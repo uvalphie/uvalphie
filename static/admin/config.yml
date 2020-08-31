@@ -12,6 +12,16 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "landing"
+    label: "Landing"
+    folder: "Landing"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subheader", name: "subheader", widget: "string"}
+      - {label: "Featured Image", name: "featuredimage", widget: image}
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
