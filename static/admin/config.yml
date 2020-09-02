@@ -19,8 +19,18 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Subheader", name: "subheader", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Section Image 1", name: "sectionimage1", widget: image}
+      - {label: "Header 1", name: "header1", widget: "string"}
+      - {label: "Description1", name: "description1", widget: "string"}
+      - {label: "Section Image 2", name: "sectionimage2", widget: image}
+      - {label: "Header 2", name: "header2", widget: "string"}
+      - {label: "Description2", name: "description2", widget: "string"}
+      - {label: "Section Image 3", name: "sectionimage3", widget: image}
+      - {label: "Header 3", name: "header3", widget: "string"}
+      - {label: "Description3", name: "description3", widget: "string"}
+
 
   - name: "blog"
     label: "Blog"
