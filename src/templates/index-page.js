@@ -1,28 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/Layout";
+import TopSection from "../components/Landing/TopSection";
 
-//Template variable that helps for organization
-export const IndexPageTemplate = ({
-  image,
-  title,
-  description,
-}) => (
-  <div>
-    <h1>HELLO</h1>
-  </div>
-);
 
-IndexPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-}
-// ***WHAT ACTUALLY GETS RENDERED
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <IndexPageTemplate />
+      <TopSection/>
     </Layout>
   );
 };
@@ -37,19 +23,3 @@ IndexPage.propTypes = {
 };
 
 export default IndexPage;
-
-// Here's where we fetch the data from our admin page
-// export const pageQuery = graphql`
-//   query IndexPageTemplate {
-//   allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/landing/.*\\.md$/"}}) {
-//     nodes {
-//       frontmatter {
-//         title
-//         description
-//         header
-//       }
-//     }
-//   }
-// }
-
-// `;
