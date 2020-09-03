@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/Layout";
 import TopSection from "../components/Landing/TopSection";
 
