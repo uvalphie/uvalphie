@@ -7,10 +7,11 @@ nav {
 
   .hamburger-menu {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 10px;
     width: 100px;
-    height: 50px;
+    height: 30px;
+    border-radius: 500px;
     background-color: $primary-color;
   }
 }
