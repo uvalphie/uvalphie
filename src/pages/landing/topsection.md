@@ -1,4 +1,5 @@
 ---
+templateKey: 'product-page'
 title: uvalphie
 description: |-
   The Gentleman's Chapter
