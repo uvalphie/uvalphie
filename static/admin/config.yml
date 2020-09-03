@@ -15,7 +15,7 @@ collections:
   - name: "landing"
     label: "Landing Page"
     files:
-      - file: "src/pages/landing/index.md"
+      - file: "src/pages/index.md"
         label: "Top Section"
         name: "index"
         fields:
