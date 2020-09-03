@@ -42,6 +42,7 @@ const TopSection = () => {
         </svg>
       </div>
       <Img
+        class="profile-img"
         fluid={
           queryResults.markdownRemark.frontmatter.image.childImageSharp.fluid
         }
