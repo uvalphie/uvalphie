@@ -12,11 +12,11 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "landing"
+    label: "Landing Page"
     files:
       - file: "src/pages/index.md"
-        label: "Landing Page"
+        label: "Top Section"
         name: "index"
         fields:
           - {
@@ -25,81 +25,42 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
+          - { label: Background Image, name: background-image, widget: image }
+          - { label: Mini Image 1, name: mini-image-1, widget: image }
+          - { label: Mini Image 2, name: mini-image-2, widget: image }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
-          - {
-              label: Mainpitch,
-              name: mainpitch,
-              widget: object,
-              fields:
-                [
-                  { label: Title, name: title, widget: string },
-                  { label: Description, name: description, widget: text },
-                ],
-            }
-          - { label: Description, name: description, widget: string }
-          - {
-              label: Intro,
-              name: intro,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Blurbs,
-                    name: blurbs,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text },
-                      ],
-                  },
-                ],
-            }
-          - {
-              label: Main,
-              name: main,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Image1,
-                    name: image1,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image2,
-                    name: image2,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image3,
-                    name: image3,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                ],
-            }
+          - { label: Description, name: description, widget: text }
+         
+      - file: "src/pages/landing/section1.md"
+        label: "Section 1"
+        name: "section1"
+        fields:
+          [
+            { label: Image, name: image, widget: image },
+            { label: Header, name: header, widget: string },
+            { label: Description, name: description, widget: text },
+          ]
+      - file: "src/pages/landing/section2.md"
+        label: "Section 2"
+        name: "section2"
+        fields:
+          [
+            { label: Image, name: image, widget: image },
+            { label: Header, name: header, widget: string },
+            { label: Description, name: description, widget: text },
+          ]
+      - file: "src/pages/landing/section3.md"
+        label: "Section 3"
+        name: "section3"
+        fields:
+          [
+            { label: Image, name: image, widget: image },
+            { label: Header, name: header, widget: string },
+            { label: Description, name: description, widget: text },
+          ]
+
+
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
