@@ -1,5 +1,5 @@
 ---
 image: /img/home-jumbotron.jpg
-header: test
+header: Section 3
 description: etests
 ---
