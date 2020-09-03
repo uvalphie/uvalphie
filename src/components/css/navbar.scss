@@ -1,0 +1,14 @@
+nav {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+
+  .hamburger-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 50px;
+    background-color: $primary-font-color;
+  }
+}
