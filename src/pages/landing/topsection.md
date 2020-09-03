@@ -1,9 +1,12 @@
 ---
 mainimage:
-  background-image: /img/home-jumbotron.jpg
-  mini-image-1: /img/favicon-16x16.png
-  mini-image-2: /img/favicon-32x32.png
+  background-image: /img/rotunda.png
+  mini-image-1: /img/miniimage1-1-.jpg
+  mini-image-2: /img/miniimage1-2-.jpg
 title: uvalphie
-image: /img/flavor_wheel.jpg
-description: The Gentleman's Chapter
+image: /img/brothers.png
+description: |-
+  The Gentleman's Chapter
+  University of Virginia
+  Lambda Phi Epsilon
 ---
