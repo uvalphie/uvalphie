@@ -5,12 +5,10 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
 
   return (
     <section className="section section--gradient">
-      <h1>HELLO</h1>
-
+      <h1>LANDING</h1>
     </section>
   )
 }
@@ -21,10 +19,13 @@ AboutPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
+const LandingPage = ({ data }) => {
   return (
     <Layout>
       <AboutPageTemplate
+        contentComponent={HTMLContent}
+        title={post.frontmatter.title}
+        content={post.html}
       />
     </Layout>
   )
@@ -34,4 +35,6 @@ AboutPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default LandingPage
+
+
