@@ -1,5 +1,5 @@
 ---
 image: /img/flavor_wheel.jpg
-header: haha
+header: Section 1
 description: haha
 ---
