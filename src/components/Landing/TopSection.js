@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import Modal from "react-modal";
+import SocialMedia from "../SocialMedia/SocialMedia.js";
 import "./css/topsection.scss";
 
 const customStyles = {
@@ -30,7 +31,7 @@ const TopSection = () => {
 
   const queryResults = useStaticQuery(
     graphql`
-      query MyQuery {
+      query {
         markdownRemark(fileAbsolutePath: { regex: "/landing/topsection.md/" }) {
           frontmatter {
             title
@@ -74,6 +75,7 @@ const TopSection = () => {
       }
     `
   );
+
   return (
     <div className="landing">
       <Modal
@@ -176,6 +178,7 @@ const TopSection = () => {
         </div>
         <h1>{queryResults.markdownRemark.frontmatter.title}</h1>
         <p>{queryResults.markdownRemark.frontmatter.description}</p>
+        <SocialMedia />
       </div>
     </div>
   );

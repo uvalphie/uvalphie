@@ -27,6 +27,8 @@
 }
 
 .intro {
+  width: 60%;
+  margin: auto;
   .gatsby-image-wrapper {
     position: relative;
     overflow: hidden;
@@ -43,14 +45,13 @@
 
   h1,
   p {
-    width: 60%;
-    margin: auto;
     text-align: center;
+    margin: 0;
   }
 }
 
 .mini-frame {
-  border: 2px solid #B4F6FF;
+  border: 2px solid #b4f6ff;
   position: absolute;
   z-index: 2;
 
@@ -59,7 +60,7 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
-    border: 2px solid #FF8845;
+    border: 2px solid #ff8845;
     left: -10px !important;
     top: -10px !important;
   }
@@ -81,4 +82,16 @@
   animation: zoomInDown 1.9s !important;
   right: 13%;
   top: 18%;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: auto;
+  margin-top: 5px;
+
+  img {
+    width: 45px;
+  }
 }
