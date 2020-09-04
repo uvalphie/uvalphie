@@ -26,15 +26,19 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: Background Image, name: background-image, widget: image },
+                  {
+                    label: Background Image,
+                    name: background-image,
+                    widget: image,
+                  },
                   { label: Mini Image 1, name: mini-image-1, widget: image },
                   { label: Mini Image 2, name: mini-image-2, widget: image },
-                ]
+                ],
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
           - { label: Description, name: description, widget: text }
-         
+
       - file: "src/pages/landing/section1.md"
         label: "Section 1"
         name: "section1"
@@ -63,127 +67,31 @@ collections:
             { label: Description, name: description, widget: text },
           ]
 
-
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+  - name: "socialmedia"
+    file: "src/pages/socialmedia/platforms.md"
+    label: "Social Media"
+    files:
+      - file: "src/pages/socialmedia/platforms.md"
+        label: "Platforms"
+        name: "platforms"
         fields:
           - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "about-page",
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/pages/products/index.md"
-        label: "Products Page"
-        name: "products"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "product-page",
-            }
-          - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Description, name: description, widget: string }
-          - {
-              label: Intro,
-              name: intro,
+              label: Platform 1,
+              name: platform1,
               widget: object,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Blurbs,
-                    name: blurbs,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text },
-                      ],
-                  },
+                  { label: Logo, name: logo, widget: image },
+                  { label: Website Link, name: website-link, widget: string },
                 ],
             }
           - {
-              label: Main,
-              name: main,
+              label: Platform 2,
+              name: platform2,
               widget: object,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Image1,
-                    name: image1,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image2,
-                    name: image2,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image3,
-                    name: image3,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                ],
-            }
-          - {
-              label: Testimonials,
-              name: testimonials,
-              widget: list,
-              fields:
-                [
-                  { label: Quote, name: quote, widget: string },
-                  { label: Author, name: author, widget: string },
-                ],
-            }
-          - { label: Full_image, name: full_image, widget: image }
-          - {
-              label: Pricing,
-              name: pricing,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: string },
-                  {
-                    label: Plans,
-                    name: plans,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Plan, name: plan, widget: string },
-                        { label: Price, name: price, widget: string },
-                        {
-                          label: Description,
-                          name: description,
-                          widget: string,
-                        },
-                        { label: Items, name: items, widget: list },
-                      ],
-                  },
+                  { label: Logo, name: logo, widget: image },
+                  { label: Website Link, name: website-link, widget: string },
                 ],
             }
