@@ -1,6 +1,18 @@
-$primary-color: #FEFEFE;
+$primary-color: #fefefe;
+$primary-font-color: #262626;
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    font-size: 2rem;
+}
+
+p{
+    color: $primary-font-color;
+    font-size: 1rem;
 }
