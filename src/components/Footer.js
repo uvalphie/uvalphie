@@ -4,7 +4,7 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer>
-        This is the footer
+        {/* This is the footer */}
       </footer>
     )
   }

@@ -11,10 +11,37 @@ const TopSection = () => {
           frontmatter {
             title
             description
+            mainimage {
+              background_image {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_noBase64
+                  }
+                }
+              }
+            }
+            mainimage {
+              mini_image_1 {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_noBase64
+                  }
+                }
+              }
+            }
+            mainimage {
+              mini_image_2 {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_noBase64
+                  }
+                }
+              }
+            }
             image {
               childImageSharp {
                 fluid {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_noBase64
                 }
               }
             }
@@ -23,9 +50,11 @@ const TopSection = () => {
       }
     `
   );
+
+  console.log(queryResults.markdownRemark.frontmatter.mainimage.mini_image_1);
   return (
-    <div class="landing">
-      <div class="main-img">
+    <div className="landing">
+      <div className="main-img">
         <svg
           width="585"
           height="79"
@@ -40,14 +69,50 @@ const TopSection = () => {
             fill="#FEFEFE"
           />
         </svg>
+        <div class="mini-frame" id="frame-1">
+          <Img
+            className="mini-image"
+            id="1"
+            fluid={
+              queryResults.markdownRemark.frontmatter.mainimage.mini_image_1
+                .childImageSharp.fluid
+            }
+            alt="TopSection"
+          />
+        </div>
+
+        <div class="mini-frame" id="frame-2">
+          <Img
+            className="mini-image"
+            fluid={
+              queryResults.markdownRemark.frontmatter.mainimage.mini_image_2
+                .childImageSharp.fluid
+            }
+            alt="TopSection"
+          />
+        </div>
+
+        <Img
+          className="profile-img"
+          fluid={
+            queryResults.markdownRemark.frontmatter.mainimage.background_image
+              .childImageSharp.fluid
+          }
+          alt="TopSection"
+        />
       </div>
-      <Img
-        class="profile-img"
-        fluid={
-          queryResults.markdownRemark.frontmatter.image.childImageSharp.fluid
-        }
-        alt="TopSection"
-      />
+
+      <div className="intro">
+        <Img
+          className="profile-img"
+          fluid={
+            queryResults.markdownRemark.frontmatter.image.childImageSharp.fluid
+          }
+          alt="TopSection"
+        />
+        <h1>{queryResults.markdownRemark.frontmatter.title}</h1>
+        <p>{queryResults.markdownRemark.frontmatter.description}</p>
+      </div>
     </div>
   );
 };
