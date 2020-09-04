@@ -22,7 +22,6 @@ const TopSection = () => {
   function openModal(image) {
     updateImage(image);
     setIsOpen(true);
-    console.log({ currentModalImage });
   }
 
   function closeModal() {
@@ -158,13 +157,23 @@ const TopSection = () => {
       </div>
 
       <div className="intro">
-        <Img
-          className="profile-img"
-          fluid={
-            queryResults.markdownRemark.frontmatter.image.childImageSharp.fluid
+        <div
+          onClick={() =>
+            openModal(
+              queryResults.markdownRemark.frontmatter.image.childImageSharp
+                .fluid
+            )
           }
-          alt="TopSection"
-        />
+        >
+          <Img
+            className="profile-img"
+            fluid={
+              queryResults.markdownRemark.frontmatter.image.childImageSharp
+                .fluid
+            }
+            alt="TopSection"
+          />
+        </div>
         <h1>{queryResults.markdownRemark.frontmatter.title}</h1>
         <p>{queryResults.markdownRemark.frontmatter.description}</p>
       </div>

@@ -22,7 +22,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    // animation: fadeIn 2s;
+    animation: fadeIn 2s;
   }
 }
 
@@ -69,7 +69,7 @@
   height: 50px;
   width: 50px;
   transform: rotate(-13deg);
-//   animation: zoomInDown 2s !important;
+  animation: zoomInDown 1.6s !important;
   left: 13%;
   top: 25%;
 }
@@ -78,7 +78,7 @@
   height: 40px;
   width: 40px;
   transform: rotate(18deg);
-//   animation: zoomInDown 2.2s !important;
+  animation: zoomInDown 1.9s !important;
   right: 13%;
   top: 18%;
 }

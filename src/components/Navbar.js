@@ -1,43 +1,39 @@
 import React from "react";
 import "./css/navbar.scss";
+import { Link } from "gatsby";
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
-      navBarActiveClass: "",
-    };
+const Navbar = () => {
+  const [isMenuToggled, toggleMenu] = React.useState(false);
+  const [currentButtonName, changeCurrentBtn] = React.useState("Home");
+
+  function changeButton(btnName) {
+    changeCurrentBtn(btnName);
+    toggleMenu(!isMenuToggled);
   }
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: "is-active",
-            })
-          : this.setState({
-              navBarActiveClass: "",
-            });
-      }
-    );
-  };
-
-  render() {
-    return (
-      <nav>
-        Navbar
-        <div class="hamburger-menu"></div>
-      </nav>
-    );
-  }
+  return (
+    <nav>
+      {isMenuToggled ? (
+        <div class="hamburger-menu" id="active">
+          <a role="button" onClick={() => toggleMenu(false)}>Home</a>
+          <Link to="/about/" id="link2" activeStyle={{ color: "red" }}>
+            About
+          </Link>
+          <Link to="/philantrophy/" id="link3" activeStyle={{ color: "red" }}>
+            Philantrophy
+          </Link>
+          <Link to="/brothers/"  id="link4" activeStyle={{ color: "red" }}>
+            Brothers
+          </Link>
+        </div>
+      ) : (
+        <div class="hamburger-menu">
+          <a role="button" onClick={() => toggleMenu(true)}>{currentButtonName}</a>
+          <a id="filler">Philantrophy</a>
+        </div>
+      )}
+    </nav>
+  );
 };
 
 export default Navbar;

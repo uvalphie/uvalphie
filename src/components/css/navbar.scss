@@ -7,11 +7,39 @@ nav {
 
   .hamburger-menu {
     position: absolute;
+    // display: flex;
+    // flex-direction: column;
     right: 10px;
     top: 10px;
-    width: 100px;
-    height: 30px;
-    border-radius: 500px;
-    background-color: $primary-color;
+    font-size: 1rem;
+
+    a {
+      text-decoration: none;
+      padding: 0.3rem 1rem;
+      background-color: $primary-color;
+      color: $primary-font-color;
+      border-radius: 500px;
+      text-align: center;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    #filler{
+        opacity: 0;
+        height: 0;
+    }
+  }
+
+
+  #link2{
+    animation: fadeInDown 0.3s;
+  }
+
+  #link3{
+    animation: fadeInDown 0.5s;
+  }
+
+  #link4{
+    animation: fadeInDown 0.7s;
   }
 }
