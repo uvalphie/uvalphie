@@ -77,7 +77,7 @@ const TopSection = () => {
   );
 
   return (
-    <div className="landing">
+    <div className="top-section">
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
