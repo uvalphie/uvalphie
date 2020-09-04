@@ -17,9 +17,10 @@ const customStyles = {
 
 const TopSection = () => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
-  const [currentModalImage] = React.useState("");
+  const [currentModalImage, updateImage] = React.useState({});
 
-  function openModal() {
+  function openModal(image) {
+    updateImage(image);
     setIsOpen(true);
     console.log({ currentModalImage });
   }
@@ -85,10 +86,7 @@ const TopSection = () => {
         <Img
           className="mini-image"
           id="1"
-          fluid={
-            queryResults.markdownRemark.frontmatter.mainimage.mini_image_1
-              .childImageSharp.fluid
-          }
+          fluid={currentModalImage}
           alt="TopSection"
         />
       </Modal>
@@ -111,11 +109,10 @@ const TopSection = () => {
           class="mini-frame"
           id="frame-1"
           onClick={() =>
-            openModal()
-            // openModal(
-            //   queryResults.markdownRemark.frontmatter.mainimage.mini_image_1
-            //     .childImageSharp.fluid
-            // )
+            openModal(
+              queryResults.markdownRemark.frontmatter.mainimage.mini_image_1
+                .childImageSharp.fluid
+            )
           }
         >
           <Img
@@ -129,12 +126,15 @@ const TopSection = () => {
           />
         </div>
 
-{/* MINI FRAME 2--------------------------------------- */}
+        {/* MINI FRAME 2--------------------------------------- */}
         <div
           class="mini-frame"
           id="frame-2"
           onClick={() =>
-            openModal()
+            openModal(
+              queryResults.markdownRemark.frontmatter.mainimage.mini_image_2
+                .childImageSharp.fluid
+            )
           }
         >
           <Img
