@@ -22,7 +22,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    animation: fadeIn 2s;
+    // animation: fadeIn 2s;
   }
 }
 
@@ -50,7 +50,7 @@
 }
 
 .mini-frame {
-  border: 2px solid cyan;
+  border: 2px solid #B4F6FF;
   position: absolute;
   z-index: 2;
 
@@ -59,7 +59,7 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
-    border: 2px solid orange;
+    border: 2px solid #FF8845;
     left: -10px !important;
     top: -10px !important;
   }
@@ -69,7 +69,7 @@
   height: 50px;
   width: 50px;
   transform: rotate(-13deg);
-  animation: zoomInDown 2s !important;
+//   animation: zoomInDown 2s !important;
   left: 13%;
   top: 25%;
 }
@@ -78,7 +78,7 @@
   height: 40px;
   width: 40px;
   transform: rotate(18deg);
-  animation: zoomInDown 2.2s !important;
+//   animation: zoomInDown 2.2s !important;
   right: 13%;
   top: 18%;
 }

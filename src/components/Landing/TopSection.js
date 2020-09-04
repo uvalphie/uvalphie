@@ -1,9 +1,35 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import Modal from "react-modal";
 import "./css/topsection.scss";
 
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
+
 const TopSection = () => {
+  var subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [currentModalImage] = React.useState(null);
+
+  function openModal() {
+    setIsOpen(true);
+    console.log({ currentModalImage });
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   const queryResults = useStaticQuery(
     graphql`
       query MyQuery {
@@ -50,10 +76,24 @@ const TopSection = () => {
       }
     `
   );
-
-  console.log(queryResults.markdownRemark.frontmatter.mainimage.mini_image_1);
   return (
     <div className="landing">
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <Img
+          className="mini-image"
+          id="1"
+          fluid={
+            queryResults.markdownRemark.frontmatter.mainimage.mini_image_1
+              .childImageSharp.fluid
+          }
+          alt="TopSection"
+        />
+      </Modal>
       <div className="main-img">
         <svg
           width="585"
@@ -69,7 +109,17 @@ const TopSection = () => {
             fill="#FEFEFE"
           />
         </svg>
-        <div class="mini-frame" id="frame-1">
+        <div
+          class="mini-frame"
+          id="frame-1"
+          onClick={
+            (() =>
+              currentModalImage(
+                "OHOH"
+              ),
+            openModal)
+          }
+        >
           <Img
             className="mini-image"
             id="1"
@@ -81,7 +131,17 @@ const TopSection = () => {
           />
         </div>
 
-        <div class="mini-frame" id="frame-2">
+        <div
+          class="mini-frame"
+          id="frame-2"
+          onClick={
+            (() =>
+              currentModalImage(
+                "OHOHOHOHOHOH"
+              ),
+            openModal)
+          }
+        >
           <Img
             className="mini-image"
             fluid={

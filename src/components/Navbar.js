@@ -31,10 +31,12 @@ const Navbar = class extends React.Component {
   };
 
   render() {
-    return <nav>Navbar
-
-      <div class="hamburger-menu"></div>
-    </nav>;
+    return (
+      <nav>
+        Navbar
+        <div class="hamburger-menu"></div>
+      </nav>
+    );
   }
 };
 
