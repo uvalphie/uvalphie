@@ -4,7 +4,6 @@ import Img from "gatsby-image";
 import Modal from "react-modal";
 import "./css/topsection.scss";
 
-
 const customStyles = {
   content: {
     top: "50%",
@@ -17,9 +16,8 @@ const customStyles = {
 };
 
 const TopSection = () => {
-  var subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
-  const [currentModalImage] = React.useState(null);
+  const [currentModalImage] = React.useState("");
 
   function openModal() {
     setIsOpen(true);
@@ -112,12 +110,12 @@ const TopSection = () => {
         <div
           class="mini-frame"
           id="frame-1"
-          onClick={
-            (() =>
-              currentModalImage(
-                "OHOH"
-              ),
-            openModal)
+          onClick={() =>
+            openModal()
+            // openModal(
+            //   queryResults.markdownRemark.frontmatter.mainimage.mini_image_1
+            //     .childImageSharp.fluid
+            // )
           }
         >
           <Img
@@ -131,15 +129,12 @@ const TopSection = () => {
           />
         </div>
 
+{/* MINI FRAME 2--------------------------------------- */}
         <div
           class="mini-frame"
           id="frame-2"
-          onClick={
-            (() =>
-              currentModalImage(
-                "OHOHOHOHOHOH"
-              ),
-            openModal)
+          onClick={() =>
+            openModal()
           }
         >
           <Img
