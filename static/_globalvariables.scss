@@ -37,13 +37,14 @@ p {
 
 .card-left-align,
 .card-right-align {
+  margin: auto;
   width: 80%;
   margin-bottom: 50px;
 
   h2,
   p {
+    position: relative;
     margin: 0;
-    padding-left: 0.5rem;
   }
 }
 
@@ -66,5 +67,67 @@ p {
     bottom: 0;
     border: 3px solid #ffa553;
     z-index: -2;
+  }
+
+  .decorator-circle {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: #dfecf9;
+    z-index: -1;
+    bottom: 40%;
+    opacity: 60%;
+    left: 0;
+    border-radius: 50%;
+  }
+  .decorator-circle-outline {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    border: 2px solid #26649d;
+    z-index: -1;
+    bottom: 40%;
+    right: 0;
+    opacity: 60%;
+    border-radius: 50%;
+  }
+}
+
+.card-left-align {
+  margin-left: 0;
+
+  h2,
+  p {
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+  h2::after {
+    content: "";
+    border-bottom: 4px solid #b4f6ff;
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-left: 0;
+  }
+}
+.card-right-align {
+  margin-right: 0;
+
+  h2,
+  p {
+    text-align: right;
+    padding-right: 1rem;
+  }
+
+  h2::after {
+    content: "";
+    border-bottom: 4px solid #b4f6ff;
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-right: 0;
   }
 }
