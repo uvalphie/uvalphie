@@ -48,19 +48,29 @@ const MidSection = () => {
           <div>
             {sectionData.order % 2 != 0 ? (
               <div className="card-left-align">
-                <Img
-                  fluid={sectionData.image.childImageSharp.fluid}
-                  alt="Section Image"
-                />
+                <div class="img-decorator">
+                  <Img
+                    fluid={sectionData.image.childImageSharp.fluid}
+                    alt="Section Image"
+                  />
+                  <div class="decorator-box" />
+                  <div class="decorator-box2" />
+                </div>
+
                 <h2>{sectionData.header}</h2>
                 <p>{sectionData.description}</p>
               </div>
             ) : (
               <div className="card-right-align">
-                <Img
-                  fluid={sectionData.image.childImageSharp.fluid}
-                  alt="Section Image"
-                />
+                <div class="img-decorator">
+                  <Img
+                    fluid={sectionData.image.childImageSharp.fluid}
+                    alt="Section Image"
+                  />
+                  <div class="decorator-box" />
+                  <div class="decorator-box2" />
+                </div>
+
                 <h2>{sectionData.header}</h2>
                 <p>{sectionData.description}</p>
               </div>

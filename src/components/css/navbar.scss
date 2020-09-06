@@ -2,7 +2,7 @@
 
 nav {
   position: fixed;
-  z-index: 9;
+  z-index: 99;
   width: 100%;
 
   .hamburger-menu {
@@ -22,24 +22,24 @@ nav {
       text-align: center;
       margin-bottom: 4px;
       display: block;
+      border: 3px solid #b4f6ff;
     }
 
-    #filler{
-        opacity: 0;
-        height: 0;
+    #filler {
+      opacity: 0;
+      height: 0;
     }
   }
 
-
-  #link2{
+  #link2 {
     animation: fadeInDown 0.3s;
   }
 
-  #link3{
+  #link3 {
     animation: fadeInDown 0.5s;
   }
 
-  #link4{
+  #link4 {
     animation: fadeInDown 0.7s;
   }
 }
