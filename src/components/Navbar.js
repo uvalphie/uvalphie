@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <nav>
       {isMenuToggled ? (
-        <div class="hamburger-menu" id="active">
+        <div className="hamburger-menu" id="active">
           <a role="button" onClick={() => toggleMenu(false)}>Home</a>
           <Link to="/about/" id="link2" activeStyle={{ color: "red" }}>
             About
@@ -27,7 +27,7 @@ const Navbar = () => {
           </Link>
         </div>
       ) : (
-        <div class="hamburger-menu">
+        <div className="hamburger-menu">
           <a role="button" onClick={() => toggleMenu(true)}>{currentButtonName}</a>
           <a id="filler">Philantrophy</a>
         </div>

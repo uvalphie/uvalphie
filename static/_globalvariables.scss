@@ -1,7 +1,8 @@
 $primary-color: #fefefe;
 $primary-font-color: #262626;
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: "Helvetica", "Arial", sans-serif;
@@ -25,10 +26,19 @@ p {
   background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
-.ReactModal__Content.ReactModal__Content--after-open{
-    width: 90vw;
-    animation: fadeIn 0.3s;
-    padding: 0px !important;
-    background-color: rgba(0,0,0,0);
-    border: none !important;
+.ReactModal__Content.ReactModal__Content--after-open {
+  width: 90vw;
+  animation: fadeIn 0.3s;
+  padding: 0px !important;
+  background-color: rgba(0, 0, 0, 0);
+  border: none !important;
+}
+
+.card-left-align,
+.card-right-align {
+  h2, p{
+    margin: 0;
+  }
+
+  width: 80%;
 }
