@@ -39,7 +39,7 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Description, name: description, widget: text }
 
-      - file: "src/pages/landing/section1.md"
+      - file: "src/pages/landing/midsection/section1.md"
         label: "Section 1"
         name: "section1"
         fields:
@@ -49,7 +49,7 @@ collections:
             { label: Description, name: description, widget: text },
             { label: Order, name: order, widget: number, valueType: int },
           ]
-      - file: "src/pages/landing/section2.md"
+      - file: "src/pages/landing/midsection/section2.md"
         label: "Section 2"
         name: "section2"
         fields:
@@ -59,7 +59,7 @@ collections:
             { label: Description, name: description, widget: text },
             { label: Order, name: order, widget: number, valueType: int },
           ]
-      - file: "src/pages/landing/section3.md"
+      - file: "src/pages/landing/midsection/section3.md"
         label: "Section 3"
         name: "section3"
         fields:
