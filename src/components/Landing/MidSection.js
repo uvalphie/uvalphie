@@ -78,10 +78,6 @@ const MidSection = () => {
               </div>
             )}
           </div>
-
-          // <div className="s" key={data.order}>
-          //   {data.header}
-          // </div>
         ))}
       </div>
     </div>
