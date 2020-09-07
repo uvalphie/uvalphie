@@ -1,10 +1,21 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import "./css/news.scss"
 import { Carousel } from "react-responsive-carousel";
+import SlideUp from "../SlideUp.js";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "./css/news.scss";
 
 const News = () => {
+  const [slideIsOpen, openSlide] = React.useState(false);
+
+  function showSlide() {
+    openSlide(true);
+  }
+
+  function closeSlide() {
+    openSlide(false);
+  }
+
   const queryResults = useStaticQuery(
     graphql`
       query MyQuery {
@@ -27,14 +38,15 @@ const News = () => {
     `
   );
   let allNews = queryResults.markdownRemark.frontmatter.news;
-  console.log(allNews);
 
   return (
     <div className="news">
+      {slideIsOpen ? <SlideUp slideDown={closeSlide} /> : <div></div>}
       <h1>News</h1>
       <Carousel>
         {allNews.map((news) => (
-          <div>
+          <div onClick={showSlide}>
+            {/* <button onClick={showSlide}>OPEN</button> */}
             <img src={news.image.childImageSharp.fluid.src} alt="News Image" />
             <div class="news-text">
               <h2>{news.title}</h2>
