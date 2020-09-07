@@ -1,13 +1,12 @@
 import React from "react";
+import "./css/gallery.scss";
 // import { graphql, useStaticQuery } from 'gatsby'
 
 const Gallery = () => {
-  // const { site } = useStaticQuery(
-  //   graphql`
-  //   `
-  // )
   return (
-    <div className="gallery"><p>gallery</p></div>
+    <div className="gallery">
+      <h1>Gallery</h1>
+    </div>
   );
 };
 

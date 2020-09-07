@@ -31,7 +31,7 @@ const News = () => {
 
   return (
     <div className="news">
-      <p>NEWS</p>
+      <h1>News</h1>
       <Carousel>
         {allNews.map((news) => (
           <div>
