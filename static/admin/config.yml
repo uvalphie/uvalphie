@@ -74,9 +74,33 @@ collections:
     file: "src/pages/socialmedia/platforms.md"
     label: "Social Media"
     files:
-      - file: "src/pages/socialmedia/platforms.md"
-        label: "Platforms"
-        name: "platforms"
+      - file: "src/pages/socialmedia/lightlogos.md"
+        label: "Light Logos"
+        name: "lightlogos"
+        fields:
+          - {
+              label: Platform 1,
+              name: platform1,
+              widget: object,
+              fields:
+                [
+                  { label: Logo, name: logo, widget: image },
+                  { label: Website Link, name: website-link, widget: string },
+                ],
+            }
+          - {
+              label: Platform 2,
+              name: platform2,
+              widget: object,
+              fields:
+                [
+                  { label: Logo, name: logo, widget: image },
+                  { label: Website Link, name: website-link, widget: string },
+                ],
+            }
+      - file: "src/pages/socialmedia/darklogos.md"
+        label: "Dark Logos"
+        name: "darklogos"
         fields:
           - {
               label: Platform 1,

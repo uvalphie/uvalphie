@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
+import SocialMedia from "./SocialMedia/SocialMedia.js";
+import "./css/footer.scss";
 
-const Footer = class extends React.Component {
-  render() {
-    return (
-      <footer>
-        {/* This is the footer */}
-      </footer>
-    )
-  }
-}
+const Footer = () => {
+  return (
+    <footer>
+      <SocialMedia />
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

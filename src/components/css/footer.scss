@@ -1,0 +1,15 @@
+@import "@/../static/_globalvariables.scss";
+
+footer{
+    width: 100%;
+    height: 100px;
+    background: $darkest-blue;
+
+    .social-media{
+        img{
+            height: 40px;
+            margin-left: 5px;
+        }
+    }
+
+}
