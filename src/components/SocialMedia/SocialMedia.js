@@ -7,7 +7,7 @@ const SocialMedia = () => {
     graphql`
       query {
         markdownRemark(
-          fileAbsolutePath: { regex: "/socialmedia/dark-logos.md/" }
+          fileAbsolutePath: { regex: "/socialmedia/lightlogos.md/" }
         ) {
           frontmatter {
             platform2 {
