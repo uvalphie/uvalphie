@@ -122,3 +122,21 @@ collections:
                   { label: Website Link, name: website-link, widget: string },
                 ],
             }
+
+  - name: "news"
+    file: "src/pages/news/index.md"
+    label: "News"
+    files:
+    - file: "src/pages/news/news.md"
+      label: "News"
+      name: "news"
+      fields:
+        - label: "News"
+          name: "news"
+          collapsed: false
+          widget: "list"
+          fields:
+            - { label: Title, name: title, widget: string }
+            - { label: Image, name: image, widget: image }
+            - { label: Description, name: description, widget: text }
+            - { label: Link to News, name: link, widget: string , required: false}
