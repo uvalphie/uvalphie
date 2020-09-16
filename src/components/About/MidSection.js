@@ -34,7 +34,7 @@ const MidSection = () => {
   console.log(data[0].image.publicURL)
 
   return (
-    <div className="mid-section">
+    <div className="mid-section" id="about">
       <div>
         {data.map((sectionData) => (
           <div>

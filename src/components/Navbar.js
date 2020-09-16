@@ -15,7 +15,9 @@ const Navbar = () => {
     <nav>
       {isMenuToggled ? (
         <div className="hamburger-menu" id="active">
-          <a role="button" onClick={() => toggleMenu(false)}>Home</a>
+          <Link to="/" id="link2" activeStyle={{ color: "red" }}>
+            Home
+          </Link>
           <Link to="/about/" id="link2" activeStyle={{ color: "red" }}>
             About
           </Link>

@@ -24,7 +24,7 @@ const TopSection = () => {
   );
 
   return (
-    <div className="top-section">
+    <div className="top-section" id="about">
       <div className="main-image">
         <Img
           className="profile-img"
@@ -33,6 +33,7 @@ const TopSection = () => {
           }
           alt="TopSection Image"
         />
+        <h3>{queryResults.markdownRemark.frontmatter.title}</h3>
       </div>
     </div>
   );
