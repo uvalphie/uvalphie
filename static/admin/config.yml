@@ -38,7 +38,6 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
           - { label: Description, name: description, widget: text }
-
       - file: "src/pages/landing/midsection/section1.md"
         label: "Section 1"
         name: "section1"
@@ -140,3 +139,97 @@ collections:
             - { label: Image, name: image, widget: image }
             - { label: Description, name: description, widget: text }
             - { label: Link to News, name: link, widget: string , required: false}
+
+  - name: "about"
+    file: "src/pages/about/index.md"
+    label: "About Page"
+    files:
+      - file: "src/pages/about/topsection.md"
+        name: "topsection"
+        label: "Top Section"
+        fields:
+          - { label: Main Image, name: mainimage, widget: image }
+          - { label: Title, name: title, widget: string }
+
+      - file: "src/pages/about/midsection.md"
+        name: "midsection"
+        label: "Mid Section"
+        fields:
+          - label: "Section"
+            name: "midsection"
+            collapsed: false
+            widget: "list"
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Order, name: order, widget: number, valueType: int }
+
+  - name: "philantrophy"
+    file: "src/pages/philantrophy/index.md"
+    label: "Philantrophy Page"
+    files:
+      - file: "src/pages/philantrophy/topsection.md"
+        name: "topsection"
+        label: "Top Section"
+        fields:
+          - { label: Main Image, name: mainimage, widget: image }
+          - { label: Title, name: title, widget: string }
+      - file: "src/pages/about/midsection.md"
+        name: "midsection"
+        label: "Mid Section"
+        fields:
+          - label: "Section"
+            name: "midsection"
+            collapsed: false
+            widget: "list"
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Order, name: order, widget: number, valueType: int }
+
+  - name: "brothers"
+    file: "src/pages/brothers/index.md"
+    label: "Brothers Page"
+    files:
+      - file: "src/pages/classes.md"
+        name: "classes"
+        label: "Classes"
+        fields:
+          - label: "Class"
+            name: "class"
+            collapsed: false
+            widget: "list"
+            fields:
+              - { label: Class Name, name: class-name, widget: string }
+              - label: "Members"
+                name: "member"
+                collapsed: false
+                widget: "list"
+                fields:
+                  - { label: Member Name, name: member, widget: string }
+      - file: "src/pages/exec-board.md"
+        name: "executive-board"
+        label: "Executive Board"
+        fields:
+          - label: "Position"
+            name: "position"
+            collapsed: false
+            widget: "list"
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Position Title, name: position-title, widget: string }
+              - { label: Position Holder, name: position-holder, widget: string }
+      - file: "src/pages/chair-positions.md"
+        name: "chair-positions"
+        label: "Chair Positions"
+        fields:
+          - label: "Position"
+            name: "position"
+            collapsed: false
+            widget: "list"
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Position Title, name: position-title, widget: string }
+              - { label: Position Holder, name: position-holder, widget: string }
