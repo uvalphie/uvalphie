@@ -33,11 +33,11 @@ const Footer = () => {
 
   return (
     <footer>
-      <div class="container">
+      <div className="container">
         <p>
           Want to see more? <br></br>Check us out on social media!
         </p>
-        <div class="social-media">
+        <div className="social-media">
           <a
             href={
               socialMediaQuery.markdownRemark.frontmatter.platform1.website_link

@@ -25,7 +25,7 @@ const TopSection = () => {
 
   return (
     <div className="top-section">
-      <div class="main-image">
+      <div className="main-image">
         <Img
           className="profile-img"
           fluid={

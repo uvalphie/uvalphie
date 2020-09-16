@@ -2,27 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import Layout from "../components/Layout";
 import TopSection from "../components/About/TopSection";
+import MidSection from "../components/About/MidSection";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  return <section></section>;
-};
-
-AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-};
-
-const AboutPage = ({ data }) => {
+const AboutPage = () => {
   return (
     <Layout>
       <TopSection />
+      <MidSection />
     </Layout>
   );
-};
-
-AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
 };
 
 export default AboutPage;
