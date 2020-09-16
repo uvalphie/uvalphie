@@ -148,7 +148,7 @@ collections:
         name: "topsection"
         label: "Top Section"
         fields:
-          - { label: Main Image, name: mainimage, widget: image }
+          - { label: Image, name: image, widget: image }
           - { label: Title, name: title, widget: string }
 
       - file: "src/pages/about/midsection.md"
@@ -173,7 +173,7 @@ collections:
         name: "topsection"
         label: "Top Section"
         fields:
-          - { label: Main Image, name: mainimage, widget: image }
+          - { label: Image, name: image, widget: image }
           - { label: Title, name: title, widget: string }
       - file: "src/pages/about/midsection.md"
         name: "midsection"

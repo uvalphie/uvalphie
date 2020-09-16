@@ -1,33 +1,28 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Layout from '../components/Layout'
+import React from "react";
+import PropTypes from "prop-types";
+import Layout from "../components/Layout";
+import TopSection from "../components/About/TopSection";
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  return (
-    <section className="section section--gradient">
-      <h1>HELLO</h1>
-
-    </section>
-  )
-}
+  return <section></section>;
+};
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-}
+};
 
 const AboutPage = ({ data }) => {
   return (
     <Layout>
-      <AboutPageTemplate
-      />
+      <TopSection />
     </Layout>
-  )
-}
+  );
+};
 
 AboutPage.propTypes = {
   data: PropTypes.object.isRequired,
-}
+};
 
-export default AboutPage
+export default AboutPage;
