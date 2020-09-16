@@ -1,6 +1,6 @@
 ---
 midsection:
-  - image: /img/gentlemen2.svg
+  - image: /img/dragon.svg
     title: Gentlemen
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
       nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
