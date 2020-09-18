@@ -24,4 +24,10 @@ class:
       - member: 16. John "Generic" Kim
       - member: 17. Andrew "Revlon" Hong
       - member: 18. Ga-Ram "Snüz" Han
+  - class-name: Gamma
+    member:
+      - member: Test.Member
+  - class-name: Delta
+    member:
+      - member: Test.Member
 ---
