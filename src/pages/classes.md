@@ -39,4 +39,34 @@ class:
   - class-name: Eta
     member:
       - member: Test.Member
+  - class-name: Iota
+    member:
+      - member: Test.Member
+  - class-name: Kappa
+    member:
+      - member: Test.Member
+  - class-name: Mu
+    member:
+      - member: Test.Member
+  - class-name: Nu
+    member:
+      - member: Test.Member
+  - class-name: Xi
+    member:
+      - member: Test.Member
+  - class-name: Omicron
+    member:
+      - member: Test.Member
+  - class-name: Pi
+    member:
+      - member: Test.Member
+  - class-name: Rho
+    member:
+      - member: Test.Member
+  - class-name: Sigma
+    member:
+      - member: Test.Member
+  - class-name: Tau
+    member:
+      - member: Test.Member
 ---
