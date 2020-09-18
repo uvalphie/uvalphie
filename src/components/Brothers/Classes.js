@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import "./css/classes.scss";
+import "./css/common.scss";
 
 const Classes = () => {
   const queryResults = useStaticQuery(
@@ -22,18 +23,25 @@ const Classes = () => {
 
   function showClassMembers(members) {
     console.log("MEMBERS ARE: ", members);
-  };
+  }
 
   const classes = queryResults.markdownRemark.frontmatter.class;
   console.log(classes);
   return (
-    <div>
-      <div className="classes">
+    <section class="classes" id="subsection">
+      <h2>Classes</h2>
+      <div className="classes-list">
         {classes.map((classObject, index) => (
-          <button className="class" onClick={() => showClassMembers(classObject.member)} key={index}>{classObject.class_name}</button>
+          <button
+            className="class"
+            onClick={() => showClassMembers(classObject.member)}
+            key={index}
+          >
+            {classObject.class_name}
+          </button>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
