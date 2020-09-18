@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 const NullPage = () => {
   return (
     <Layout>
-      Test
+      Null page
     </Layout>
   );
 };
