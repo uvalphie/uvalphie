@@ -55,7 +55,10 @@ const MidSection = () => {
                   />
                   <div class="decorator-box" />
                   <div class="decorator-box2" />
-                  <div class="decorator-circle" />
+                  <div class="decorator-circle" id="circle1"/>
+                  <div class="decorator-circle" id="circle2"/>
+                  <div class="decorator-circle" id="circle3"/>
+                  <div class="decorator-circle" id="circle4"/>
                 </div>
 
                 <h2>{sectionData.header}</h2>
