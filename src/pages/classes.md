@@ -30,4 +30,13 @@ class:
   - class-name: Delta
     member:
       - member: Test.Member
+  - class-name: Epsilon
+    member:
+      - member: Test.Member
+  - class-name: Zeta
+    member:
+      - member: Test.Member
+  - class-name: Eta
+    member:
+      - member: Test.Member
 ---
