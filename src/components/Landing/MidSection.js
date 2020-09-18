@@ -53,8 +53,8 @@ const MidSection = () => {
                     fluid={sectionData.image.childImageSharp.fluid}
                     alt="Section Image"
                   />
-                  <div class="decorator-box" />
-                  <div class="decorator-box2" />
+                  <div class="decorator-box" id="box1" />
+                  <div class="decorator-box" id="box2"/>
                   <div class="decorator-circle" id="circle1"/>
                   <div class="decorator-circle" id="circle2"/>
                   <div class="decorator-circle" id="circle3"/>
@@ -71,9 +71,11 @@ const MidSection = () => {
                     fluid={sectionData.image.childImageSharp.fluid}
                     alt="Section Image"
                   />
-                  <div class="decorator-box" />
-                  <div class="decorator-box2" />
-                  <div class="decorator-circle-outline" />
+                  <div class="decorator-box" id="box1"/>
+                  <div class="decorator-box" id="box2"/>
+                  <div class="decorator-box" id="box3"/>
+                  <div class="decorator-box" id="box4"/>
+                  <div class="decorator-box" id="box5"/>
                 </div>
 
                 <h2>{sectionData.header}</h2>
