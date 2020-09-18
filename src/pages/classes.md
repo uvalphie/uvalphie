@@ -13,4 +13,15 @@ class:
       - member: 9. Amit "Pinch" Goyal
       - member: 10. Burita "Fez" Em
       - member: 11. Vivek "Kick My Dog" Taneja
+  - class-name: Alpha
+    member:
+      - member: 12. Kevin "Pho Foot Tall" Nguyen
+      - member: 13. Jack "J-Lo" Chen
+      - member: 14. Vinod "Hinbad" Chopra
+  - class-name: Beta
+    member:
+      - member: 15. Frank Sungping Chen
+      - member: 16. John "Generic" Kim
+      - member: 17. Andrew "Revlon" Hong
+      - member: 18. Ga-Ram "Snüz" Han
 ---
