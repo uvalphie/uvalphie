@@ -26,4 +26,14 @@
     background: $dark-blue;
     color: $primary-color;
   }
+
+  .name-search {
+    width: 100%;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    border: 1px solid gray;
+    text-align: center;
+    padding: 0.2rem 0rem;
+    color: $primary-font-color;
+  }
 }

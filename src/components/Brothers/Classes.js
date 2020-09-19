@@ -23,7 +23,7 @@ const Classes = () => {
     try {
       document.getElementById(currentSelectedClass).className = "class";
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
     // Style the new selected button
     document.getElementById(classObject.class_name).className =
@@ -33,6 +33,35 @@ const Classes = () => {
   function closeSlide() {
     changeInfo(null);
     document.getElementById(currentSelectedClass).className = "class";
+  }
+
+  function resetClassStyle() {
+    let allClasses = document.getElementsByClassName("class");
+    for (let index in allClasses) {
+      try {
+        allClasses[index].style.border = "1px solid #dadada";
+        allClasses[index].style.boxShadow = "none";
+      } catch (err) {}
+    }
+  }
+
+  function searchName(e) {
+    let input = e.target.value;
+    console.log(input);
+    if (input === "") {
+      resetClassStyle();
+    } else {
+      for (let className in classDictionary) {
+        // console.log(classDictionary[className]);
+        if (classDictionary[className].toLowerCase().includes(input)) {
+          document.getElementById(className).style.border = "1px solid black";
+          document.getElementById(className).style.boxShadow = "0px 1px 3px 0px rgba(0,0,0,0.21)";
+        } else {
+          document.getElementById(className).style.border = "1px solid #dadada";
+          document.getElementById(className).style.boxShadow = "none";
+        }
+      }
+    }
   }
 
   const queryResults = useStaticQuery(
@@ -53,9 +82,21 @@ const Classes = () => {
   );
 
   const classes = queryResults.markdownRemark.frontmatter.class;
-  console.log(classes);
+  let classDictionary = {};
+
+  // Used for search-indexing
+  for (let index in classes) {
+    let className = classes[index].class_name;
+    let classMembers = classes[index].member;
+    let allClassMemberNames = "";
+    for (let index in classMembers) {
+      allClassMemberNames += classMembers[index].member;
+    }
+    classDictionary[className] = allClassMemberNames;
+  }
+
   return (
-    <section class="classes" id="subsection">
+    <section className="classes" id="subsection">
       {classInfo ? (
         <SlideUp slideDown={closeSlide} information={classInfo}>
           {classInfo}{" "}
@@ -77,6 +118,7 @@ const Classes = () => {
           </button>
         ))}
       </div>
+      <input className="name-search" onChange={searchName} />
     </section>
   );
 };
