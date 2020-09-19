@@ -1,13 +1,14 @@
 .slide-up {
   position: fixed;
   bottom: 0;
+  left: 0;
   z-index: 9999;
-  background: rgba(0, 0, 0, 0.5);
+  // background: rgba(0, 0, 0, 0.5);
   .close {
     height: 5vh;
   }
   .content {
-    height: 95vh;
+    height: 65vh;
     width: 100vw;
     background: white;
     border-top-left-radius: 25px;
