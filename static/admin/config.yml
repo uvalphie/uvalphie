@@ -175,7 +175,7 @@ collections:
         fields:
           - { label: Image, name: image, widget: image }
           - { label: Title, name: title, widget: string }
-      - file: "src/pages/about/midsection.md"
+      - file: "src/pages/philantrophy/midsection.md"
         name: "midsection"
         label: "Mid Section"
         fields:
