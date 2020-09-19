@@ -1,3 +1,4 @@
+@import "@/../static/_globalvariables.scss";
 .slide-up {
   position: fixed;
   bottom: 0;
@@ -7,20 +8,39 @@
   .close {
     height: 5vh;
   }
+
   .content {
     height: 65vh;
     width: 100vw;
-    background: white;
+    background: $primary-color;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     animation: slideInUp 0.5s;
 
-    button {
+    .close-btn {
       width: 100%;
       border-top-left-radius: 25px;
       border-top-right-radius: 25px;
       padding: 0.5rem 0;
       border: none;
+    }
+
+    .content-markup {
+      height: 80%;
+      width: 80%;
+      margin: auto;
+      margin-top: 10%;
+
+      h4 {
+        text-align: center;
+      }
+      ul {
+        padding: 0;
+        text-align: center;
+        li {
+          list-style-type: none;
+        }
+      }
     }
   }
 }

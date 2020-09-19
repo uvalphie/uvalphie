@@ -18,4 +18,12 @@
     background: none;
   }
 
+  .class.selected {
+    width: 48%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    background: $dark-blue;
+    color: $primary-color;
+  }
 }

@@ -2,13 +2,17 @@ import React from "react";
 import "./css/slideup.scss";
 import { graphql, useStaticQuery } from "gatsby";
 
-const SlideUp = ({slideDown, information}) => {
+const SlideUp = ({ slideDown, information, previousPage, nextPage }) => {
+  function createMarkup(markup) {
+    return { __html: markup };
+  }
+
   return (
-    <div class="slide-up">
+    <div className="slide-up">
       {/* <div class="close">GODOWN</div> */}
-      <div class="content">
-        <button onClick={slideDown}>Close Menu</button>
-        {information}
+      <div className="content">
+        <button className="close-btn" onClick={slideDown}>Close Menu</button>
+        <div className="content-markup" dangerouslySetInnerHTML={createMarkup(information)} />
       </div>
     </div>
   );
