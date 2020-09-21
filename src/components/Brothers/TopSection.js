@@ -25,14 +25,14 @@ const TopSection = () => {
 
   return (
     <div className="top-section" id="brothers">
-      <div className="main-image">
-        <Img
+      <div className="main-image" id="brothers">
+        {/* <Img
           className="profile-img"
           fluid={
             queryResults.markdownRemark.frontmatter.image.childImageSharp.fluid
           }
           alt="TopSection Image"
-        />
+        /> */}
         <h3>{queryResults.markdownRemark.frontmatter.title}</h3>
       </div>
     </div>

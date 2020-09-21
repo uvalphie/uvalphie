@@ -126,19 +126,24 @@ collections:
     file: "src/pages/news/index.md"
     label: "News"
     files:
-    - file: "src/pages/news/news.md"
-      label: "News"
-      name: "news"
-      fields:
-        - label: "News"
-          name: "news"
-          collapsed: false
-          widget: "list"
-          fields:
-            - { label: Title, name: title, widget: string }
-            - { label: Image, name: image, widget: image }
-            - { label: Description, name: description, widget: text }
-            - { label: Link to News, name: link, widget: string , required: false}
+      - file: "src/pages/news/news.md"
+        label: "News"
+        name: "news"
+        fields:
+          - label: "News"
+            name: "news"
+            collapsed: false
+            widget: "list"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { label: Description, name: description, widget: text }
+              - {
+                  label: Link to News,
+                  name: link,
+                  widget: string,
+                  required: false,
+                }
 
   - name: "about"
     file: "src/pages/about/index.md"
@@ -148,8 +153,10 @@ collections:
         name: "topsection"
         label: "Top Section"
         fields:
-          - { label: Image, name: image, widget: image }
           - { label: Title, name: title, widget: string }
+          - { label: Left Image, name: left-image, widget: image, required: false }
+          - { label: Center Image, name: center-image, widget: image, required: false}
+          - { label: Right Image, name: right-image, widget: image, required: false}
 
       - file: "src/pages/about/midsection.md"
         name: "midsection"
@@ -173,8 +180,11 @@ collections:
         name: "topsection"
         label: "Top Section"
         fields:
-          - { label: Image, name: image, widget: image }
           - { label: Title, name: title, widget: string }
+          - { label: Left Image, name: left-image, widget: image, required: false }
+          - { label: Center Image, name: center-image, widget: image, required: false}
+          - { label: Right Image, name: right-image, widget: image, required: false}
+
       - file: "src/pages/philantrophy/midsection.md"
         name: "midsection"
         label: "Mid Section"
@@ -225,7 +235,11 @@ collections:
             widget: "list"
             fields:
               - { label: Position Title, name: position-title, widget: string }
-              - { label: Position Holder, name: position-holder, widget: string }
+              - {
+                  label: Position Holder,
+                  name: position-holder,
+                  widget: string,
+                }
               - { label: Image, name: image, widget: image }
       - file: "src/pages/brothers/chair-positions.md"
         name: "chair-positions"
@@ -237,5 +251,9 @@ collections:
             widget: "list"
             fields:
               - { label: Position Title, name: position-title, widget: string }
-              - { label: Position Holder, name: position-holder, widget: string }
+              - {
+                  label: Position Holder,
+                  name: position-holder,
+                  widget: string,
+                }
               - { label: Image, name: image, widget: image }

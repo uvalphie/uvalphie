@@ -10,7 +10,14 @@ const TopSection = () => {
         markdownRemark(fileAbsolutePath: { regex: "/about/topsection.md/" }) {
           frontmatter {
             title
-            image {
+            right_image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
+            }
+            left_image {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid_noBase64
@@ -22,17 +29,29 @@ const TopSection = () => {
       }
     `
   );
-
   return (
     <div className="top-section" id="about">
-      <div className="main-image">
+      <div className="main-image" id="about">
         <Img
-          className="profile-img"
+          className="left-img"
           fluid={
-            queryResults.markdownRemark.frontmatter.image.childImageSharp.fluid
+            queryResults.markdownRemark.frontmatter.left_image.childImageSharp
+              .fluid
           }
           alt="TopSection Image"
         />
+        <Img
+          className="right-img"
+          fluid={
+            queryResults.markdownRemark.frontmatter.right_image.childImageSharp
+              .fluid
+          }
+          alt="TopSection Image"
+        />
+        <div class="decorator" id="circle1" />
+        <div class="decorator" id="circle2" />
+        <div class="decorator" id="circle3" />
+        <div class="decorator" id="circle4" />
         <h3>{queryResults.markdownRemark.frontmatter.title}</h3>
       </div>
     </div>

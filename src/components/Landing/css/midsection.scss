@@ -11,7 +11,7 @@
     z-index: -1;
   }
 
-  #box2.decorator-box{
+  #box2.decorator-box {
     position: absolute;
     width: 90%;
     height: 55%;
@@ -20,7 +20,7 @@
     z-index: -2;
   }
 
-  #box3.decorator-box{
+  #box3.decorator-box {
     position: absolute;
     width: 80px;
     height: 80px;
@@ -31,34 +31,32 @@
     z-index: 2;
   }
 
-  #box4.decorator-box{
+  #box4.decorator-box {
     position: absolute;
     width: 70px;
     height: 70px;
     top: 15%;
     right: 8%;
     transform: rotate(45deg);
-    background:  #26649d;
+    background: #26649d;
     z-index: -2;
   }
 
-  #box5.decorator-box{
+  #box5.decorator-box {
     position: absolute;
     width: 70px;
     height: 70px;
     top: 14%;
     left: 0;
     transform: rotate(60deg);
-    background:  #26649d;
+    background: #26649d;
     opacity: 40%;
     z-index: -2;
   }
 
-  img{
-      z-index: 3;
+  img {
+    z-index: 3;
   }
-
-
 
   #circle1.decorator-circle {
     position: absolute;
