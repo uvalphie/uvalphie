@@ -31,7 +31,7 @@ const MidSection = () => {
     );
   }
   data.sort((a, b) => a.order - b.order);
-  console.log(data[0].image.publicURL)
+  console.log(data[0].image.publicURL);
 
   return (
     <div className="mid-section" id="about">
@@ -39,11 +39,10 @@ const MidSection = () => {
         {data.map((sectionData) => (
           <div>
             <div className="card-center-align">
-              <img
-                src={sectionData.image.publicURL}
-                alt="Section Image"
-              />
-              <h2>{sectionData.title}</h2>
+              <img src={sectionData.image.publicURL} alt="Section Image" />
+              <h2>
+                <span>{sectionData.title}</span>
+              </h2>
               <p>{sectionData.description}</p>
             </div>
           </div>

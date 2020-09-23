@@ -2,7 +2,6 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import SlideUp from "../common/SlideUp.js";
 import "./css/classes.scss";
-import "./css/common.scss";
 
 const Classes = () => {
   const [classInfo, changeInfo] = React.useState(null);
@@ -54,9 +53,9 @@ const Classes = () => {
       for (let className in classDictionary) {
         // console.log(classDictionary[className]);
         if (classDictionary[className].toLowerCase().includes(input)) {
-          document.getElementById(className).style.border = "1px solid black";
+          document.getElementById(className).style.border = "1px solid #26649d";
           document.getElementById(className).style.boxShadow =
-            "0px 1px 3px 0px rgba(0,0,0,0.21)";
+            "0px 1px 3px 0px rgba(0,0,0,0.15)";
         } else {
           document.getElementById(className).style.border = "1px solid #dadada";
           document.getElementById(className).style.boxShadow = "none";
@@ -105,7 +104,7 @@ const Classes = () => {
       ) : (
         <div></div>
       )}
-      <h2>Classes</h2>
+      <h2 className="center-align"><span>Classes</span></h2>
 
       <input
         className="name-search"

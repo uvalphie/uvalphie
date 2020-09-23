@@ -43,6 +43,7 @@ const News = () => {
     <div className="news">
       {slideIsOpen ? <SlideUp slideDown={closeSlide} /> : <div></div>}
       <h1>News</h1>
+      <p>See what’s going on in our chapter</p>
       <Carousel>
         {allNews.map((news) => (
           <div onClick={showSlide}>

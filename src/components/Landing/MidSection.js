@@ -61,7 +61,9 @@ const MidSection = () => {
                   <div class="decorator-circle" id="circle4" />
                 </div>
 
-                <h2>{sectionData.header}</h2>
+                <h2>
+                  <span>{sectionData.header}</span>
+                </h2>
                 <p>{sectionData.description}</p>
               </div>
             ) : (
@@ -78,7 +80,9 @@ const MidSection = () => {
                   <div class="decorator-box" id="box5" />
                 </div>
 
-                <h2>{sectionData.header}</h2>
+                <h2>
+                  <span>{sectionData.header}</span>
+                </h2>
                 <p>{sectionData.description}</p>
               </div>
             )}

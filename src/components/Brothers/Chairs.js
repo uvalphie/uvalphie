@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import "./css/common.scss";
 import "./css/chairs.scss";
 
 const Chairs = () => {
@@ -30,7 +29,7 @@ const Chairs = () => {
     console.log(queryResults.markdownRemark.frontmatter.position);
   return (
     <section class="chairs" id="subsection">
-      <h2>Chair Positions</h2>
+      <h2 className="center-align"><span>Chair Positions</span></h2>
       <div class="image-container">
         <div class="mini-decorator" id="circle1"></div>
         <div class="mini-decorator" id="circle2"></div>

@@ -4,7 +4,7 @@
   margin: auto;
 
   .classes-list {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -35,6 +35,8 @@
     text-align: center;
     padding: 0.5rem 0rem;
     color: $primary-font-color;
+    background: url("../../../img/search-icon.svg") no-repeat;
+    background-position: left;
   }
 
   .name-search::placeholder {

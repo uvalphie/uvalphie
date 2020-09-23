@@ -1,17 +1,11 @@
-#about {
-    h2{
-        position: relative;
-    }
-    h2::after{
-        content: "";
-        position: absolute;
-        height: 4px;
-        width: 90%;
-        margin: auto;
-        background: #B4F6FF;
-        bottom: -2px;
-        left: 0;
-        right: 0;
-        text-align: center;
+#philantrophy{
+    .card-center-align{
+        h2{
+            font-size: 1.5rem;
+        }
+
+        img{
+            width: 50%;
+        }
     }
 }
