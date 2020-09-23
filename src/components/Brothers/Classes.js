@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import SlideUp from "../SlideUp.js";
+import SlideUp from "../common/SlideUp.js";
 import "./css/classes.scss";
 import "./css/common.scss";
 

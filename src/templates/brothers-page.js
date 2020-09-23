@@ -6,7 +6,6 @@ import Classes from "../components/Brothers/Classes";
 import Exec from "../components/Brothers/Exec";
 import Chairs from "../components/Brothers/Chairs";
 import "../../static/_globalvariables.scss";
-// import MidSection from "../components/Landing/MidSection";
 
 const BrothersPage = () => {
   const queryResults = useStaticQuery(

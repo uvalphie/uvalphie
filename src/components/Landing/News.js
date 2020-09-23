@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Carousel } from "react-responsive-carousel";
-import SlideUp from "../SlideUp.js";
+import SlideUp from "../common/SlideUp.js";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import "./css/news.scss";
 

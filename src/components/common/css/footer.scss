@@ -1,0 +1,25 @@
+@import "@/../static/_globalvariables.scss";
+
+footer {
+  width: 100%;
+  background: $darkest-blue;
+  margin-top: 100px;
+
+  .container {
+    padding: 1rem;
+  }
+
+  p {
+    color: $primary-color;
+    text-align: right;
+  }
+  .social-media {
+    background: $darkest-blue;
+    text-align: right;
+    padding-top: 0.5rem;
+    img {
+      height: 40px;
+      margin-left: 5px;
+    }
+  }
+}
