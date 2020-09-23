@@ -34,6 +34,11 @@ p {
 
   margin: 0;
 }
+
+.news-gallery-container{
+  background: #f8f8f8;
+}
+
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.4) !important;
@@ -43,7 +48,7 @@ p {
   width: 90vw;
   animation: fadeIn 0.3s;
   padding: 0px !important;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0) !important;
   border: none !important;
 }
 

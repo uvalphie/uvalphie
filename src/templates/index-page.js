@@ -10,8 +10,10 @@ const IndexPage = () => {
     <Layout>
       <TopSection />
       <MidSection />
-      <News />
-      <Gallery />
+      <div className="news-gallery-container">
+        <News />
+        <Gallery />
+      </div>
     </Layout>
   );
 };
