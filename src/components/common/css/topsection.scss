@@ -1,149 +1,6 @@
 @import "@/../static/_globalvariables.scss";
 
 .main-image {
-  // Decorators for circles
-  #circle1.decorator {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    left: 10%;
-    bottom: 20%;
-    background: #3969bb;
-    border-radius: 50%;
-    animation: zoomInDown 1.5s;
-  }
-
-  #circle2.decorator {
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    left: 25%;
-    bottom: 0%;
-    z-index: 0;
-    background: #568be5;
-    border-radius: 50%;
-    animation: zoomInDown 1s;
-  }
-
-  #circle3.decorator {
-    position: absolute;
-    height: 20%;
-    width: 20%;
-    right: 10%;
-    top: 10%;
-    z-index: 0;
-    border-radius: 50%;
-    border: 2px solid #ff8845;
-    animation: zoomInDown 2s;
-  }
-
-  #circle4.decorator {
-    position: absolute;
-    height: 20%;
-    width: 20%;
-    left: 5%;
-    top: 5%;
-    z-index: 0;
-    border-radius: 50%;
-    border: 2px solid #b4f6ff;
-    animation: zoomInDown 1s;
-  }
-
-  #rectangle1.decorator {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    left: 10%;
-    bottom: 20%;
-    background: #3969bb;
-    animation: zoomInDown 1.5s;
-  }
-
-  #rectangle2.decorator {
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    right: 25%;
-    bottom: 15%;
-    transform: rotate(25deg);
-    z-index: 0;
-    background: #568be5;
-    animation: zoomInDown 2s;
-  }
-
-  #rectangle3.decorator {
-    position: absolute;
-    height: 20%;
-    width: 20%;
-    right: 5%;
-    top: 10%;
-    z-index: 0;
-    border: 2px solid #ff8845;
-    transform: rotate(40deg);
-    animation: zoomInDown 1s;
-  }
-
-  #rectangle4.decorator {
-    position: absolute;
-    height: 10%;
-    width: 10%;
-    left: 10%;
-    top: 10%;
-    z-index: 0;
-    border: 2px solid #b4f6ff;
-    transform: rotate(45deg);
-    animation: zoomInDown 1s;
-  }
-
-  #triangle1.decorator {
-    position: absolute;
-    border-left: 70px solid transparent;
-    border-right: 70px solid transparent;
-    border-bottom: 140px solid #3969bb;
-    transform: rotate(45deg);
-    left: 10%;
-    bottom: 20%;
-    animation: zoomInDown 1.5s;
-  }
-
-  #triangle2.decorator {
-    position: absolute;
-    border-left: 80px solid transparent;
-    border-right: 80px solid transparent;
-    border-bottom: 160px solid #3969bb;
-    transform: rotate(45deg);
-    right: 10%;
-    bottom: 40%;
-    z-index: 0;
-    animation: zoomInDown 2s;
-  }
-
-  #triangle3.decorator {
-    position: absolute;
-    height: 20%;
-    width: 20%;
-    right: 5%;
-    top: 10%;
-    z-index: 0;
-    border: 2px solid #ff8845;
-    transform: rotate(40deg);
-    animation: zoomInDown 1s;
-  }
-
-  #triangle4.decorator {
-    position: absolute;
-    height: 60px;
-    width: 60px;
-    left: 10%;
-    top: 0%;
-    z-index: 0;
-    border: 2px solid #b4f6ff;
-    transform: rotate(45deg);
-    animation: zoomInDown 1s;
-  }
-}
-
-.main-image {
   background-color: #1f3a68;
   border-radius: 0px 0px 100px 100px;
 
@@ -183,7 +40,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 3;
     border-radius: 0 0 100px 100px;
 
     img {
@@ -191,4 +48,145 @@
       object-position: center center !important;
     }
   }
+}
+
+// Decorators for circles
+#circle1.decorator {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  left: 10%;
+  bottom: 20%;
+  background: #3969bb;
+  border-radius: 50%;
+  animation: zoomInDown 1.5s;
+}
+
+#circle2.decorator {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  left: 25%;
+  bottom: 0%;
+  z-index: 0;
+  background: #568be5;
+  border-radius: 50%;
+  animation: zoomInDown 1s;
+}
+
+#circle3.decorator {
+  position: absolute;
+  height: 20%;
+  width: 20%;
+  right: 10%;
+  top: 10%;
+  z-index: 0;
+  border-radius: 50%;
+  border: 2px solid #ff8845;
+  animation: zoomInDown 2s;
+}
+
+#circle4.decorator {
+  position: absolute;
+  height: 20%;
+  width: 20%;
+  left: 5%;
+  top: 5%;
+  z-index: 0;
+  border-radius: 50%;
+  border: 2px solid #b4f6ff;
+  animation: zoomInDown 1s;
+}
+
+#rectangle1.decorator {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  left: 10%;
+  bottom: 20%;
+  background: #3969bb;
+  animation: zoomInDown 1.5s;
+}
+
+#rectangle2.decorator {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  right: 25%;
+  bottom: 15%;
+  transform: rotate(25deg);
+  z-index: 0;
+  background: #568be5;
+  animation: zoomInDown 2s;
+}
+
+#rectangle3.decorator {
+  position: absolute;
+  height: 20%;
+  width: 20%;
+  right: 5%;
+  top: 10%;
+  z-index: 0;
+  border: 2px solid #ff8845;
+  transform: rotate(40deg);
+  animation: zoomInDown 1s;
+}
+
+#rectangle4.decorator {
+  position: absolute;
+  height: 10%;
+  width: 10%;
+  left: 10%;
+  top: 10%;
+  z-index: 0;
+  border: 2px solid #b4f6ff;
+  transform: rotate(45deg);
+  animation: zoomInDown 1s;
+}
+
+#triangle1.decorator {
+  position: absolute;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-bottom: 140px solid #3969bb;
+  transform: rotate(45deg);
+  left: 10%;
+  bottom: 20%;
+  animation: zoomInDown 1.5s;
+}
+
+#triangle2.decorator {
+  position: absolute;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 160px solid #3969bb;
+  transform: rotate(45deg);
+  right: 10%;
+  bottom: 40%;
+  z-index: 0;
+  animation: zoomInDown 2s;
+}
+
+#triangle3.decorator {
+  position: absolute;
+  height: 20%;
+  width: 20%;
+  right: 5%;
+  top: 10%;
+  z-index: 0;
+  border: 2px solid #ff8845;
+  transform: rotate(40deg);
+  animation: zoomInDown 1s;
+}
+
+#triangle4.decorator {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  left: 10%;
+  top: 0%;
+  z-index: 0;
+  border: 2px solid #b4f6ff;
+  transform: rotate(45deg);
+  animation: zoomInDown 1s;
 }
