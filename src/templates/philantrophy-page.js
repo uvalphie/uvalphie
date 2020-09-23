@@ -43,7 +43,7 @@ const PhilantrophyPage = () => {
   return (
     <Layout>
       <div id="philantrophy">
-        <TopSection queryResults={queryResults} circle="true" />
+        <TopSection queryResults={queryResults} rectangle="true" />
         <MidSection />
       </div>
     </Layout>

@@ -44,7 +44,7 @@ const BrothersPage = () => {
   return (
     <Layout>
       <div id="brothers">
-        <TopSection queryResults={queryResults} circle="true" />
+        <TopSection queryResults={queryResults} triangle="true" />
         <Classes />
         <Exec />
         <Chairs />
