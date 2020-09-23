@@ -207,8 +207,10 @@ collections:
         name: "topsection"
         label: "Top Section"
         fields:
-          - { label: Image, name: image, widget: image }
           - { label: Title, name: title, widget: string }
+          - { label: Left Image, name: left-image, widget: image, required: false }
+          - { label: Center Image, name: center-image, widget: image, required: false}
+          - { label: Right Image, name: right-image, widget: image, required: false}
       - file: "src/pages/brothers/classes.md"
         name: "classes"
         label: "Classes"
