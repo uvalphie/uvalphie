@@ -3,6 +3,8 @@
   background: #f8f8f8;
   width: 100%;
   display: block;
+  margin-top: 25px;
+  padding-bottom: $global-margin-top;
 
   h1 {
     text-align: center;
@@ -13,17 +15,38 @@
   .instagram-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 95%;
     margin: auto;
   }
 
+  .slick-initialized {
+    overflow: hidden;
+  }
+
   .instagram-img {
     img {
-      width: 45vw;
-      height: 45vw;
+      width: 47vw;
+      height: 47vw;
       object-fit: cover;
+      margin-top: 3px;
     }
+  }
+
+  .instagram-slide {
+    width: 95vw !important;
+    display: inline-block;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-between !important;
+    margin: auto;
+  }
+  .slick-dots{
+    bottom: 15px;
+  }
+
+  .slick-list{
+    padding-bottom: 50px;
   }
 }
 
@@ -34,9 +57,9 @@
 }
 
 .model-caption {
-  background-color: #071029;
+  background-color: #020613;
   color: $primary-color;
-  padding: 0.5rem;
+  padding: 0.75rem;
   max-height: 7rem;
   overflow: scroll;
 }

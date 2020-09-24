@@ -1,16 +1,16 @@
 @import "@/../static/_globalvariables.scss";
 .news {
-  margin-top: 100px;
+  margin-top: $global-margin-top;
   display: block;
   background: #f8f8f8;
 
   h1 {
     text-align: center;
-    padding-top: 1.5rem;
+    padding-top: 2rem;
     margin: 0;
   }
 
-  p{
+  p {
     margin: 0;
     text-align: center;
     padding-bottom: 0.5rem;
@@ -25,32 +25,36 @@
       font-size: 1rem;
     }
   }
+  // .slick-track{
+  //   width: 100% !important;
+  // }
+  .slick-initialized {
+    overflow: hidden;
+  }
 
-  // Carousel Stylings
-  .carousel.carousel-slider {
-    width: 90% !important;
+  .slick-dots{
+    bottom: 0 !important;
+  }
+
+  .slick-list {
+    height: 320px;
+    width: 95%;
     margin: auto;
-  }
 
-  .carousel .slide {
-    background: #f8f8f8 !important;
-  }
-
-  .control-arrow{
-      opacity: 1 !important;
-  }
-  .slider-wrapper {
-    padding-bottom: 25px !important;
-  }
-
-  .control-dots {
-    bottom: -35px;
-    li {
-      box-shadow: none !important;
-      border: 1px solid black;
+    img {
+      width: 100%;
+      height: calc(285px - 1.5rem);
+      object-fit: cover;
     }
-    .dot.selected {
-      background: black;
+
+    h2 {
+      text-align: center;
+      padding-top: 0.5rem;
+      width: 80%;
+      margin: auto;
     }
+  }
+  .slick-dots li.slick-active button:before{
+    color: $darkest-blue;
   }
 }

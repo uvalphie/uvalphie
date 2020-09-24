@@ -6,6 +6,8 @@ $dark-blue: #14285a;
 $darkest-blue: #0d1f4d;
 $cyan: #b4f6ff;
 
+$global-margin-top: 75px;
+
 html,
 body {
   margin: 0;
@@ -58,7 +60,7 @@ p {
 .card-center-align {
   margin: auto;
   width: 80%;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
 
   h2,
   p {

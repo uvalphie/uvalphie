@@ -3,6 +3,9 @@ import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import "./css/gallery.scss";
 import Modal from "react-modal";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const customStyles = {
   content: {
@@ -19,6 +22,7 @@ const Gallery = () => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [currentModalImage, updateImage] = React.useState({});
   const [currentImageCaption, updateCaption] = React.useState("");
+  const [currentGallerySlide, updateGallerySlide] = React.useState(0);
 
   function openModal(image, caption) {
     updateImage(image);
@@ -28,6 +32,10 @@ const Gallery = () => {
 
   function closeModal() {
     setIsOpen(false);
+  }
+
+  function whatSlide() {
+    console.log(currentGallerySlide);
   }
 
   const queryResults = useStaticQuery(
@@ -53,6 +61,16 @@ const Gallery = () => {
     imagesData.push(queryResults.allInstaNode.edges[parseInt(query)].node);
   }
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    afterChange: (current) => updateGallerySlide(current),
+  };
+
+  const slideImgIndices = [0, 7, 14, 21, 28, 35, 42 ];
   return (
     <div className="gallery">
       <Modal
@@ -70,17 +88,22 @@ const Gallery = () => {
         <p className="model-caption">{currentImageCaption}</p>
       </Modal>
       <h1>Gallery</h1>
-      <div class="instagram-container">
-        {imagesData.map((image, index) => (
-          <div className="instagram-img">
-            <img
-              src={image.preview}
-              alt="Section Image"
-              onClick={() => openModal(image.original, image.caption)}
-            />
+
+      <Slider {...settings}>
+        {slideImgIndices.map((imageIndex, index) => (
+          <div class="instagram-slide">
+            {imagesData.slice(imageIndex, imageIndex + 6).map((image, index) => (
+              <div className="instagram-img">
+                <img
+                  src={image.preview}
+                  alt="Section Image"
+                  onClick={() => openModal(image.original, image.caption)}
+                />
+              </div>
+            ))}
           </div>
         ))}
-      </div>
+      </Slider>
     </div>
   );
 };
