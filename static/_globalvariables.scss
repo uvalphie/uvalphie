@@ -28,6 +28,10 @@ body {
   background-color: $primary-color;
 }
 
+svg{
+  display: block;
+}
+
 h1,
 h2,
 h3,
@@ -250,7 +254,6 @@ p {
 @media screen and (min-width: $tablet) {
   .card-left-align,
   .card-right-align {
-    width: 90%;
     display: flex;
     margin: auto;
 

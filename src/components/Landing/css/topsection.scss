@@ -2,6 +2,11 @@
 
 .landing-section {
   margin-bottom: 100px;
+
+  .desktop-svg-overlay {
+    display: none;
+  }
+
   .main-img {
     width: 100vw;
     height: 105vw;
@@ -70,6 +75,9 @@
   #frame-1 {
     height: 12.5vw;
     width: 12.5vw;
+    max-height: 150px;
+    max-width: 150px;
+
     transform: rotate(-13deg);
     animation: zoomInDown 1.6s !important;
     left: 13%;
@@ -85,10 +93,10 @@
   }
 
   #frame-2 {
-    height: 40px;
-    width: 40px;
     height: 12.5vw;
     width: 12.5vw;
+    max-height: 150px;
+    max-width: 150px;
     transform: rotate(18deg);
     animation: zoomInDown 1.9s !important;
     right: 13%;
@@ -126,6 +134,49 @@
       img {
         object-fit: contain !important;
       }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-landscape) {
+  .landing-section {
+    display: flex;
+
+    .desktop-svg-overlay {
+      display: block;
+    }
+
+    #bottom-left {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      bottom: -1px;
+      left: -1px;
+    }
+
+    #top-left {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      transform: scaleY(-1);
+    }
+
+    .main-img {
+      width: 55%;
+      height: 700px;
+      margin: auto;
+      margin-right: 0;
+      order: 2;
+
+      .mobile-overlay {
+        display: none;
+      }
+    }
+
+    .intro {
+      order: 1;
     }
   }
 }

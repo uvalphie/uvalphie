@@ -93,6 +93,7 @@ const TopSection = () => {
       </Modal>
       <div className="main-img">
         <svg
+          class="mobile-overlay"
           width="585"
           height="79"
           viewBox="0 0 585 79"
@@ -106,6 +107,39 @@ const TopSection = () => {
             fill="#FEFEFE"
           />
         </svg>
+        <svg
+          class="desktop-svg-overlay"
+          id="bottom-left"
+          width="250"
+          height="250"
+          viewBox="0 0 250 250"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M250 250C111.929 250 0 138.071 0 0V250H250Z"
+            fill="#FEFEFE"
+          />
+        </svg>
+        <svg
+          class="desktop-svg-overlay"
+          id="top-left"
+          width="250"
+          height="250"
+          viewBox="0 0 250 250"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M250 250C111.929 250 0 138.071 0 0V250H250Z"
+            fill="#FEFEFE"
+          />
+        </svg>
+
         <div
           class="mini-frame"
           id="frame-1"

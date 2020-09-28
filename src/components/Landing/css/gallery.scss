@@ -2,6 +2,8 @@
 .gallery {
   background: #f8f8f8;
   width: 100%;
+  max-width: $max-width;
+  margin: auto;
   display: block;
   margin-top: 25px;
   padding-bottom: $global-margin-top;
@@ -66,13 +68,17 @@
 }
 
 @media screen and (min-width: $tablet) {
-  .instagram-img{
+  .instagram-img {
     width: 32%;
     margin-top: 10px;
-    img{
+    img {
       width: 100% !important;
       height: 100% !important;
       object-fit: cover;
     }
+  }
+
+  .slick-list {
+    padding-bottom: 0 !important;
   }
 }
