@@ -61,10 +61,12 @@ const MidSection = () => {
                   <div class="decorator-circle" id="circle4" />
                 </div>
 
-                <h2>
-                  <span>{sectionData.header}</span>
-                </h2>
-                <p>{sectionData.description}</p>
+                <div class="text">
+                  <h2>
+                    <span>{sectionData.header}</span>
+                  </h2>
+                  <p>{sectionData.description}</p>
+                </div>
               </div>
             ) : (
               <div className="card-right-align">
@@ -79,11 +81,12 @@ const MidSection = () => {
                   <div class="decorator-box" id="box4" />
                   <div class="decorator-box" id="box5" />
                 </div>
-
-                <h2>
-                  <span>{sectionData.header}</span>
-                </h2>
-                <p>{sectionData.description}</p>
+                <div class="text">
+                  <h2>
+                    <span>{sectionData.header}</span>
+                  </h2>
+                  <p>{sectionData.description}</p>
+                </div>
               </div>
             )}
           </div>
