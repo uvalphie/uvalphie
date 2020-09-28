@@ -6,6 +6,8 @@ footer {
 
   .container {
     padding: 1rem;
+    max-width: $max-width;
+    margin: auto;
   }
 
   p {

@@ -125,9 +125,9 @@
     content: "";
     position: absolute;
     height: 100%;
-    width: 100px;
+    width: 150px;
     background: $dark-blue;
-    left: -50px;
+    left: -200px;
     top: 0;
     border-radius: 25px;
   }
@@ -136,10 +136,12 @@
     content: "";
     position: absolute;
     height: 100%;
-    width: 100px;
-    background: $dark-blue;
-    right: -50px;
+    width: 150px;
+    right: -200px;
     top: 0;
+    background: $dark-blue;
+    background-attachment: fixed;
+    background-size: contain;
     border-radius: 25px;
   }
 }

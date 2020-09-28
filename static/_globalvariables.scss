@@ -15,7 +15,7 @@ $desktop: 1280px;
 
 // Etc
 $global-margin-top: 75px;
-$max-width: 1200px;
+$max-width: 1100px;
 
 html,
 body {
@@ -280,5 +280,13 @@ p {
     #box3.decorator-box{
       left: 2%;
     }
+  }
+}
+
+
+@media screen and (min-width: $tablet-landscape) {
+  .card-left-align,
+  .card-right-align {
+    width: 100% !important;
   }
 }

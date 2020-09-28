@@ -182,6 +182,10 @@ const TopSection = () => {
           />
         </div>
 
+        <div class="landing-decorator" id="circle1" />a
+        <div class="landing-decorator" id="circle2" />
+        <div class="landing-decorator" id="circle3" />
+
         <Img
           className="big-image"
           fluid={

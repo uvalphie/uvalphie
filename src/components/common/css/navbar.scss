@@ -1,6 +1,10 @@
 @import "@/../static/_globalvariables.scss";
 
-nav {
+.desktop-navbar {
+  display: none;
+}
+
+.mobile-navbar {
   position: fixed;
   z-index: 99;
   width: 100%;
@@ -24,13 +28,20 @@ nav {
       text-align: center;
       margin-bottom: 6px;
       display: block;
-      box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
     }
 
     #filler {
       opacity: 0;
       height: 0;
     }
+
+    .active-link{
+      color: $primary-color;
+      background: $dark-blue;
+      border: 1px solid $primary-color;
+    }
+
   }
 
   #link2 {
@@ -43,5 +54,42 @@ nav {
 
   #link4 {
     animation: fadeInDown 0.7s;
+  }
+}
+
+@media screen and (min-width: $tablet-landscape) {
+  .mobile-navbar {
+    display: none;
+  }
+
+  .desktop-navbar {
+    display: block;
+
+    .hamburger-menu {
+      position: fixed;
+      right: 0;
+      display: flex;
+      z-index: 9;
+      top: 10px;
+      right: 10px;
+      background: $primary-color;
+      border-radius: 50px;
+      padding: 5px;
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+
+      a {
+        padding: 0.3rem 1rem;
+        font-size: 1rem;
+        text-decoration: none;
+        color: $primary-font-color;
+      }
+    }
+  }
+
+  .active-link {
+    background-color: $dark-blue;
+    color: $primary-color !important;
+    height: 100%;
+    border-radius: 50px;
   }
 }

@@ -19,7 +19,7 @@
       width: 100%;
       height: auto;
       position: absolute;
-      z-index: 1;
+      z-index: 9;
       bottom: -1px;
     }
 
@@ -30,13 +30,58 @@
       bottom: 0;
       right: 0;
       left: 0;
+      z-index: 2;
       animation: fadeIn 2s;
     }
 
-    .big-image{
-      img{
+    .big-image {
+      img {
         object-position: bottom !important;
       }
+    }
+
+    .landing-decorator {
+      position: absolute;
+      z-index: 1;
+    }
+
+    #circle1 {
+      width: 40vw;
+      height: 40vw;
+      max-width: 300px;
+      max-height: 300px;
+      bottom: 0;
+      left: 0;
+      opacity: 0.8;
+      background: $primary-blue;
+      border-radius: 50%;
+      animation: zoomInDown 1s;
+    }
+
+    #circle2 {
+      width: 20vw;
+      height: 20vw;
+      max-width: 150px;
+      max-height: 150px;
+      top: 15%;
+      right: 15%;
+      background: $primary-blue;
+      opacity: 0.6;
+      border-radius: 50%;
+      animation: zoomInDown 1.5s;
+    }
+
+    #circle3 {
+      width: 20vw;
+      height: 20vw;
+      max-width: 200px;
+      max-height: 200px;
+      bottom: 5%;
+      right: 0;
+      background: $primary-blue;
+      opacity: 0.6;
+      border-radius: 50%;
+      animation: zoomInDown 1.2s;
     }
   }
 
@@ -91,8 +136,8 @@
   #frame-1 {
     height: 12.5vw;
     width: 12.5vw;
-    max-height: 150px;
-    max-width: 150px;
+    max-height: 115px;
+    max-width: 115px;
 
     transform: rotate(-13deg);
     animation: zoomInDown 1.6s !important;
@@ -109,8 +154,8 @@
   }
 
   #frame-2 {
-    height: 12.5vw;
-    width: 12.5vw;
+    height: 13.5vw;
+    width: 13.5vw;
     max-height: 150px;
     max-width: 150px;
     transform: rotate(18deg);
