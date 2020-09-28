@@ -183,7 +183,7 @@ const TopSection = () => {
         </div>
 
         <Img
-          className="profile-img"
+          className="big-image"
           fluid={
             queryResults.markdownRemark.frontmatter.mainimage.background_image
               .childImageSharp.fluid
@@ -193,6 +193,7 @@ const TopSection = () => {
       </div>
 
       <div className="intro">
+        <h1 id="desktop-header">{queryResults.markdownRemark.frontmatter.title}</h1>
         <div
           onClick={() =>
             openModal(
@@ -202,7 +203,7 @@ const TopSection = () => {
           }
         >
           <Img
-            className="profile-img"
+            className="profile-img-mobile"
             fluid={
               queryResults.markdownRemark.frontmatter.image.childImageSharp
                 .fluid
@@ -210,8 +211,19 @@ const TopSection = () => {
             alt="TopSection"
           />
         </div>
-        <h1>{queryResults.markdownRemark.frontmatter.title}</h1>
-        <p>{queryResults.markdownRemark.frontmatter.description}</p>
+        <h1 id="mobile-header">{queryResults.markdownRemark.frontmatter.title}</h1>
+        <div class="text">
+          <Img
+            className="profile-img-desktop"
+            id="desktop"
+            fluid={
+              queryResults.markdownRemark.frontmatter.image.childImageSharp
+                .fluid
+            }
+            alt="TopSection"
+          />
+          <p>{queryResults.markdownRemark.frontmatter.description}</p>
+        </div>
         <SocialMedia />
       </div>
     </div>

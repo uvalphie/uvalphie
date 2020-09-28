@@ -42,7 +42,7 @@ const MidSection = () => {
   console.log(data);
 
   return (
-    <div className="mid-section">
+    <div className="mid-section" id="landing">
       <div>
         {data.map((sectionData) => (
           <div>

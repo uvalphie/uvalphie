@@ -2,6 +2,7 @@
 .mid-section {
   max-width: $max-width;
   margin: auto;
+  position: relative;
 }
 
 .img-decorator {
@@ -118,5 +119,27 @@
     .text {
       padding: 0rem 3rem;
     }
+  }
+
+  #landing.mid-section::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    background: $dark-blue;
+    left: -50px;
+    top: 0;
+    border-radius: 25px;
+  }
+
+  #landing.mid-section::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    background: $dark-blue;
+    right: -50px;
+    top: 0;
+    border-radius: 25px;
   }
 }
