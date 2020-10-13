@@ -10,7 +10,7 @@ midsection:
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
       nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
     order: 2
-  - image: /img/moon.svg
+  - image: /img/space.svg
     title: The Vision
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
       nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
@@ -20,7 +20,7 @@ midsection:
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
       nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
     order: 4
-  - image: /img/dragon.svg
+  - image: /img/rotunda.svg
     title: Chapter Values
     order: 5
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
