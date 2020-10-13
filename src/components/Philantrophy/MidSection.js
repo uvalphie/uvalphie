@@ -18,6 +18,9 @@ const MidSection = () => {
               image {
                 publicURL
               }
+              logo {
+                publicURL
+              }
             }
           }
         }
@@ -40,10 +43,11 @@ const MidSection = () => {
       <div>
         {data.map((sectionData) => (
           <div>
-            <div className="flip-card" id="mobile">
-              <div class="front-side">
+            <div className="flip-card" id="mobile" >
+              <div class="front-side" style={{ backgroundImage: "url(" + sectionData.image.publicURL + ")"}}>
+                <div class="overlay" />
                 <div class="container">
-                  <img src={sectionData.image.publicURL} alt="Section Image" />
+                  <img src={sectionData.logo.publicURL} alt="Section Image" />
                   <h2>
                     <span>{sectionData.title}</span>
                   </h2>

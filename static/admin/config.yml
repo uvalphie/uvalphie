@@ -196,6 +196,7 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Description, name: description, widget: text }
+              - { label: Logo, name: logo, widget: image }
               - { label: Image, name: image, widget: image }
               - { label: Order, name: order, widget: number, valueType: int }
 
