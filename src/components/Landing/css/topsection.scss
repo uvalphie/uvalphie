@@ -288,3 +288,9 @@
     width: 35% !important;
   }
 }
+
+@media screen and (min-width: $tablet-landscape) {
+  .mobile-container{
+    display: none;
+  }
+}

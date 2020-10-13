@@ -11,7 +11,7 @@
     left: 0;
     bottom: 0;
     z-index: 2;
-    border-radius: 0 0 0 100px;
+    border-radius: 0 0 0 $global-top-section-border-radius;
     img {
       object-fit: contain !important;
       object-position: left bottom !important;
@@ -25,7 +25,7 @@
     right: 0;
     bottom: 0;
     z-index: 1;
-    border-radius: 0 0 100px 0;
+    border-radius: 0 0 $global-top-section-border-radius 0;
 
     img {
       object-fit: contain !important;
@@ -41,7 +41,7 @@
     left: 0;
     bottom: 0;
     z-index: 3;
-    border-radius: 0 0 100px 100px;
+    border-radius: 0 0 $global-top-section-border-radius $global-top-section-border-radius;
 
     img {
       object-fit: contain !important;
@@ -189,4 +189,11 @@
   border: 2px solid #b4f6ff;
   transform: rotate(45deg);
   animation: zoomInDown 1s;
+}
+
+
+@media screen and (min-width: $tablet-landscape) {
+  .top-section{
+    height: 45vh !important;
+  }
 }

@@ -1,11 +1,72 @@
-#philantrophy{
-    .card-center-align{
-        h2{
-            font-size: 1.5rem;
-        }
+@import "@/../static/_globalvariables.scss";
+#philantrophy {
+  .flip-card {
+    width: 90vw;
+    height: 70vw;
+    background: gray;
+    margin: auto;
+    position: relative;
+    margin-top: 15px;
+  }
 
-        img{
-            width: 50%;
-        }
+  .front-side {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: pink;
+
+    .container {
+      width: 75%;
+      text-align: center;
+      margin: auto;
+      img {
+        width: 70px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
     }
+  }
+
+  .flip-card:last-child{
+      margin-bottom: 15px;
+  }
+
+  .back-side {
+    display: none;
+  }
+
+  .flip-card:hover .back-side {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: blue;
+    animation: fadeIn 0.5s;
+
+    .container {
+      width: 75%;
+      text-align: left;
+      margin: auto;
+      img {
+        width: 70px;
+      }
+
+      h2,
+      p {
+        color: $primary-color;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: -1rem;
+      }
+    }
+  }
 }

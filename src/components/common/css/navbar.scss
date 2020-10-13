@@ -13,21 +13,26 @@
 
   .hamburger-menu {
     position: absolute;
-    // display: flex;
-    // flex-direction: column;
     right: 10px;
     top: 10px;
     font-size: 1rem;
+    width: 150px;
+
+    img {
+      height: 1rem;
+      width: 1rem;
+    }
 
     a {
+      display: flex;
+      justify-content: space-evenly;
       text-decoration: none;
-      padding: 0.3rem 1rem;
+      padding: 0.3rem 0.3rem;
       background-color: $primary-color;
       color: $primary-font-color;
       border-radius: 500px;
       text-align: center;
       margin-bottom: 6px;
-      display: block;
       box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
     }
 
@@ -36,12 +41,16 @@
       height: 0;
     }
 
-    .active-link{
+    .active-link {
       color: $primary-color;
       background: $dark-blue;
       border: 1px solid $primary-color;
-    }
 
+      img{
+        filter: brightness(100);
+
+      }
+    }
   }
 
   #link2 {
