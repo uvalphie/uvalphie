@@ -14,7 +14,7 @@ const News = () => {
 
   function showNewsContent(newsContent) {
     openSlide(true);
-    console.log(newsContent)
+    console.log(newsContent);
     changeNewsContent(newsContent);
   }
 
@@ -25,25 +25,29 @@ const News = () => {
   const queryResults = useStaticQuery(
     graphql`
       query MyQuery {
-        markdownRemark(fileAbsolutePath: { regex: "/news/news.md/" }) {
-          frontmatter {
-            news {
-              title
-              body
-              image {
-                childImageSharp {
-                  fluid {
-                    src
+        allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/News/" } }) {
+          edges {
+            node {
+              id
+              frontmatter {
+                title
+                image {
+                  childImageSharp {
+                    fluid {
+                      src
+                    }
                   }
                 }
               }
+              html
             }
           }
         }
       }
     `
   );
-  let allNews = queryResults.markdownRemark.frontmatter.news;
+  let allNews = queryResults.allMarkdownRemark.edges;
+  console.log(allNews)
   const settings = {
     dots: true,
     infinite: true,
@@ -73,7 +77,7 @@ const News = () => {
   };
   return (
     <div className="news">
-      {/* Slide up menu that shows the menu */}
+            {/* Slide up menu that shows the menu */}
       {slideIsOpen ? (
         <SlideUp
           slideDown={closeSlide}
@@ -89,11 +93,11 @@ const News = () => {
       {/* Carousel Slider */}
       <Slider {...settings}>
         {allNews.map((news) => (
-          <div class="news-slide" onClick={() => showNewsContent(news.body)}>
+          <div class="news-slide" onClick={() => showNewsContent(news.node.html)}>
             {/* <button onClick={showSlide}>OPEN</button> */}
-            <img src={news.image.childImageSharp.fluid.src} alt="News Image" />
+            <img src={news.node.frontmatter.image.childImageSharp.fluid.src} alt="News Image" />
             <div class="news-text">
-              <h2>{news.title}</h2>
+              <h2>{news.node.frontmatter.title}</h2>
               {/* <p>{news.description}</p> */}
             </div>
           </div>

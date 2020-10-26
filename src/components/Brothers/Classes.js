@@ -9,7 +9,9 @@ const Classes = () => {
   const myRef = React.createRef();
 
   function showClass(classObject) {
-    let markup = "<h4>" + classObject.class_name + "</h4>";
+    
+    let markup = "<img src='/img/mini-rotunda.png' />";
+    markup += "<h4><span>" + classObject.class_name + "</span></h4>";
     markup += "<ul>";
     for (let index in classObject.member) {
       markup += "<li>" + classObject.member[index].member + "</li>";

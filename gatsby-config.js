@@ -35,6 +35,13 @@ module.exports = {
         name: "images",
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/News`,
+        name: "News",
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
