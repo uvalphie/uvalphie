@@ -10,6 +10,40 @@ const Navbar = () => {
   const [isMenuToggled, toggleMenu] = React.useState(false);
   const [currentButtonName, changeCurrentBtn] = React.useState("Home");
 
+  const url = window.location.href;
+
+  let currentPageNav = null;
+
+  if (url.includes("about")) {
+    currentPageNav = (
+      <div className="current-page-btn">
+        <img src={AboutIcon} />
+        <span>About</span>
+      </div>
+    );
+  } else if (url.includes("philantrophy")) {
+    currentPageNav = (
+      <div className="current-page-btn">
+        <img src={PhilantrophyIcon} />
+        <span>Philantrophy</span>
+      </div>
+    );
+  } else if (url.includes("brothers")) {
+    currentPageNav = (
+      <div className="current-page-btn">
+        <img src={BrothersIcon} />
+        <span>Brothers</span>
+      </div>
+    );
+  } else {
+    currentPageNav = (
+      <div className="current-page-btn">
+        <img src={HomeIcon} />
+        <span>Home</span>
+      </div>
+    );
+  }
+
   return (
     <nav>
       <div className="mobile-navbar">
@@ -36,7 +70,7 @@ const Navbar = () => {
           // Button when not-clicked
           <div className="hamburger-menu">
             <a role="button" onClick={() => toggleMenu(true)}>
-              {currentButtonName}
+              {currentPageNav}
             </a>
             <a id="filler">Philantrophy</a>
           </div>
