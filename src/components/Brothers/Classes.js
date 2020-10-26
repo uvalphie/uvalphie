@@ -98,7 +98,7 @@ const Classes = () => {
   return (
     <section className="classes" id="subsection">
       {classInfo ? (
-        <SlideUp slideDown={closeSlide} information={classInfo}>
+        <SlideUp slideDown={closeSlide} content={classInfo} contentType="class">
           {classInfo}{" "}
         </SlideUp>
       ) : (

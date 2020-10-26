@@ -10,17 +10,17 @@ const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
   console.log(queryResults.markdownRemark.frontmatter);
   try {
     leftImage =
-      queryResults.markdownRemark.frontmatter.left_image.childImageSharp.fluid;
+      queryResults.markdownRemark.frontmatter.leftImage.childImageSharp.fluid;
   } catch (err) {}
 
   try {
     rightImage =
-      queryResults.markdownRemark.frontmatter.right_image.childImageSharp.fluid;
+      queryResults.markdownRemark.frontmatter.rightImage.childImageSharp.fluid;
   } catch (err) {}
 
   try {
     centerImage =
-      queryResults.markdownRemark.frontmatter.center_image.childImageSharp
+      queryResults.markdownRemark.frontmatter.centerImage.childImageSharp
         .fluid;
   } catch (err) {}
 

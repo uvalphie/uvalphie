@@ -10,9 +10,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 const News = () => {
   const [slideIsOpen, openSlide] = React.useState(false);
+  const [currentNewsContent, changeNewsContent] = React.useState(null);
 
-  function showSlide() {
+  function showNewsContent(newsContent) {
     openSlide(true);
+    console.log(newsContent)
+    changeNewsContent(newsContent);
   }
 
   function closeSlide() {
@@ -26,7 +29,7 @@ const News = () => {
           frontmatter {
             news {
               title
-              description
+              body
               image {
                 childImageSharp {
                   fluid {
@@ -70,13 +73,23 @@ const News = () => {
   };
   return (
     <div className="news">
-      {slideIsOpen ? <SlideUp slideDown={closeSlide} /> : <div></div>}
+      {/* Slide up menu that shows the menu */}
+      {slideIsOpen ? (
+        <SlideUp
+          slideDown={closeSlide}
+          content={currentNewsContent}
+          contentType="NEWS"
+        />
+      ) : (
+        <div></div>
+      )}
       <h1>News</h1>
       <p>See what’s going on in our chapter</p>
 
+      {/* Carousel Slider */}
       <Slider {...settings}>
         {allNews.map((news) => (
-          <div class="news-slide" onClick={showSlide}>
+          <div class="news-slide" onClick={() => showNewsContent(news.body)}>
             {/* <button onClick={showSlide}>OPEN</button> */}
             <img src={news.image.childImageSharp.fluid.src} alt="News Image" />
             <div class="news-text">

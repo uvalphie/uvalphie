@@ -14,21 +14,21 @@ const BrothersPage = () => {
         markdownRemark(fileAbsolutePath: { regex: "/brothers/topsection.md/" }) {
           frontmatter {
             title
-            center_image {
+            centerImage {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid_noBase64
                 }
               }
             }
-            right_image {
+            rightImage {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid_noBase64
                 }
               }
             }
-            left_image {
+            leftImage {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid_noBase64

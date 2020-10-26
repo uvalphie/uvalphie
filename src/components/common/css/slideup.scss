@@ -9,8 +9,15 @@
     height: 5vh;
   }
 
-  .content {
+  #news-content {
+    height: 99vh;
+  }
+
+  #class-content{
     height: 65vh;
+  }
+
+  .content {
     width: 100vw;
     background: $primary-color;
     border-top-left-radius: 25px;
@@ -43,4 +50,8 @@
       }
     }
   }
+}
+
+#news.slide-up {
+  background: black;
 }

@@ -12,21 +12,21 @@ const AboutPage = () => {
         markdownRemark(fileAbsolutePath: { regex: "/about/topsection.md/" }) {
           frontmatter {
             title
-            center_image {
+            centerImage {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid_noBase64
                 }
               }
             }
-            right_image {
+            rightImage {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid_noBase64
                 }
               }
             }
-            left_image {
+            leftImage {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid_noBase64
