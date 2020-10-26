@@ -36,7 +36,6 @@ const MidSection = () => {
     );
   }
   data.sort((a, b) => a.order - b.order);
-  console.log(data[0].image.publicURL);
 
   return (
     <div className="mid-section" id="philantrophy">

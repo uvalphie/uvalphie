@@ -35,7 +35,6 @@ const Gallery = () => {
   }
 
   function whatSlide() {
-    console.log(currentGallerySlide);
   }
 
   const queryResults = useStaticQuery(

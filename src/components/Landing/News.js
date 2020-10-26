@@ -14,7 +14,6 @@ const News = () => {
 
   function showNewsContent(newsContent) {
     openSlide(true);
-    console.log(newsContent);
     changeNewsContent(newsContent);
   }
 
@@ -47,7 +46,6 @@ const News = () => {
     `
   );
   let allNews = queryResults.allMarkdownRemark.edges;
-  console.log(allNews)
   const settings = {
     dots: true,
     infinite: true,

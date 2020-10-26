@@ -27,9 +27,6 @@ const SocialMedia = () => {
       }
     `
   );
-  console.log(
-    socialMediaQuery.markdownRemark.frontmatter.platform1.logo.publicURL
-  );
 
   return (
     <div className="social-media">

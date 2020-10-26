@@ -27,9 +27,6 @@ const Footer = () => {
       }
     `
   );
-  console.log(
-    socialMediaQuery.markdownRemark.frontmatter.platform1.logo.publicURL
-  );
 
   return (
     <footer>

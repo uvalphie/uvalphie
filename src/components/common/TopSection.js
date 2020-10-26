@@ -7,7 +7,6 @@ const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
     rightImage,
     centerImage = null;
 
-  console.log(queryResults.markdownRemark.frontmatter);
   try {
     leftImage =
       queryResults.markdownRemark.frontmatter.leftImage.childImageSharp.fluid;

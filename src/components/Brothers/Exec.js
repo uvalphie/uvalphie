@@ -26,7 +26,6 @@ const Exec = () => {
       }
     `
   );
-  // console.log(queryResults.markdownRemark.frontmatter.position);
   return (
     <section class="exec-board" id="subsection">
       <h2 className="center-align"><span>Executive Board</span></h2>

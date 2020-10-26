@@ -6,14 +6,6 @@ import News from "../components/Landing/News";
 import Gallery from "../components/Landing/Gallery";
 
 const IndexPage = () => {
-  // var docWidth = document.documentElement.offsetWidth;
-
-  // [].forEach.call(document.querySelectorAll("*"), function (el) {
-  //   if (el.offsetWidth > docWidth) {
-  //     console.log("FOUND THE ELEMENT")
-  //     console.log(el);
-  //   }
-  // });
   return (
     <Layout>
       <TopSection />

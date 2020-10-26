@@ -24,7 +24,6 @@ const Classes = () => {
     try {
       document.getElementById(currentSelectedClass).className = "class";
     } catch (err) {
-      // console.log(err);
     }
     // Style the new selected button
     document.getElementById(classObject.class_name).className =
@@ -48,12 +47,10 @@ const Classes = () => {
 
   function searchName(e) {
     let input = e.target.value;
-    console.log(input);
     if (input === "") {
       resetClassStyle();
     } else {
       for (let className in classDictionary) {
-        // console.log(classDictionary[className]);
         if (classDictionary[className].toLowerCase().includes(input)) {
           document.getElementById(className).style.border = "1px solid #26649d";
           document.getElementById(className).style.boxShadow =

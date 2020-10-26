@@ -26,7 +26,6 @@ const Chairs = () => {
       }
     `
   );
-    console.log(queryResults.markdownRemark.frontmatter.position);
   return (
     <section class="chairs" id="subsection">
       <h2 className="center-align"><span>Chair Positions</span></h2>

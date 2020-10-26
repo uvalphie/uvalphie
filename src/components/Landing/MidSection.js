@@ -39,7 +39,6 @@ const MidSection = () => {
     );
   }
   data.sort((a, b) => a.order - b.order);
-  console.log(data);
 
   return (
     <div className="mid-section" id="landing">
