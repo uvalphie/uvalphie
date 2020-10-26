@@ -122,8 +122,7 @@
   .mini-frame {
     border: 2px solid #b4f6ff;
     position: absolute;
-    z-index: 2;
-
+    z-index: 9;
     .mini-image {
       position: relative;
       overflow: hidden;
@@ -162,6 +161,7 @@
     animation: zoomInDown 1.9s !important;
     right: 13%;
     top: 18%;
+
 
     .mini-image {
       left: 5px !important;

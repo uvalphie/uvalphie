@@ -44,23 +44,23 @@ const MidSection = () => {
     <div className="mid-section" id="landing">
       <div>
         {data.map((sectionData) => (
-          <div>
+          <div key={sectionData.order}>
             {sectionData.order % 2 != 0 ? (
               <div className="card-left-align">
-                <div class="img-decorator">
+                <div className="img-decorator">
                   <Img
                     fluid={sectionData.image.childImageSharp.fluid}
                     alt="Section Image"
                   />
-                  <div class="decorator-box" id="box1" />
-                  <div class="decorator-box" id="box2" />
-                  <div class="decorator-circle" id="circle1" />
-                  <div class="decorator-circle" id="circle2" />
-                  <div class="decorator-circle" id="circle3" />
-                  <div class="decorator-circle" id="circle4" />
+                  <div className="decorator-box" id="box1" />
+                  <div className="decorator-box" id="box2" />
+                  <div className="decorator-circle" id="circle1" />
+                  <div className="decorator-circle" id="circle2" />
+                  <div className="decorator-circle" id="circle3" />
+                  <div className="decorator-circle" id="circle4" />
                 </div>
 
-                <div class="text">
+                <div className="text">
                   <h2>
                     <span>{sectionData.header}</span>
                   </h2>
@@ -69,18 +69,18 @@ const MidSection = () => {
               </div>
             ) : (
               <div className="card-right-align">
-                <div class="img-decorator">
+                <div className="img-decorator">
                   <Img
                     fluid={sectionData.image.childImageSharp.fluid}
                     alt="Section Image"
                   />
-                  <div class="decorator-box" id="box1" />
-                  <div class="decorator-box" id="box2" />
-                  <div class="decorator-box" id="box3" />
-                  <div class="decorator-box" id="box4" />
-                  <div class="decorator-box" id="box5" />
+                  <div className="decorator-box" id="box1" />
+                  <div className="decorator-box" id="box2" />
+                  <div className="decorator-box" id="box3" />
+                  <div className="decorator-box" id="box4" />
+                  <div className="decorator-box" id="box5" />
                 </div>
-                <div class="text">
+                <div className="text">
                   <h2>
                     <span>{sectionData.header}</span>
                   </h2>

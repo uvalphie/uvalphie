@@ -90,13 +90,11 @@ const News = () => {
 
       {/* Carousel Slider */}
       <Slider {...settings}>
-        {allNews.map((news) => (
-          <div class="news-slide" onClick={() => showNewsContent(news.node.html)}>
-            {/* <button onClick={showSlide}>OPEN</button> */}
+        {allNews.map((news, index) => (
+          <div className="news-slide" onClick={() => showNewsContent(news.node.html)} key={index}>
             <img src={news.node.frontmatter.image.childImageSharp.fluid.src} alt="News Image" />
-            <div class="news-text">
+            <div className="news-text">
               <h2>{news.node.frontmatter.title}</h2>
-              {/* <p>{news.description}</p> */}
             </div>
           </div>
         ))}

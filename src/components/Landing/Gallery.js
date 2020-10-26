@@ -90,7 +90,7 @@ const Gallery = () => {
 
       <Slider {...settings}>
         {slideImgIndices.map((imageIndex, index) => (
-          <div class="instagram-slide">
+          <div className="instagram-slide" key={index}>
             {imagesData.slice(imageIndex, imageIndex + 6).map((image, index) => (
               <div className="instagram-img">
                 <img

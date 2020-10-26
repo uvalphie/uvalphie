@@ -93,7 +93,7 @@ const TopSection = () => {
       </Modal>
       <div className="main-img">
         <svg
-          class="mobile-overlay"
+          className="mobile-overlay"
           width="585"
           height="79"
           viewBox="0 0 585 79"
@@ -101,14 +101,14 @@ const TopSection = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M0 0.568916V79H293H585V1.1804C505.182 49.8532 403.6 79 293 79C181.937 79 79.9685 49.609 0 0.568916Z"
             fill="#FEFEFE"
           />
         </svg>
         <svg
-          class="desktop-svg-overlay"
+          className="desktop-svg-overlay"
           id="bottom-left"
           width="250"
           height="250"
@@ -117,14 +117,14 @@ const TopSection = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M250 250C111.929 250 0 138.071 0 0V250H250Z"
             fill="#FEFEFE"
           />
         </svg>
         <svg
-          class="desktop-svg-overlay"
+          className="desktop-svg-overlay"
           id="top-left"
           width="250"
           height="250"
@@ -133,15 +133,15 @@ const TopSection = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M250 250C111.929 250 0 138.071 0 0V250H250Z"
             fill="#FEFEFE"
           />
         </svg>
 
         <div
-          class="mini-frame"
+          className="mini-frame"
           id="frame-1"
           onClick={() =>
             openModal(
@@ -163,7 +163,7 @@ const TopSection = () => {
 
         {/* MINI FRAME 2--------------------------------------- */}
         <div
-          class="mini-frame"
+          className="mini-frame"
           id="frame-2"
           onClick={() =>
             openModal(
@@ -182,9 +182,9 @@ const TopSection = () => {
           />
         </div>
 
-        <div class="landing-decorator" id="circle1" />a
-        <div class="landing-decorator" id="circle2" />
-        <div class="landing-decorator" id="circle3" />
+        <div className="landing-decorator" id="circle1" />a
+        <div className="landing-decorator" id="circle2" />
+        <div className="landing-decorator" id="circle3" />
 
         <Img
           className="big-image"
@@ -216,7 +216,7 @@ const TopSection = () => {
           />
         </div>
         <h1 id="mobile-header">{queryResults.markdownRemark.frontmatter.title}</h1>
-        <div class="text">
+        <div className="text">
           <Img
             className="profile-img-desktop"
             id="desktop"
