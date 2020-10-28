@@ -1,4 +1,5 @@
 import React from "react";
+
 import { graphql, useStaticQuery } from "gatsby";
 import "./css/position-carousel.scss";
 import Img from "gatsby-image";
@@ -9,6 +10,9 @@ import "slick-carousel/slick/slick-theme.css";
 const Exec = () => {
   const [currentPositionTitle, updatePositionTitle] = React.useState("");
   const [currentPositionHolder, updatePositionHolder] = React.useState("");
+
+  const [carousel, setCarousel] = React.useState();
+  const slider = React.useRef();
 
   function updatePosition(current) {
     console.log(current);
@@ -41,6 +45,14 @@ const Exec = () => {
     `
   );
 
+  function nextSlide() {
+    carousel.slickNext();
+  }
+
+  function previousSlide() {
+    carousel.slickPrev();
+  }
+
   let positionData = queryResults.markdownRemark.frontmatter.position;
 
   const settings = {
@@ -60,7 +72,11 @@ const Exec = () => {
       </h2>
 
       <div class="container">
-        <Slider {...settings}>
+        <Slider
+          asNavFor={carousel}
+          ref={(slider) => setCarousel(slider)}
+          {...settings}
+        >
           {positionData.map((position) => (
             <div class="person">
               <div class="mini-decorator" id="circle1"></div>
@@ -76,7 +92,7 @@ const Exec = () => {
       </div>
 
       <div className="carousel-bottom">
-        <button>L</button>
+        <button onClick={previousSlide}>L</button>
         {currentPositionHolder == "" ? (
           <div className="position-text">
             <h3>{positionData[0].position_title}</h3>
@@ -88,7 +104,7 @@ const Exec = () => {
             <p>{currentPositionHolder}</p>
           </div>
         )}
-        <button>R</button>
+        <button onClick={nextSlide}>R</button>
       </div>
     </section>
   );
