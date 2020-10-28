@@ -35,10 +35,10 @@ const Chairs = () => {
         <div class="mini-decorator" id="circle3"></div>
         <div class="image">
           <div class="person">
-            <img src="https://placekitten.com/200/286" />
+            {/* <img src="https://placekitten.com/200/286" /> */}
           </div>
           <div class="background">
-            <img src="https://placekitten.com/408/287" />
+            {/* <img src="https://placekitten.com/408/287" /> */}
           </div>
         </div>
       </div>

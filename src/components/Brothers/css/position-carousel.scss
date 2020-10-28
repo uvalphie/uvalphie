@@ -1,14 +1,24 @@
 @import "@/../static/_globalvariables.scss";
-.exec-board {
+.positions {
   margin-top: $global-margin-top;
   h3,
   p {
     text-align: center;
   }
 
-  .image-container {
+  .person {
     position: relative;
-    width: 100%;
+  }
+
+  .position-text {
+    padding: 1.5rem 0;
+  }
+
+  .carousel-bottom {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    justify-content: space-evenly;
   }
 
   #circle1.mini-decorator {
@@ -16,7 +26,7 @@
     width: 100px;
     border-radius: 50%;
     position: absolute;
-    z-index: 2;
+    z-index: -1;
     top: 10%;
     left: 0;
     border: 3px solid #cadaea;
@@ -27,7 +37,7 @@
     width: 70px;
     border-radius: 50%;
     position: absolute;
-    z-index: 2;
+    z-index: -1;
     top: 10%;
     right: 0;
     border: 2px solid #2476c2;
@@ -38,24 +48,30 @@
     width: 60px;
     border-radius: 50%;
     position: absolute;
-    z-index: 2;
+    z-index: -1;
     bottom: 10%;
     left: 5%;
     border: 5px solid #cadaea;
   }
 
-  .image {
+  .container {
     background: black;
     width: 85vw;
     height: 85vw;
+    max-width: 350px;
+    max-height: 350px;
     position: relative;
-    overflow: hidden;
     margin: auto;
-
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #155896 100%);
+    background: linear-gradient(180deg, #679ed1 0%, #082b4b 100%);
   }
 
-  .image::before {
+  .slick-list {
+    height: 85vw;
+    width: 85vw;
+    position: relative;
+  }
+
+  .slick-list::after {
     content: "";
     position: absolute;
     bottom: 0;

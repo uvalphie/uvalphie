@@ -18,9 +18,35 @@ footer {
     background: $darkest-blue;
     text-align: right;
     padding-top: 0.5rem;
-    img {
-      height: 40px;
-      margin-left: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+    }
+
+    a {
+      height: 45px;
+      width: 45px;
+      margin: auto;
+      margin-bottom: 0;
+
+      img {
+        height: 100%;
+        width: 100%;
+        margin-left: 5px;
+      }
+    }
+
+    a:first-child {
+      margin-right: 5px;
+    }
+
+    p {
+      text-align: left;
+      margin: auto;
+      margin-bottom: 0;
+      line-height: 1.2rem;
     }
   }
 }
