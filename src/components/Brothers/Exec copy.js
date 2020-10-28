@@ -1,22 +1,22 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import PositionCarousel from './PositionCarousel';
+import PositionCarousel from "./PositionCarousel";
 
-const Exec = () => {
+const Chairs = () => {
   const queryResults = useStaticQuery(
     graphql`
       query {
         markdownRemark(
-          fileAbsolutePath: { regex: "/brothers/exec-board.md/" }
+          fileAbsolutePath: { regex: "/brothers/chair-positions.md/" }
         ) {
           frontmatter {
             position {
-              position_holder
               position_title
+              position_holder
               image {
                 childImageSharp {
                   fluid {
-                    ...GatsbyImageSharpFluid_noBase64
+                    src
                   }
                 }
               }
@@ -30,10 +30,10 @@ const Exec = () => {
   let positionData = queryResults.markdownRemark.frontmatter.position;
 
   return (
-    <section class="exec" id="subsection">
+    <section class="chairs" id="subsection">
       <PositionCarousel data={positionData} />
     </section>
   );
 };
 
-export default Exec;
+export default Chairs;
