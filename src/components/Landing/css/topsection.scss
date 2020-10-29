@@ -3,6 +3,10 @@
 .landing-section {
   margin-bottom: 100px;
 
+  #desktop.social-icons {
+    display: none;
+  }
+
   .desktop-svg-overlay {
     display: none;
   }
@@ -187,6 +191,7 @@
     display: flex;
     justify-content: space-evenly;
     width: 50%;
+    max-width: 125px;
     margin: auto;
     margin-top: 5px;
 
@@ -196,7 +201,6 @@
     }
   }
 }
-
 
 // Media Queries
 @media screen and (min-width: $mobile-landscape) {
@@ -257,6 +261,11 @@
       width: 45%;
       padding-left: 10%;
 
+      .uvalphie-text {
+        height: 7rem;
+        margin-left: 0;
+      }
+
       .profile-img-mobile {
         display: none;
       }
@@ -277,22 +286,29 @@
         .profile-img-desktop {
           display: block;
           margin: 0;
-          height: 150px;
-          width: 150px;
+          height: 125px;
+          width: 125px;
         }
 
         p {
-          width: 45%;
           text-align: left;
           padding-left: 0.5rem;
+          font-size: 1.5rem;
         }
       }
 
       .social-media {
         margin: 0;
-        width: 150px;
         justify-content: space-evenly;
         margin-top: 0.5rem;
+      }
+
+      #desktop.social-icons {
+        display: block;
+      }
+
+      #mobile.social-icons {
+        display: none;
       }
     }
   }

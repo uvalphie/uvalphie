@@ -225,13 +225,21 @@ const TopSection = () => {
             }
             alt="TopSection"
           />
-          <p>
-            University of Virginia
-            <br />
-            Lambda Phi Epsilon
-          </p>
+          <div>
+            <p>
+              University of Virginia
+              <br />
+              Lambda Phi Epsilon
+            </p>
+            <div className="social-icons" id="desktop">
+              <SocialMedia />
+            </div>
+          </div>
         </div>
-        <SocialMedia />
+
+        <div className="social-icons" id="mobile">
+          <SocialMedia />
+        </div>
       </div>
     </div>
   );
