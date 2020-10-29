@@ -40,28 +40,61 @@ const MidSection = () => {
   return (
     <div className="mid-section" id="philantrophy">
       <div>
-        {data.map((sectionData) => (
+        {data.map((sectionData, index) => (
           <div>
-            <div className="flip-card" id="mobile" >
-              <div class="front-side" style={{ backgroundImage: "url(" + sectionData.image.publicURL + ")"}}>
-                <div class="overlay" />
-                <div class="container">
-                  <img src={sectionData.logo.publicURL} alt="Section Image" />
-                  <h2>
-                    <span>{sectionData.title}</span>
-                  </h2>
+            {index % 2 == 0 ? (
+              <div className="flip-card" id="left">
+                <div
+                  class="front-side"
+                  style={{
+                    backgroundImage: "url(" + sectionData.image.publicURL + ")",
+                  }}
+                >
+                  <div class="overlay" />
+                  <div class="container">
+                    <img src={sectionData.logo.publicURL} alt="Section Image" />
+                    <h2>
+                      <span>{sectionData.title}</span>
+                    </h2>
+                  </div>
                 </div>
-              </div>
 
-              <div className="back-side">
-                <div class="container">
-                  <h2>
-                    <span>{sectionData.title}</span>
-                  </h2>
-                  <p>{sectionData.description}</p>
+                <div className="back-side">
+                  <div class="container">
+                    <h2>
+                      <span>{sectionData.title}</span>
+                    </h2>
+                    <p>{sectionData.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              <div className="flip-card" id="right">
+                <div
+                  class="front-side"
+                  style={{
+                    backgroundImage: "url(" + sectionData.image.publicURL + ")",
+                  }}
+                >
+                  <div class="overlay" />
+                  <div class="container">
+                    <img src={sectionData.logo.publicURL} alt="Section Image" />
+                    <h2>
+                      <span>{sectionData.title}</span>
+                    </h2>
+                  </div>
+                </div>
+
+                <div className="back-side">
+                  <div class="container">
+                    <h2>
+                      <span>{sectionData.title}</span>
+                    </h2>
+                    <p>{sectionData.description}</p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         ))}
       </div>

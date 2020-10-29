@@ -37,27 +37,15 @@ const MidSection = () => {
       <div>
         {data.map((sectionData) => (
           <div>
-            {sectionData.order % 2 != 0 ? (
-              <div className="card-center-align" id="right-align">
-                <img src={sectionData.image.publicURL} alt="Section Image" />
-                <div className="text">
-                  <h2>
-                    <span>{sectionData.title}</span>
-                  </h2>
-                  <p>{sectionData.description}</p>
-                </div>
+            <div className="card-center-align">
+              <img src={sectionData.image.publicURL} alt="Section Image" />
+              <div className="text">
+                <h2>
+                  <span>{sectionData.title}</span>
+                </h2>
+                <p>{sectionData.description}</p>
               </div>
-            ) : (
-              <div className="card-center-align" id="left-align">
-                <img src={sectionData.image.publicURL} alt="Section Image" />
-                <div className="text">
-                  <h2>
-                    <span>{sectionData.title}</span>
-                  </h2>
-                  <p>{sectionData.description}</p>
-                </div>
-              </div>
-            )}
+            </div>
           </div>
         ))}
       </div>

@@ -19,8 +19,7 @@ const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
 
   try {
     centerImage =
-      queryResults.markdownRemark.frontmatter.centerImage.childImageSharp
-        .fluid;
+      queryResults.markdownRemark.frontmatter.centerImage.childImageSharp.fluid;
   } catch (err) {}
 
   return (
@@ -72,6 +71,9 @@ const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
             <div />
           )}
 
+          <h3>{queryResults.markdownRemark.frontmatter.title}</h3>
+        </div>
+        <div className="desktop-container">
           <h3>{queryResults.markdownRemark.frontmatter.title}</h3>
         </div>
       </div>

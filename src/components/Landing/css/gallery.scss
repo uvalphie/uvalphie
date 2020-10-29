@@ -94,7 +94,16 @@
     }
   }
 
+  .gallery .slick-dots {
+    bottom: 80px;
+  }
   .slick-list {
     padding-bottom: 0 !important;
+  }
+}
+
+@media screen and (min-width: $tablet-landscape) {
+  .gallery .slick-dots {
+    bottom: 120px;
   }
 }

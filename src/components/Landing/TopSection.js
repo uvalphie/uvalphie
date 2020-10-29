@@ -216,16 +216,25 @@ const TopSection = () => {
         </div>
         <img className="uvalphie-text" id="mobile" src={UvalphieText} />
         <div className="text">
-          <Img
-            className="profile-img-desktop"
-            id="desktop"
-            fluid={
-              queryResults.markdownRemark.frontmatter.image.childImageSharp
-                .fluid
+          <div
+            onClick={() =>
+              openModal(
+                queryResults.markdownRemark.frontmatter.image.childImageSharp
+                  .fluid
+              )
             }
-            alt="TopSection"
-          />
-          <div>
+          >
+            <Img
+              className="profile-img-desktop"
+              id="desktop"
+              fluid={
+                queryResults.markdownRemark.frontmatter.image.childImageSharp
+                  .fluid
+              }
+              alt="TopSection"
+            />
+          </div>
+          <div class="container">
             <p>
               University of Virginia
               <br />
