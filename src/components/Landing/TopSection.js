@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import Modal from "react-modal";
 import SocialMedia from "../SocialMedia/SocialMedia.js";
+import UvalphieText from "../../img/uvalphie.svg";
 import "./css/topsection.scss";
 
 const customStyles = {
@@ -139,7 +140,6 @@ const TopSection = () => {
             fill="#FEFEFE"
           />
         </svg>
-
         <div
           className="mini-frame"
           id="frame-1"
@@ -160,7 +160,6 @@ const TopSection = () => {
             alt="TopSection"
           />
         </div>
-
         {/* MINI FRAME 2--------------------------------------- */}
         <div
           className="mini-frame"
@@ -181,11 +180,9 @@ const TopSection = () => {
             alt="TopSection"
           />
         </div>
-
         <div className="landing-decorator" id="circle1" />a
         <div className="landing-decorator" id="circle2" />
         <div className="landing-decorator" id="circle3" />
-
         <Img
           className="big-image"
           fluid={
@@ -197,7 +194,9 @@ const TopSection = () => {
       </div>
 
       <div className="intro">
-        <h1 id="desktop-header">{queryResults.markdownRemark.frontmatter.title}</h1>
+        <h1 id="desktop-header">
+          {queryResults.markdownRemark.frontmatter.title}
+        </h1>
         <div
           onClick={() =>
             openModal(
@@ -215,7 +214,7 @@ const TopSection = () => {
             alt="TopSection"
           />
         </div>
-        <h1 id="mobile-header">{queryResults.markdownRemark.frontmatter.title}</h1>
+        <img className="uvalphie-text" id="mobile" src={UvalphieText} />
         <div className="text">
           <Img
             className="profile-img-desktop"
@@ -226,7 +225,11 @@ const TopSection = () => {
             }
             alt="TopSection"
           />
-          <p>{queryResults.markdownRemark.frontmatter.description}</p>
+          <p>
+            University of Virginia
+            <br />
+            Lambda Phi Epsilon
+          </p>
         </div>
         <SocialMedia />
       </div>

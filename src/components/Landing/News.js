@@ -2,7 +2,6 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Carousel } from "react-responsive-carousel";
 import SlideUp from "../common/SlideUp.js";
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import "./css/news.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -11,10 +10,12 @@ import "slick-carousel/slick/slick-theme.css";
 const News = () => {
   const [slideIsOpen, openSlide] = React.useState(false);
   const [currentNewsContent, changeNewsContent] = React.useState(null);
+  const [currentNewsTitle, changeNewsTitle] = React.useState(null);
 
-  function showNewsContent(newsContent) {
+  function showNewsContent(newsContent, newsTitle) {
     openSlide(true);
     changeNewsContent(newsContent);
+    changeNewsTitle(newsTitle);
   }
 
   function closeSlide() {
@@ -51,27 +52,27 @@ const News = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 1920,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-    ],
+    slidesToScroll: 1
+    // responsive: [
+    //   {
+    //     breakpoint: 768,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 3,
+    //       infinite: true,
+    //       dots: true,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 1920,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 3,
+    //       infinite: true,
+    //       dots: true,
+    //     },
+    //   },
+    // ],
   };
   return (
     <div className="news">
@@ -81,6 +82,7 @@ const News = () => {
           slideDown={closeSlide}
           content={currentNewsContent}
           contentType="NEWS"
+          title={currentNewsTitle}
         />
       ) : (
         <div></div>
@@ -91,7 +93,7 @@ const News = () => {
       {/* Carousel Slider */}
       <Slider {...settings}>
         {allNews.map((news, index) => (
-          <div className="news-slide" onClick={() => showNewsContent(news.node.html)} key={index}>
+          <div className="news-slide" onClick={() => showNewsContent(news.node.html, news.node.frontmatter.title)} key={index}>
             <img src={news.node.frontmatter.image.childImageSharp.fluid.src} alt="News Image" />
             <div className="news-text">
               <h2>{news.node.frontmatter.title}</h2>

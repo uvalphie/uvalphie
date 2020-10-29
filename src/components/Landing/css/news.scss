@@ -27,14 +27,11 @@
       font-size: 1rem;
     }
   }
-  // .slick-track{
-  //   width: 100% !important;
-  // }
   .slick-initialized {
     overflow: hidden;
   }
 
-  .slick-dots{
+  .slick-dots {
     bottom: 0 !important;
   }
 
@@ -56,7 +53,7 @@
       margin: auto;
     }
   }
-  .slick-dots li.slick-active button:before{
+  .slick-dots li.slick-active button:before {
     color: $darkest-blue;
   }
 }
@@ -66,7 +63,7 @@
     width: 100% !important;
   }
 
-  .news-gallery-container{
+  .news-gallery-container {
     margin-top: $global-margin-top;
   }
 }

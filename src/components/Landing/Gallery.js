@@ -79,12 +79,13 @@ const Gallery = () => {
         contentLabel="Example Modal"
       >
         <img
-          className="model-img"
+          className="modal-img"
           id="1"
           src={currentModalImage}
           alt="TopSection"
         />
-        <p className="model-caption">{currentImageCaption}</p>
+        <p className="modal-caption">{currentImageCaption}</p>
+        <button className="exit-modal-btn" onClick={closeModal}>&times;</button>
       </Modal>
       <h1>Gallery</h1>
 

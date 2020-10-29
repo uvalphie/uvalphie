@@ -1,13 +1,8 @@
 import React from "react";
 import "./css/slideup.scss";
 
-const SlideUp = ({
-  slideDown,
-  content,
-  contentType,
-  previousPage,
-  nextPage,
-}) => {
+const SlideUp = ({ slideDown, content, contentType, title }) => {
+  // Transform markup to html
   function createMarkup(markup) {
     return { __html: markup };
   }
@@ -45,11 +40,10 @@ const SlideUp = ({
           </svg>
         </button>
         {contentType === "NEWS" ? (
-          <div
-            className="content-markup"
-            id="news"
-            dangerouslySetInnerHTML={createMarkup(content)}
-          />
+          <div className="content-markup" id="news">
+            <h1 class="news-title">{title}</h1>
+            <div dangerouslySetInnerHTML={createMarkup(content)}></div>
+          </div>
         ) : (
           <div
             className="content-markup"

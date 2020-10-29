@@ -7,6 +7,7 @@
     display: none;
   }
 
+  // The top section images as a collective (is a main-img)
   .main-img {
     width: 100vw;
     height: 105vw;
@@ -15,6 +16,7 @@
     position: relative;
     object-fit: contain;
 
+    // The curve that gives the top section some shape
     svg {
       width: 100%;
       height: auto;
@@ -34,6 +36,7 @@
       animation: fadeIn 2s;
     }
 
+    // The biggest image of the main-img
     .big-image {
       img {
         object-position: bottom !important;
@@ -45,6 +48,7 @@
       z-index: 1;
     }
 
+    // Decoration circles
     #circle1 {
       width: 40vw;
       height: 40vw;
@@ -85,6 +89,7 @@
     }
   }
 
+  // The 'profile picture' of our Chapter along with supporting text
   .intro {
     width: 60%;
     margin: auto;
@@ -93,7 +98,6 @@
       overflow: hidden;
       width: 120px;
       height: 120px;
-      /* position: absolute; */
       margin: auto;
       border-radius: 50%;
       background-color: $primary-color;
@@ -116,6 +120,13 @@
       .profile-img-desktop {
         display: none;
       }
+    }
+
+    .uvalphie-text {
+      height: 2rem;
+      margin: auto;
+      margin-top: 0.5rem;
+      display: block;
     }
   }
 
@@ -162,7 +173,6 @@
     right: 13%;
     top: 18%;
 
-
     .mini-image {
       left: 5px !important;
       top: -10px !important;
@@ -187,6 +197,8 @@
   }
 }
 
+
+// Media Queries
 @media screen and (min-width: $mobile-landscape) {
   .landing-section {
     .main-img {
@@ -290,7 +302,7 @@
 }
 
 @media screen and (min-width: $tablet-landscape) {
-  .mobile-container{
+  .mobile-container {
     display: none;
   }
 }
