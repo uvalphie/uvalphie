@@ -14,6 +14,7 @@ const Navbar = () => {
 
   let currentPageNav = null;
 
+
   if (url.includes("about")) {
     currentPageNav = (
       <div className="current-page-btn">
