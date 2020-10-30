@@ -15,7 +15,7 @@ $desktop: 1280px;
 
 // Etc
 $global-margin-top: 75px;
-$global-top-section-border-radius: 0px;
+$global-top-section-border-radius: 25px;
 $max-width: 1200px;
 
 html,
@@ -71,6 +71,21 @@ p {
   padding: 0px !important;
   background-color: rgba(0, 0, 0, 0) !important;
   border: none !important;
+}
+
+// Modal Exit Button
+.exit-modal-btn {
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  margin: auto;
+  display: block;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  margin-top: 10px;
+  background: rgba(2, 6, 19, 0.9);
+  color: $primary-color;
 }
 
 // Card template stylings--------------------------

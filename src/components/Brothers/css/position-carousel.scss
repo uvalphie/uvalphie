@@ -1,6 +1,6 @@
 @import "@/../static/_globalvariables.scss";
 .positions {
-  margin-top: $global-margin-top;
+  margin: 50px 0;
   h3,
   p {
     text-align: center;
@@ -22,6 +22,7 @@
   .position-text {
     padding: 1.5rem 0;
     width: 75%;
+    height: 3rem;
   }
 
   .carousel-bottom {
@@ -30,13 +31,26 @@
     width: 80%;
     justify-content: space-between;
 
-    button{
+    button {
       height: 40px;
       width: 40px;
       border: none;
-      background: gray;
+      background: none;
+      border: 1px solid #999999;
       margin: auto;
       border-radius: 50%;
+      display: flex;
+
+      svg {
+        width: 70%;
+        height: auto;
+        margin: auto;
+      }
+
+      .right-arrow {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
     }
   }
 

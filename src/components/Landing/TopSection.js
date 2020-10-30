@@ -91,6 +91,10 @@ const TopSection = () => {
           fluid={currentModalImage}
           alt="TopSection"
         />
+
+        <button className="exit-modal-btn" onClick={closeModal}>
+          &times;
+        </button>
       </Modal>
       <div className="main-img">
         <svg

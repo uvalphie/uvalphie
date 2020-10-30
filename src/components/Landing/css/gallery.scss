@@ -69,19 +69,6 @@
   scrollbar-width: none; /* Firefox */
 }
 
-.exit-modal-btn {
-  border: none;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  margin: auto;
-  display: block;
-  height: 40px;
-  width: 40px;
-  padding: 0;
-  margin-top: 10px;
-  background: rgba(2, 6, 19, 0.9);
-  color: $primary-color;
-}
 
 @media screen and (min-width: $tablet) {
   .instagram-img {

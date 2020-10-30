@@ -16,7 +16,7 @@
     .news-title {
       font-size: 2rem;
       margin: 0;
-      padding: 0.5rem;
+      padding: 0.5rem 0;
       text-align: left;
     }
 
@@ -35,11 +35,17 @@
     .content-markup {
       height: 95%;
       overflow: scroll;
-      padding-bottom: 50px;
     }
 
-    p:last-child {
-      padding-bottom: 100px;
+    .close-news-btn {
+      margin-bottom: 50px;
+      margin: 50px auto;
+      margin-top: 25px;
+      display: block;
+      border: none;
+      background: none;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid #808080;
     }
   }
 

@@ -1,5 +1,8 @@
 @import "@/../static/_globalvariables.scss";
 #philantrophy {
+  .mid-section {
+    padding-bottom: 25px;
+  }
   .flip-card {
     width: 90vw;
     height: 70vw;
@@ -139,7 +142,7 @@
         display: flex;
         background: #f8f8f8;
 
-        .container{
+        .container {
           margin: auto;
           width: 80%;
         }
