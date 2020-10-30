@@ -34,8 +34,7 @@ const Gallery = () => {
     setIsOpen(false);
   }
 
-  function whatSlide() {
-  }
+  function whatSlide() {}
 
   const queryResults = useStaticQuery(
     graphql`
@@ -69,10 +68,11 @@ const Gallery = () => {
     afterChange: (current) => updateGallerySlide(current),
   };
 
-  const slideImgIndices = [0, 7, 14, 21, 28, 35, 42 ];
+  const slideImgIndices = [0, 7, 14, 21, 28, 35, 42];
   return (
     <div className="gallery">
       <Modal
+        ariaHideApp={false}
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
@@ -85,22 +85,26 @@ const Gallery = () => {
           alt="TopSection"
         />
         <p className="modal-caption">{currentImageCaption}</p>
-        <button className="exit-modal-btn" onClick={closeModal}>&times;</button>
+        <button className="exit-modal-btn" onClick={closeModal}>
+          &times;
+        </button>
       </Modal>
       <h1>Gallery</h1>
 
       <Slider {...settings}>
         {slideImgIndices.map((imageIndex, index) => (
           <div className="instagram-slide" key={index}>
-            {imagesData.slice(imageIndex, imageIndex + 6).map((image, index) => (
-              <div className="instagram-img">
-                <img
-                  src={image.preview}
-                  alt="Section Image"
-                  onClick={() => openModal(image.original, image.caption)}
-                />
-              </div>
-            ))}
+            {imagesData
+              .slice(imageIndex, imageIndex + 6)
+              .map((image, index) => (
+                <div className="instagram-img" key={index}>
+                  <img
+                    src={image.preview}
+                    alt="Section Image"
+                    onClick={() => openModal(image.original, image.caption)}
+                  />
+                </div>
+              ))}
           </div>
         ))}
       </Slider>

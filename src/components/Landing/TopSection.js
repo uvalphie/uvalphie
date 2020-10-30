@@ -80,6 +80,7 @@ const TopSection = () => {
   return (
     <div className="landing-section">
       <Modal
+        ariaHideApp={false}
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
@@ -238,7 +239,7 @@ const TopSection = () => {
               alt="TopSection"
             />
           </div>
-          <div class="container">
+          <div className="container">
             <p>
               University of Virginia
               <br />
