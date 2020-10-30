@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import Fade from "react-reveal/Fade";
 import "./css/midsection.scss";
 
 const MidSection = () => {
@@ -43,57 +43,69 @@ const MidSection = () => {
         {data.map((sectionData, index) => (
           <div>
             {index % 2 == 0 ? (
-              <div className="flip-card" id="left">
-                <div
-                  class="front-side"
-                  style={{
-                    backgroundImage: "url(" + sectionData.image.publicURL + ")",
-                  }}
-                >
-                  <div class="overlay" />
-                  <div class="container">
-                    <img src={sectionData.logo.publicURL} alt="Section Image" />
-                    <h2>
-                      <span>{sectionData.title}</span>
-                    </h2>
+              <Fade bottom>
+                <div className="flip-card" id="left">
+                  <div
+                    class="front-side"
+                    style={{
+                      backgroundImage:
+                        "url(" + sectionData.image.publicURL + ")",
+                    }}
+                  >
+                    <div class="overlay" />
+                    <div class="container">
+                      <img
+                        src={sectionData.logo.publicURL}
+                        alt="Section Image"
+                      />
+                      <h2>
+                        <span>{sectionData.title}</span>
+                      </h2>
+                    </div>
                   </div>
-                </div>
 
-                <div className="back-side">
-                  <div class="container">
-                    <h2>
-                      <span>{sectionData.title}</span>
-                    </h2>
-                    <p>{sectionData.description}</p>
+                  <div className="back-side">
+                    <div class="container">
+                      <h2>
+                        <span>{sectionData.title}</span>
+                      </h2>
+                      <p>{sectionData.description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Fade>
             ) : (
-              <div className="flip-card" id="right">
-                <div
-                  class="front-side"
-                  style={{
-                    backgroundImage: "url(" + sectionData.image.publicURL + ")",
-                  }}
-                >
-                  <div class="overlay" />
-                  <div class="container">
-                    <img src={sectionData.logo.publicURL} alt="Section Image" />
-                    <h2>
-                      <span>{sectionData.title}</span>
-                    </h2>
+              <Fade bottom>
+                <div className="flip-card" id="right">
+                  <div
+                    class="front-side"
+                    style={{
+                      backgroundImage:
+                        "url(" + sectionData.image.publicURL + ")",
+                    }}
+                  >
+                    <div class="overlay" />
+                    <div class="container">
+                      <img
+                        src={sectionData.logo.publicURL}
+                        alt="Section Image"
+                      />
+                      <h2>
+                        <span>{sectionData.title}</span>
+                      </h2>
+                    </div>
                   </div>
-                </div>
 
-                <div className="back-side">
-                  <div class="container">
-                    <h2>
-                      <span>{sectionData.title}</span>
-                    </h2>
-                    <p>{sectionData.description}</p>
+                  <div className="back-side">
+                    <div class="container">
+                      <h2>
+                        <span>{sectionData.title}</span>
+                      </h2>
+                      <p>{sectionData.description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Fade>
             )}
           </div>
         ))}

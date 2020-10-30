@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import "./css/midsection.scss";
+import Fade from "react-reveal/Fade";
 
 const MidSection = () => {
   const queryResults = useStaticQuery(
@@ -47,45 +48,49 @@ const MidSection = () => {
           <div key={sectionData.order}>
             {sectionData.order % 2 != 0 ? (
               <div className="card-left-align">
-                <div className="img-decorator">
-                  <Img
-                    fluid={sectionData.image.childImageSharp.fluid}
-                    alt="Section Image"
-                  />
-                  <div className="decorator-box" id="box1" />
-                  <div className="decorator-box" id="box2" />
-                  <div className="decorator-circle" id="circle1" />
-                  <div className="decorator-circle" id="circle2" />
-                  <div className="decorator-circle" id="circle3" />
-                  <div className="decorator-circle" id="circle4" />
-                </div>
+                <Fade left>
+                  <div className="img-decorator">
+                    <Img
+                      fluid={sectionData.image.childImageSharp.fluid}
+                      alt="Section Image"
+                    />
+                    <div className="decorator-box" id="box1" />
+                    <div className="decorator-box" id="box2" />
+                    <div className="decorator-circle" id="circle1" />
+                    <div className="decorator-circle" id="circle2" />
+                    <div className="decorator-circle" id="circle3" />
+                    <div className="decorator-circle" id="circle4" />
+                  </div>
 
-                <div className="text">
-                  <h2>
-                    <span>{sectionData.header}</span>
-                  </h2>
-                  <p>{sectionData.description}</p>
-                </div>
+                  <div className="text">
+                    <h2>
+                      <span>{sectionData.header}</span>
+                    </h2>
+                    <p>{sectionData.description}</p>
+                  </div>
+                </Fade>
               </div>
             ) : (
               <div className="card-right-align">
-                <div className="img-decorator">
-                  <Img
-                    fluid={sectionData.image.childImageSharp.fluid}
-                    alt="Section Image"
-                  />
-                  <div className="decorator-box" id="box1" />
-                  <div className="decorator-box" id="box2" />
-                  <div className="decorator-box" id="box3" />
-                  <div className="decorator-box" id="box4" />
-                  <div className="decorator-box" id="box5" />
-                </div>
-                <div className="text">
-                  <h2>
-                    <span>{sectionData.header}</span>
-                  </h2>
-                  <p>{sectionData.description}</p>
-                </div>
+                <Fade right>
+                  <div className="img-decorator">
+                    <Img
+                      fluid={sectionData.image.childImageSharp.fluid}
+                      alt="Section Image"
+                    />
+                    <div className="decorator-box" id="box1" />
+                    <div className="decorator-box" id="box2" />
+                    <div className="decorator-box" id="box3" />
+                    <div className="decorator-box" id="box4" />
+                    <div className="decorator-box" id="box5" />
+                  </div>
+                  <div className="text">
+                    <h2>
+                      <span>{sectionData.header}</span>
+                    </h2>
+                    <p>{sectionData.description}</p>
+                  </div>
+                </Fade>
               </div>
             )}
           </div>

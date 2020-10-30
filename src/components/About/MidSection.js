@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import Fade from "react-reveal/Fade";
 import "./css/midsection.scss";
 
 const MidSection = () => {
@@ -38,13 +38,15 @@ const MidSection = () => {
         {data.map((sectionData) => (
           <div>
             <div className="card-center-align">
-              <img src={sectionData.image.publicURL} alt="Section Image" />
-              <div className="text">
-                <h2>
-                  <span>{sectionData.title}</span>
-                </h2>
-                <p>{sectionData.description}</p>
-              </div>
+              <Fade bottom>
+                <img src={sectionData.image.publicURL} alt="Section Image" />
+                <div className="text">
+                  <h2>
+                    <span>{sectionData.title}</span>
+                  </h2>
+                  <p>{sectionData.description}</p>
+                </div>
+              </Fade>
             </div>
           </div>
         ))}
