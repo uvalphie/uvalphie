@@ -1,12 +1,13 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-import "./css/gallery.scss";
 import Modal from "react-modal";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./css/gallery.scss";
 
+// Modal Settings
 const customStyles = {
   content: {
     top: "50%",
@@ -25,6 +26,7 @@ const Gallery = () => {
   const [currentGallerySlide, updateGallerySlide] = React.useState(0);
   const [carousel, setCarousel] = React.useState();
 
+  // Modal Functions
   function openModal(image, caption) {
     updateImage(image);
     updateCaption(caption);
@@ -66,6 +68,7 @@ const Gallery = () => {
     imagesData.push(queryResults.allInstaNode.edges[parseInt(query)].node);
   }
 
+  // Carousel Settings
   const settings = {
     dots: true,
     infinite: true,
@@ -75,9 +78,32 @@ const Gallery = () => {
     afterChange: (current) => updateGallerySlide(current),
   };
 
+  // Indices for showing 6 instagram images at a time
   const slideImgIndices = [0, 7, 14, 21, 28, 35, 42];
+
   return (
     <div className="gallery">
+      <h1>Gallery</h1>
+      <Modal
+        ariaHideApp={false}
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <img
+          className="modal-img"
+          id="1"
+          src={currentModalImage}
+          alt="TopSection"
+        />
+        <p className="modal-caption">{currentImageCaption}</p>
+        <button className="exit-modal-btn" onClick={closeModal}>
+          &times;
+        </button>
+      </Modal>
+
+      {/* Previous and Next buttons for Carousel */}
       <button onClick={previousSlide} className="prev-carousel-btn">
         <svg
           className="left-arrow"
@@ -108,25 +134,6 @@ const Gallery = () => {
           />
         </svg>
       </button>
-      <Modal
-        ariaHideApp={false}
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <img
-          className="modal-img"
-          id="1"
-          src={currentModalImage}
-          alt="TopSection"
-        />
-        <p className="modal-caption">{currentImageCaption}</p>
-        <button className="exit-modal-btn" onClick={closeModal}>
-          &times;
-        </button>
-      </Modal>
-      <h1>Gallery</h1>
 
       <Slider
         asNavFor={carousel}

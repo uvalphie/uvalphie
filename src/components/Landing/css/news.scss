@@ -1,11 +1,11 @@
 @import "@/../static/_globalvariables.scss";
 .news {
-  margin-top: $global-margin-top;
   display: block;
   position: relative;
   background: #f8f8f8;
   max-width: $max-width;
   margin: auto;
+  margin-top: $global-margin-top;
 
   button {
     height: 40px;
@@ -101,19 +101,19 @@
 }
 
 @media screen and (min-width: $tablet) {
-  .slick-list {
-    width: 100% !important;
-  }
-
-  .news-gallery-container {
-    margin-top: $global-margin-top;
-  }
-
   .news {
     .gatsby-image-wrapper {
       img {
         height: 50% !important;
       }
+    }
+
+    .slick-list {
+      width: 100% !important;
+    }
+
+    .news-gallery-container {
+      margin-top: $global-margin-top;
     }
 
     .prev-carousel-btn,

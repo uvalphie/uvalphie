@@ -6,8 +6,8 @@
   max-width: $max-width;
   margin: auto;
   display: block;
-  margin-top: 25px;
-  padding-bottom: 50px;
+  margin-top: $global-margin-top;
+  padding-bottom: $global-margin-top;
 
   h1 {
     text-align: center;

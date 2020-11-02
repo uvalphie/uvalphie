@@ -1,12 +1,11 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { Carousel } from "react-responsive-carousel";
 import SlideUp from "../common/SlideUp.js";
 import Img from "gatsby-image";
-import "./css/news.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./css/news.scss";
 
 const News = () => {
   const [slideIsOpen, openSlide] = React.useState(false);
@@ -58,32 +57,14 @@ const News = () => {
     `
   );
   let allNews = queryResults.allMarkdownRemark.edges;
+
+  // Carousel Settings
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // responsive: [
-    //   {
-    //     breakpoint: 768,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 3,
-    //       infinite: true,
-    //       dots: true,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 1920,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 3,
-    //       infinite: true,
-    //       dots: true,
-    //     },
-    //   },
-    // ],
   };
   return (
     <div className="news">

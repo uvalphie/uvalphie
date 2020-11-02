@@ -56,6 +56,10 @@ p {
   margin: 0;
 }
 
+.mid-section {
+  max-width: $max-width;
+  margin: auto;
+}
 .news-gallery-container {
   background: #f8f8f8;
 }

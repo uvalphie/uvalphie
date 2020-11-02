@@ -11,7 +11,9 @@ const BrothersPage = () => {
   const queryResults = useStaticQuery(
     graphql`
       {
-        markdownRemark(fileAbsolutePath: { regex: "/brothers/topsection.md/" }) {
+        markdownRemark(
+          fileAbsolutePath: { regex: "/brothers/topsection.md/" }
+        ) {
           frontmatter {
             title
             centerImage {
@@ -44,9 +46,11 @@ const BrothersPage = () => {
     <Layout>
       <div id="brothers">
         <TopSection queryResults={queryResults} triangle="true" />
-        <Classes />
-        <Exec />
-        <Chairs />
+        <div className="mid-section">
+          <Classes />
+          <Exec />
+          <Chairs />
+        </div>
       </div>
     </Layout>
   );

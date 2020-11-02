@@ -1,11 +1,12 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import Modal from "react-modal";
+import { useStaticQuery, graphql } from "gatsby";
 import SocialMedia from "../SocialMedia/SocialMedia.js";
 import UvalphieText from "../../img/uvalphie.svg";
 import "./css/topsection.scss";
 
+// Custom style settings for Modal
 const customStyles = {
   content: {
     top: "50%",
@@ -21,6 +22,7 @@ const TopSection = () => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [currentModalImage, updateImage] = React.useState({});
 
+  // Modal Functions
   function openModal(image) {
     updateImage(image);
     setIsOpen(true);
@@ -30,6 +32,7 @@ const TopSection = () => {
     setIsOpen(false);
   }
 
+  // Static Querying
   const queryResults = useStaticQuery(
     graphql`
       query {
@@ -84,7 +87,6 @@ const TopSection = () => {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
-        contentLabel="Example Modal"
       >
         <Img
           className="mini-image"
@@ -98,6 +100,7 @@ const TopSection = () => {
         </button>
       </Modal>
       <div className="main-img">
+        {/* White overlays that gives the top-section curve */}
         <svg
           className="mobile-overlay"
           width="585"
@@ -145,6 +148,7 @@ const TopSection = () => {
             fill="#FEFEFE"
           />
         </svg>
+        {/* Mini image within the top section */}
         <div
           className="mini-frame"
           id="frame-1"
@@ -165,7 +169,7 @@ const TopSection = () => {
             alt="TopSection"
           />
         </div>
-        {/* MINI FRAME 2--------------------------------------- */}
+        {/* Mini image within the top section */}
         <div
           className="mini-frame"
           id="frame-2"
@@ -185,6 +189,7 @@ const TopSection = () => {
             alt="TopSection"
           />
         </div>
+        {/* Circles behind the main image in top-section */}
         <div className="landing-decorator" id="circle1" />a
         <div className="landing-decorator" id="circle2" />
         <div className="landing-decorator" id="circle3" />
@@ -200,9 +205,6 @@ const TopSection = () => {
 
       <div className="intro">
         <div className="container">
-          <h1 id="desktop-header">
-            {queryResults.markdownRemark.frontmatter.title}
-          </h1>
           <div
             onClick={() =>
               openModal(
@@ -220,6 +222,7 @@ const TopSection = () => {
               alt="TopSection"
             />
           </div>
+          {/* The 'uvalphie' text */}
           <img className="uvalphie-text" id="mobile" src={UvalphieText} />
           <div className="text">
             <div

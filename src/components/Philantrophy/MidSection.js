@@ -66,6 +66,11 @@ const MidSection = () => {
 
                   <div className="back-side">
                     <div class="container">
+                      <img
+                        src={sectionData.logo.publicURL}
+                        alt="Section Image"
+                        id="desktop"
+                      />
                       <h2>
                         <span>{sectionData.title}</span>
                       </h2>
@@ -98,6 +103,11 @@ const MidSection = () => {
 
                   <div className="back-side">
                     <div class="container">
+                      <img
+                        src={sectionData.logo.publicURL}
+                        alt="Section Image"
+                        id="desktop"
+                      />
                       <h2>
                         <span>{sectionData.title}</span>
                       </h2>
