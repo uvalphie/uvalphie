@@ -199,28 +199,10 @@ const TopSection = () => {
       </div>
 
       <div className="intro">
-        <h1 id="desktop-header">
-          {queryResults.markdownRemark.frontmatter.title}
-        </h1>
-        <div
-          onClick={() =>
-            openModal(
-              queryResults.markdownRemark.frontmatter.image.childImageSharp
-                .fluid
-            )
-          }
-        >
-          <Img
-            className="profile-img-mobile"
-            fluid={
-              queryResults.markdownRemark.frontmatter.image.childImageSharp
-                .fluid
-            }
-            alt="TopSection"
-          />
-        </div>
-        <img className="uvalphie-text" id="mobile" src={UvalphieText} />
-        <div className="text">
+        <div className="container">
+          <h1 id="desktop-header">
+            {queryResults.markdownRemark.frontmatter.title}
+          </h1>
           <div
             onClick={() =>
               openModal(
@@ -230,8 +212,7 @@ const TopSection = () => {
             }
           >
             <Img
-              className="profile-img-desktop"
-              id="desktop"
+              className="profile-img-mobile"
               fluid={
                 queryResults.markdownRemark.frontmatter.image.childImageSharp
                   .fluid
@@ -239,14 +220,35 @@ const TopSection = () => {
               alt="TopSection"
             />
           </div>
-          <div className="container">
-            <p>
-              University of Virginia
-              <br />
-              Lambda Phi Epsilon
-            </p>
-            <div className="social-icons" id="desktop">
-              <SocialMedia />
+          <img className="uvalphie-text" id="mobile" src={UvalphieText} />
+          <div className="text">
+            <div
+              onClick={() =>
+                openModal(
+                  queryResults.markdownRemark.frontmatter.image.childImageSharp
+                    .fluid
+                )
+              }
+            >
+              <Img
+                className="profile-img-desktop"
+                id="desktop"
+                fluid={
+                  queryResults.markdownRemark.frontmatter.image.childImageSharp
+                    .fluid
+                }
+                alt="TopSection"
+              />
+            </div>
+            <div className="container">
+              <p>
+                University of Virginia
+                <br />
+                Lambda Phi Epsilon
+              </p>
+              <div className="social-icons" id="desktop">
+                <SocialMedia />
+              </div>
             </div>
           </div>
         </div>

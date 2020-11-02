@@ -2,9 +2,51 @@
 .news {
   margin-top: $global-margin-top;
   display: block;
+  position: relative;
   background: #f8f8f8;
   max-width: $max-width;
   margin: auto;
+
+  button {
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    border: none;
+    background: none;
+    border: 1px solid #999999;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+
+    svg {
+      width: 70%;
+      height: auto;
+      margin: auto;
+    }
+
+    .right-arrow {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+  }
+
+  .gatsby-image-wrapper {
+    min-height: 255px;
+  }
+
+  .prev-carousel-btn {
+    left: -50px;
+    top: 0;
+    bottom: 0;
+    display: none;
+  }
+
+  .next-carousel-btn {
+    right: -50px;
+    top: 0;
+    bottom: 0;
+    display: none;
+  }
 
   h1 {
     text-align: center;
@@ -65,5 +107,18 @@
 
   .news-gallery-container {
     margin-top: $global-margin-top;
+  }
+
+  .news {
+    .gatsby-image-wrapper {
+      img {
+        height: 50% !important;
+      }
+    }
+
+    .prev-carousel-btn,
+    .next-carousel-btn {
+      display: block;
+    }
   }
 }

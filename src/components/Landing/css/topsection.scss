@@ -259,7 +259,6 @@
       flex-direction: column;
       text-align: left;
       width: 45%;
-      padding-left: 10%;
 
       .uvalphie-text {
         height: 7rem;
@@ -326,5 +325,11 @@
 @media screen and (min-width: $tablet-landscape) {
   .mobile-container {
     display: none;
+  }
+
+  .intro{
+    .container:first-child{
+      margin: auto;
+    }
   }
 }

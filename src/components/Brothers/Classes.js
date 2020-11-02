@@ -51,7 +51,7 @@ const Classes = () => {
       resetClassStyle();
     } else {
       for (let className in classDictionary) {
-        if (classDictionary[className].toLowerCase().includes(input)) {
+        if (classDictionary[className].toLowerCase().includes(input.toLowerCase())) {
           document.getElementById(className).style.border = "1px solid #26649d";
           document.getElementById(className).style.boxShadow =
             "0px 1px 3px 0px rgba(0,0,0,0.15)";

@@ -1,5 +1,6 @@
 @import "@/../static/_globalvariables.scss";
 .gallery {
+  position: relative;
   background: #f8f8f8;
   width: 100%;
   max-width: $max-width;
@@ -12,6 +13,43 @@
     text-align: center;
     margin: 0;
     padding-bottom: 0.5rem;
+  }
+
+  button {
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    border: none;
+    background: none;
+    border: 1px solid #999999;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+
+    svg {
+      width: 70%;
+      height: auto;
+      margin: auto;
+    }
+
+    .right-arrow {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+  }
+
+  .prev-carousel-btn {
+    left: -50px;
+    top: 0;
+    bottom: 0;
+    display: none;
+  }
+
+  .next-carousel-btn {
+    right: -50px;
+    top: 0;
+    bottom: 0;
+    display: none;
   }
 
   .instagram-container {
@@ -27,6 +65,7 @@
   }
 
   .instagram-img {
+    max-height: 350px;
     img {
       width: 47vw;
       height: 47vw;
@@ -69,7 +108,6 @@
   scrollbar-width: none; /* Firefox */
 }
 
-
 @media screen and (min-width: $tablet) {
   .instagram-img {
     width: 32%;
@@ -90,7 +128,20 @@
 }
 
 @media screen and (min-width: $tablet-landscape) {
+  .gallery {
+    padding-bottom: 150px;
+
+    .prev-carousel-btn,
+    .next-carousel-btn {
+      display: block;
+    }
+  }
+
   .gallery .slick-dots {
-    bottom: 120px;
+    bottom: -50px;
+  }
+
+  .gallery .slick-initialized {
+    overflow: visible !important;
   }
 }

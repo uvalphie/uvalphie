@@ -60,6 +60,11 @@ p {
   background: #f8f8f8;
 }
 
+.slick-arrow.slick-next,
+.slick-arrow.slick-prev {
+  display: none !important;
+}
+
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.4) !important;
@@ -283,6 +288,7 @@ p {
   }
 
   .card-center-align {
+    width: 100%;
     display: flex;
     text-align: left;
     margin-bottom: 100px;
@@ -290,6 +296,45 @@ p {
     .text {
       margin: auto;
       padding-left: 3rem;
+    }
+
+    img {
+      max-height: 300px;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    span::after {
+      border: none;
+    }
+
+    .text {
+      position: relative;
+    }
+
+    .text::before {
+      width: 5px;
+      height: 200%;
+      left: 1rem;
+      top: -50%;
+      content: "";
+      position: absolute;
+      background: #ebebeb;
+    }
+  }
+
+  .card-center-align:hover {
+    .text::before {
+      width: 5px;
+      height: 200%;
+      left: 1rem;
+      top: -50%;
+      content: "";
+      position: absolute;
+      background: $cyan;
+      animation: fadeIn 1s;
     }
   }
 
