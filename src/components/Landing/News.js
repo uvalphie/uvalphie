@@ -7,6 +7,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./css/news.scss";
 
+// Carousel Settings
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
+
 const News = () => {
   const [slideIsOpen, openSlide] = React.useState(false);
   const [currentNewsContent, changeNewsContent] = React.useState(null);
@@ -58,17 +67,12 @@ const News = () => {
   );
   let allNews = queryResults.allMarkdownRemark.edges;
 
-  // Carousel Settings
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   return (
     <div className="news">
-      <button onClick={previousSlide} className="prev-carousel-btn">
+      <div>
+
+      </div>
+      <button onClick={previousSlide} className="prev-carousel-btn" id="carousel-btn">
         <svg
           className="left-arrow"
           width="24"
@@ -83,7 +87,7 @@ const News = () => {
           />
         </svg>
       </button>
-      <button onClick={nextSlide} className="next-carousel-btn">
+      <button onClick={nextSlide} className="next-carousel-btn" id="carousel-btn">
         <svg
           className="right-arrow"
           width="24"

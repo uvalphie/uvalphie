@@ -41,7 +41,7 @@ const SlideUp = ({ slideDown, content, contentType, title }) => {
         </button>
         {contentType === "NEWS" ? (
           <div className="content-markup" id="news">
-            <h1 class="news-title">{title}</h1>
+            <h1 className="news-title">{title}</h1>
             <div dangerouslySetInnerHTML={createMarkup(content)}></div>
             <button className="close-news-btn" onClick={slideDown}>Exit News</button>
           </div>

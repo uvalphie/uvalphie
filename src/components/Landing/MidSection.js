@@ -1,8 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-import "./css/midsection.scss";
 import Fade from "react-reveal/Fade";
+import "./css/midsection.scss";
 
 const MidSection = () => {
   const queryResults = useStaticQuery(
@@ -48,6 +48,7 @@ const MidSection = () => {
           <div key={sectionData.order}>
             {sectionData.order % 2 != 0 ? (
               <div className="card-left-align">
+                {/* Cards that are Left Aligned */}
                 <Fade left>
                   <div className="img-decorator">
                     <Img
@@ -71,6 +72,7 @@ const MidSection = () => {
                 </Fade>
               </div>
             ) : (
+              // Cards that are right aligned
               <div className="card-right-align">
                 <Fade right>
                   <div className="img-decorator">

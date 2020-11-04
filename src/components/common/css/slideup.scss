@@ -49,10 +49,6 @@
     }
   }
 
-  #news.slide-up {
-    background: black;
-  }
-
   // Styling for Class Content
   #class-content {
     height: 65vh;
@@ -89,6 +85,7 @@
     }
   }
 
+  // Styling for both News and Classes
   .content {
     box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.15);
     width: 100vw;
@@ -98,15 +95,15 @@
 
     .close-btn {
       width: 100%;
-      border-top-left-radius: 25px;
-      border-top-right-radius: 25px;
+      border-radius: 25px 25px 0 0;
       padding: 1rem 0;
       border: none;
       background: $darkest-blue;
-    }
 
-    svg {
-      margin: auto;
+      svg {
+        margin: auto;
+        height: 100%;
+      }
     }
 
     .content-markup {

@@ -9,7 +9,6 @@ const Classes = () => {
   const myRef = React.createRef();
 
   function showClass(classObject) {
-    
     let markup = "<img src='/img/mini-rotunda.png' />";
     markup += "<h4><span>" + classObject.class_name + "</span></h4>";
     markup += "<ul>";
@@ -23,8 +22,7 @@ const Classes = () => {
     // Revert previous selected class stylings
     try {
       document.getElementById(currentSelectedClass).className = "class";
-    } catch (err) {
-    }
+    } catch (err) {}
     // Style the new selected button
     document.getElementById(classObject.class_name).className =
       "class selected";
@@ -51,7 +49,9 @@ const Classes = () => {
       resetClassStyle();
     } else {
       for (let className in classDictionary) {
-        if (classDictionary[className].toLowerCase().includes(input.toLowerCase())) {
+        if (
+          classDictionary[className].toLowerCase().includes(input.toLowerCase())
+        ) {
           document.getElementById(className).style.border = "1px solid #26649d";
           document.getElementById(className).style.boxShadow =
             "0px 1px 3px 0px rgba(0,0,0,0.15)";
@@ -95,35 +95,43 @@ const Classes = () => {
   }
 
   return (
-    <section className="classes" id="subsection">
-      {classInfo ? (
-        <SlideUp slideDown={closeSlide} content={classInfo} contentType="class">
-          {classInfo}{" "}
-        </SlideUp>
-      ) : (
-        <div></div>
-      )}
-      <h2 className="center-align"><span>Classes</span></h2>
-
-      <input
-        className="name-search"
-        onChange={searchName}
-        placeholder="Find a brother"
-      />
-      <div className="classes-list">
-        {classes.map((classObject, index) => (
-          <button
-            className="class"
-            id={classObject.class_name}
-            ref={myRef}
-            onClick={() => showClass(classObject)}
-            key={index}
+    <div>
+      <section className="classes" id="subsection">
+        {classInfo ? (
+          <SlideUp
+            slideDown={closeSlide}
+            content={classInfo}
+            contentType="class"
           >
-            {classObject.class_name}
-          </button>
-        ))}
-      </div>
-    </section>
+            {classInfo}{" "}
+          </SlideUp>
+        ) : (
+          <div></div>
+        )}
+        <h2 className="center-align">
+          <span>Classes</span>
+        </h2>
+
+        <input
+          className="name-search"
+          onChange={searchName}
+          placeholder="Find a brother"
+        />
+        <div className="classes-list" id="mobile">
+          {classes.map((classObject, index) => (
+            <button
+              className="class"
+              id={classObject.class_name}
+              ref={myRef}
+              onClick={() => showClass(classObject)}
+              key={index}
+            >
+              {classObject.class_name}
+            </button>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 

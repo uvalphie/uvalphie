@@ -3,13 +3,14 @@
 #landing.mid-section {
   margin: auto;
   position: relative;
-  // Different margin-top than global-margin-top to give a little more breathing space
+  // Different margin-top than global-margin-top to give a little more breathing space between top section and mid section
   margin-top: 100px;
 
   .img-decorator {
     position: relative;
     margin-bottom: 0.5rem;
 
+    // Decorators for the images
     #box1.decorator-box {
       position: absolute;
       bottom: 0;
@@ -62,10 +63,6 @@
       z-index: -2;
     }
 
-    img {
-      z-index: 3;
-    }
-
     #circle1.decorator-circle {
       position: absolute;
       content: "";
@@ -78,6 +75,7 @@
       left: 0;
       border-radius: 50%;
     }
+
     #circle2.decorator-circle {
       position: absolute;
       width: 70px;
@@ -112,6 +110,10 @@
       right: 20%;
       border-radius: 50%;
     }
+
+    img {
+      z-index: 3;
+    }
   }
 }
 
@@ -122,15 +124,17 @@
       padding: 0rem 3rem;
     }
   }
+}
 
+@media screen and (min-width: 1600px) {
   // Columns that appear to each side
   #landing.mid-section::before {
     content: "";
     position: absolute;
     height: 100%;
-    width: 150px;
+    width: 100px;
     background: $dark-blue;
-    left: -200px;
+    left: -150px;
     top: 0;
     border-radius: 25px;
   }
@@ -139,12 +143,25 @@
     content: "";
     position: absolute;
     height: 100%;
-    width: 150px;
-    right: -200px;
+    width: 100px;
+    right: -150px;
     top: 0;
     background: $dark-blue;
     background-attachment: fixed;
     background-size: contain;
     border-radius: 25px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  // Columns that appear to each side
+  #landing.mid-section::before {
+    width: 150px;
+    left: -200px;
+  }
+
+  #landing.mid-section::after {
+    width: 150px;
+    right: -200px;
   }
 }

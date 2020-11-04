@@ -45,3 +45,13 @@
     font-size: 1rem;
   }
 }
+
+@media screen and (min-width: $tablet-landscape) {
+  .classes {
+    width: 40%;
+  }
+
+  .slide-up{
+    display: none;
+  }
+}

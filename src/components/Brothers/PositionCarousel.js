@@ -37,11 +37,21 @@ const PositionCarousel = (data) => {
     afterChange: (current) => updatePosition(current),
   };
 
+  console.log(data);
+
   return (
     <section class="positions" id="subsection">
       <h2 className="center-align">
         <span>Executive Board</span>
       </h2>
+
+      <div className="position-selectors">
+        {allPositions.map((position,index) => (
+          <div>
+            {index}
+          </div>
+        ))}
+      </div>
 
       <div class="container">
         <Slider

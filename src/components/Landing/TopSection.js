@@ -161,7 +161,6 @@ const TopSection = () => {
         >
           <Img
             className="mini-image"
-            id="1"
             fluid={
               queryResults.markdownRemark.frontmatter.mainimage.mini_image_1
                 .childImageSharp.fluid
@@ -205,6 +204,7 @@ const TopSection = () => {
 
       <div className="intro">
         <div className="container">
+          {/* Profile image of the chapter */}
           <div
             onClick={() =>
               openModal(

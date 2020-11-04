@@ -138,6 +138,7 @@
     }
   }
 
+  // Mini images that pop up
   #frame-1 {
     height: 12.5vw;
     width: 12.5vw;
@@ -205,7 +206,7 @@
 @media screen and (min-width: $mobile-landscape) {
   .landing-section {
     .main-img {
-      height: 546px;
+      height: 545px;
 
       img {
         object-fit: contain !important;
@@ -222,6 +223,7 @@
       display: block;
     }
 
+    // SVGs overlays for giving the curves of the main image
     #bottom-left {
       position: absolute;
       width: 200px;
@@ -270,12 +272,6 @@
 
       #desktop-header {
         text-align: left;
-      }
-
-      h1 {
-        text-align: left;
-        font-size: 6rem;
-        font-weight: bold;
       }
 
       .text {
