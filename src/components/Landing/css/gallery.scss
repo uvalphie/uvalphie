@@ -1,4 +1,5 @@
 @import "@/../static/_globalvariables.scss";
+
 .gallery {
   position: relative;
   background: #f8f8f8;
@@ -7,7 +8,7 @@
   margin: auto;
   display: block;
   margin-top: $global-margin-top/3;
-  padding-bottom: $global-margin-top;
+  padding-bottom: $global-margin-top/3;
 
   h1 {
     text-align: center;
@@ -61,7 +62,7 @@
   }
 
   .slick-initialized {
-    overflow: hidden;
+    overflow: visible !important;
   }
 
   .instagram-img {
@@ -110,8 +111,8 @@
 
 @media screen and (min-width: $tablet) {
   .instagram-img {
-    width: 32%;
-    margin-top: 10px;
+    width: 33%;
+    margin-top: 5px;
     img {
       width: 100% !important;
       height: 100% !important;
@@ -130,18 +131,29 @@
 @media screen and (min-width: $tablet-landscape) {
   .gallery {
     padding-bottom: 150px;
+    margin-top: $global-margin-top;
 
     .prev-carousel-btn,
     .next-carousel-btn {
       display: block;
     }
+    .slick-list {
+      height: 700px;
+      .slick-track {
+        height: 700px;
+      }
+
+      .instagram-slide{
+        height: 700px;
+      }
+
+      .instagram-img {
+        height: 49% !important;
+      }
+    }
   }
 
   .gallery .slick-dots {
     bottom: -50px;
-  }
-
-  .gallery .slick-initialized {
-    overflow: visible !important;
   }
 }

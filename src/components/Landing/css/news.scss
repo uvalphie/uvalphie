@@ -4,6 +4,7 @@
   position: relative;
   background: #f8f8f8;
   max-width: $max-width;
+  width: 95%;
   margin: auto;
   margin-top: $global-margin-top;
 
@@ -31,7 +32,7 @@
   }
 
   .gatsby-image-wrapper {
-    min-height: 255px;
+    height: 250px;
   }
 
   .prev-carousel-btn {
@@ -63,24 +64,41 @@
     display: none !important;
   }
 
+  .news-slide {
+    position: relative;
+  }
+
   .news-text {
-    margin: 0;
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50px;
     h2 {
+      text-align: center;
+      background: #000;
       font-size: 1rem;
+      background: $darkest-blue;
+      padding: 0.5rem;
+      background: rgba(13, 31, 77, 0.8);
+      // background: linear-gradient(to top, #0D1F4D, transparent);
+      color: $primary-color;
     }
   }
+
   .slick-initialized {
-    overflow: hidden;
+    overflow: visible !important;
   }
 
   .slick-dots {
-    bottom: 15px !important;
+    position: relative !important;
+    bottom: -5px;
   }
 
   .slick-list {
-    height: 320px;
-    width: 95%;
-    margin: auto;
+    height: 250px;
 
     img {
       width: 100%;
@@ -88,41 +106,31 @@
       object-fit: cover;
     }
 
-    h2 {
-      text-align: center;
-      padding-top: 0.5rem;
-      width: 80%;
-      margin: auto;
-    }
+    // h2 {
+    //   text-align: center;
+    //   padding-top: 0.5rem;
+    //   width: 80%;
+    //   margin: auto;
+    // }
   }
   .slick-dots li.slick-active button:before {
     color: $darkest-blue;
   }
 }
 
-@media screen and (min-width: $tablet) {
+@media screen and (min-width: $tablet-landscape) {
   .news {
-
-    #carousel-btn{
-      display: block;
-    }
-
-    .gatsby-image-wrapper {
-      img {
-        height: 50% !important;
-      }
-    }
-
-    .slick-list {
-      width: 100% !important;
+    .gatsby-image-wrapper,
+    .slick-list,
+    .slick-track {
+      height: 350px;
     }
 
     .news-gallery-container {
       margin-top: $global-margin-top;
     }
 
-    .prev-carousel-btn,
-    .next-carousel-btn {
+    #carousel-btn {
       display: block;
     }
   }

@@ -69,10 +69,11 @@ const News = () => {
 
   return (
     <div className="news">
-      <div>
-
-      </div>
-      <button onClick={previousSlide} className="prev-carousel-btn" id="carousel-btn">
+      <button
+        onClick={previousSlide}
+        className="prev-carousel-btn"
+        id="carousel-btn"
+      >
         <svg
           className="left-arrow"
           width="24"
@@ -87,7 +88,11 @@ const News = () => {
           />
         </svg>
       </button>
-      <button onClick={nextSlide} className="next-carousel-btn" id="carousel-btn">
+      <button
+        onClick={nextSlide}
+        className="next-carousel-btn"
+        id="carousel-btn"
+      >
         <svg
           className="right-arrow"
           width="24"
