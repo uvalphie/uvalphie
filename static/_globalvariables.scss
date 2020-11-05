@@ -13,11 +13,12 @@ $tablet: 768px;
 $tablet-landscape: 1024px;
 $desktop: 1280px;
 
-// Etc
+// Misc.
 $global-margin-top: 75px;
 $global-top-section-border-radius: 50px;
 $max-width: 1200px;
 
+// Overall
 html,
 body {
   margin: 0;
@@ -56,19 +57,24 @@ p {
   margin: 0;
 }
 
+// Common Mid Section Stylings
 .mid-section {
   max-width: $max-width;
   margin: auto;
 }
+
+// Common between two Components
 .news-gallery-container {
   background: #f8f8f8;
 }
 
+// Carousel Stylings
 .slick-arrow.slick-next,
 .slick-arrow.slick-prev {
   display: none !important;
 }
 
+// Modal Stylings
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.4) !important;
@@ -82,7 +88,6 @@ p {
   border: none !important;
 }
 
-// Modal Exit Button
 .exit-modal-btn {
   border: none;
   border-radius: 50%;
@@ -97,7 +102,7 @@ p {
   color: $primary-color;
 }
 
-// Card template stylings--------------------------
+// Card template stylings
 .card-left-align,
 .card-right-align,
 .card-center-align {
@@ -145,6 +150,7 @@ p {
 // Center card
 .card-center-align {
   text-align: center;
+  // Override the width
   width: 70%;
 
   img {
@@ -308,6 +314,9 @@ p {
 
     h2 {
       font-size: 3rem;
+    }
+    p {
+      padding-top: 0;
     }
 
     span::after {

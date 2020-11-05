@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Fade from "react-reveal/Fade";
+import Img from "gatsby-image";
 import "./css/midsection.scss";
 
 const MidSection = () => {
@@ -16,7 +17,11 @@ const MidSection = () => {
               order
               title
               image {
-                publicURL
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_noBase64
+                  }
+                }
               }
               logo {
                 publicURL
@@ -45,15 +50,16 @@ const MidSection = () => {
             {index % 2 == 0 ? (
               <Fade bottom>
                 <div className="flip-card" id="left">
-                  <div
-                    class="front-side"
-                    style={{
-                      backgroundImage:
-                        "url(" + sectionData.image.publicURL + ")",
-                    }}
-                  >
-                    <div class="overlay" />
-                    <div class="container">
+                  <div className="front-side">
+                    <div class="cover-img">
+                      <Img
+                        fluid={sectionData.image.childImageSharp.fluid}
+                        alt="News Image"
+                      />
+
+                      <div className="overlay" />
+                    </div>
+                    <div className="container">
                       <img
                         src={sectionData.logo.publicURL}
                         alt="Section Image"
@@ -65,8 +71,9 @@ const MidSection = () => {
                   </div>
 
                   <div className="back-side">
-                    <div class="container">
+                    <div className="container">
                       <img
+                        className="logo"
                         src={sectionData.logo.publicURL}
                         alt="Section Image"
                         id="desktop"
@@ -82,15 +89,16 @@ const MidSection = () => {
             ) : (
               <Fade bottom>
                 <div className="flip-card" id="right">
-                  <div
-                    class="front-side"
-                    style={{
-                      backgroundImage:
-                        "url(" + sectionData.image.publicURL + ")",
-                    }}
-                  >
-                    <div class="overlay" />
-                    <div class="container">
+                  <div className="front-side">
+                    <div class="cover-img">
+                      <Img
+                        fluid={sectionData.image.childImageSharp.fluid}
+                        alt="News Image"
+                      />
+
+                      <div className="overlay" />
+                    </div>
+                    <div className="container">
                       <img
                         src={sectionData.logo.publicURL}
                         alt="Section Image"
@@ -102,8 +110,9 @@ const MidSection = () => {
                   </div>
 
                   <div className="back-side">
-                    <div class="container">
+                    <div className="container">
                       <img
+                        className="logo"
                         src={sectionData.logo.publicURL}
                         alt="Section Image"
                         id="desktop"
