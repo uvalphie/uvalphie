@@ -1,5 +1,5 @@
 ---
-title: Graduation
+title: Senior Graduation
 image: /img/miniimage1-1-.jpg
 ---
 ![](/img/miniimage1-1-.jpg)
