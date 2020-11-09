@@ -28,7 +28,7 @@
       right: 0;
       left: 0;
       z-index: 2;
-      animation: fadeIn 2s;
+      animation: fadeIn 3.5s;
     }
 
     // The biggest image of the main-img
@@ -54,7 +54,7 @@
       opacity: 0.8;
       background: $primary-blue;
       border-radius: 50%;
-      animation: zoomInDown 1s;
+      animation: zoomInDown 2s;
     }
 
     #circle2 {
@@ -67,7 +67,7 @@
       background: $primary-blue;
       opacity: 0.6;
       border-radius: 50%;
-      animation: zoomInDown 1.5s;
+      animation: zoomInDown 2.5s;
     }
 
     #circle3 {
@@ -80,7 +80,7 @@
       background: $primary-blue;
       opacity: 0.6;
       border-radius: 50%;
-      animation: zoomInDown 1.2s;
+      animation: zoomInDown 2.2s;
     }
   }
 
@@ -145,7 +145,7 @@
     max-height: 115px;
     max-width: 115px;
     transform: rotate(-13deg);
-    animation: zoomInDown 1.6s !important;
+    animation: zoomInDown 2.6s !important;
     left: 13%;
     top: 25%;
 
@@ -164,7 +164,7 @@
     max-height: 150px;
     max-width: 150px;
     transform: rotate(18deg);
-    animation: zoomInDown 1.9s !important;
+    animation: zoomInDown 2.6s !important;
     right: 13%;
     top: 18%;
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, navigate, useStaticQuery } from "gatsby";
 import SlideUp from "../common/SlideUp.js";
 import Img from "gatsby-image";
 import Slider from "react-slick";
@@ -17,21 +17,9 @@ const settings = {
 };
 
 const News = () => {
-  const [slideIsOpen, openSlide] = React.useState(false);
   const [currentNewsContent, changeNewsContent] = React.useState(null);
   const [currentNewsTitle, changeNewsTitle] = React.useState(null);
   const [carousel, setCarousel] = React.useState();
-
-  // Slider functions
-  function showNewsContent(newsContent, newsTitle) {
-    openSlide(true);
-    changeNewsContent(newsContent);
-    changeNewsTitle(newsTitle);
-  }
-
-  function closeSlide() {
-    openSlide(false);
-  }
 
   // Carousel Functions
   function nextSlide() {
@@ -44,9 +32,12 @@ const News = () => {
   const queryResults = useStaticQuery(
     graphql`
       query MyQuery {
-        allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/News/" } }) {
+        allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/src/pages/news/" } }) {
           edges {
             node {
+              fields {
+                slug
+              }
               id
               frontmatter {
                 title
@@ -108,17 +99,6 @@ const News = () => {
         </svg>
       </button>
 
-      {/* Slide up menu that shows the menu */}
-      {slideIsOpen ? (
-        <SlideUp
-          slideDown={closeSlide}
-          content={currentNewsContent}
-          contentType="NEWS"
-          title={currentNewsTitle}
-        />
-      ) : (
-        <div></div>
-      )}
       <h1>News</h1>
       <p>See what’s going on in our chapter</p>
 
@@ -131,9 +111,7 @@ const News = () => {
         {allNews.map((news, index) => (
           <div
             className="news-slide"
-            onClick={() =>
-              showNewsContent(news.node.html, news.node.frontmatter.title)
-            }
+            onClick={()=>{navigate(news.node.fields.slug)}}
             key={index}
           >
             <Img

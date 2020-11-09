@@ -121,15 +121,22 @@ collections:
                   { label: Website Link, name: website-link, widget: string },
                 ],
             }
-  - name: 'news'
-    label: 'News'
-    folder: 'News'
+  - name: "news"
+    label: "News"
+    folder: "src/pages/news"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "news-page",
+        }
       - { label: Title, name: title, widget: string }
       - { label: Image, name: image, widget: image }
-      - { label: 'News Content', name: 'body', widget: 'markdown' }
+      - { label: "News Content", name: "body", widget: "markdown" }
+      - { label: "Order", name: "order", widget: "number", value_type: "int" }
 
   - name: "about"
     file: "src/pages/about/index.md"
@@ -140,9 +147,24 @@ collections:
         label: "Top Section"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Left Image, name: leftImage, widget: image, required: false }
-          - { label: Center Image, name: centerImage, widget: image, required: false}
-          - { label: Right Image, name: rightImage, widget: image, required: false}
+          - {
+              label: Left Image,
+              name: leftImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Center Image,
+              name: centerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Right Image,
+              name: rightImage,
+              widget: image,
+              required: false,
+            }
 
       - file: "src/pages/about/midsection.md"
         name: "midsection"
@@ -167,9 +189,24 @@ collections:
         label: "Top Section"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Left Image, name: leftImage, widget: image, required: false }
-          - { label: Center Image, name: centerImage, widget: image, required: false}
-          - { label: Right Image, name: rightImage, widget: image, required: false}
+          - {
+              label: Left Image,
+              name: leftImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Center Image,
+              name: centerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Right Image,
+              name: rightImage,
+              widget: image,
+              required: false,
+            }
 
       - file: "src/pages/philantrophy/midsection.md"
         name: "midsection"
@@ -195,9 +232,24 @@ collections:
         label: "Top Section"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Left Image, name: leftImage, widget: image, required: false }
-          - { label: Center Image, name: centerImage, widget: image, required: false}
-          - { label: Right Image, name: rightImage, widget: image, required: false}
+          - {
+              label: Left Image,
+              name: leftImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Center Image,
+              name: centerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Right Image,
+              name: rightImage,
+              widget: image,
+              required: false,
+            }
       - file: "src/pages/brothers/classes.md"
         name: "classes"
         label: "Classes"

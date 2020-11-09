@@ -63,6 +63,11 @@ const Classes = () => {
     }
   }
 
+  function clearInput() {
+    document.getElementById("search-input").value = '';
+    resetClassStyle();
+  }
+
   const queryResults = useStaticQuery(
     graphql`
       query {
@@ -112,11 +117,15 @@ const Classes = () => {
           <span>Classes</span>
         </h2>
 
-        <input
-          className="name-search"
-          onChange={searchName}
-          placeholder="Find a brother"
-        />
+        <div className="name-search">
+          <input
+            id="search-input"
+            onChange={searchName}
+            placeholder="Find a brother"
+          />
+          <button onClick={clearInput}>&times;</button>
+        </div>
+
         <div className="classes-list" id="mobile">
           {classes.map((classObject, index) => (
             <button

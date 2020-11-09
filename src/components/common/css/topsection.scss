@@ -93,7 +93,7 @@
   bottom: 20%;
   background: #3969bb;
   border-radius: 50%;
-  animation: zoomInDown 1.5s;
+  animation: zoomInDown 2.5s;
 }
 
 #circle2.decorator {
@@ -105,7 +105,7 @@
   z-index: 0;
   background: #568be5;
   border-radius: 50%;
-  animation: zoomInDown 1s;
+  animation: zoomInDown 2s;
 }
 
 #circle3.decorator {
@@ -117,7 +117,7 @@
   z-index: 0;
   border-radius: 50%;
   border: 2px solid #ff8845;
-  animation: zoomInDown 2s;
+  animation: zoomInDown 3s;
 }
 
 #circle4.decorator {
@@ -129,7 +129,7 @@
   z-index: 0;
   border-radius: 50%;
   border: 2px solid #b4f6ff;
-  animation: zoomInDown 1s;
+  animation: zoomInDown 2s;
 }
 
 #rectangle1.decorator {
@@ -139,7 +139,7 @@
   left: 10%;
   bottom: 20%;
   background: #3969bb;
-  animation: zoomInDown 1.5s;
+  animation: zoomInDown 2.5s;
 }
 
 #rectangle2.decorator {
@@ -151,7 +151,7 @@
   transform: rotate(25deg);
   z-index: 0;
   background: #568be5;
-  animation: zoomInDown 2s;
+  animation: zoomInDown 3s;
 }
 
 #rectangle3.decorator {
@@ -163,7 +163,7 @@
   z-index: 0;
   border: 2px solid #ff8845;
   transform: rotate(40deg);
-  animation: zoomInDown 1s;
+  animation: zoomInDown 2s;
 }
 
 #rectangle4.decorator {
@@ -175,7 +175,7 @@
   z-index: 0;
   border: 2px solid #b4f6ff;
   transform: rotate(45deg);
-  animation: zoomInDown 1s;
+  animation: zoomInDown 2s;
 }
 
 #triangle1.decorator {
@@ -186,7 +186,7 @@
   transform: rotate(45deg);
   left: 10%;
   bottom: 20%;
-  animation: zoomInDown 1.5s;
+  animation: zoomInDown 2.5s;
 }
 
 #triangle2.decorator {
@@ -198,7 +198,7 @@
   right: 10%;
   bottom: 40%;
   z-index: 0;
-  animation: zoomInDown 2s;
+  animation: zoomInDown 3s;
 }
 
 #triangle3.decorator {
@@ -210,7 +210,7 @@
   z-index: 0;
   border: 2px solid #ff8845;
   transform: rotate(40deg);
-  animation: zoomInDown 1s;
+  animation: zoomInDown 2s;
 }
 
 #triangle4.decorator {
@@ -222,7 +222,7 @@
   z-index: 0;
   border: 2px solid #b4f6ff;
   transform: rotate(45deg);
-  animation: zoomInDown 1s;
+  animation: zoomInDown 2s;
 }
 
 @media screen and (min-width: $tablet-landscape) {

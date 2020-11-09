@@ -46,11 +46,11 @@ const PositionCarousel = (data) => {
       </h2>
 
       <div className="position-selectors">
-        {allPositions.map((position,index) => (
+        {/* {allPositions.map((position,index) => (
           <div>
             {index}
           </div>
-        ))}
+        ))} */}
       </div>
 
       <div class="container">
