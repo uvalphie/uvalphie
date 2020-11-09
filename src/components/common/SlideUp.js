@@ -9,10 +9,7 @@ const SlideUp = ({ slideDown, content, contentType, title }) => {
 
   return (
     <div className="slide-up">
-      <div
-        className="content"
-        id={contentType === "NEWS" ? "news-content" : "class-content"}
-      >
+      <div className="content" id="class-content">
         <button className="close-btn" onClick={slideDown}>
           <svg
             width="31"
@@ -39,19 +36,11 @@ const SlideUp = ({ slideDown, content, contentType, title }) => {
             />
           </svg>
         </button>
-        {contentType === "NEWS" ? (
-          <div className="content-markup" id="news">
-            <h1 className="news-title">{title}</h1>
-            <div dangerouslySetInnerHTML={createMarkup(content)}></div>
-            <button className="close-news-btn" onClick={slideDown}>Exit News</button>
-          </div>
-        ) : (
-          <div
-            className="content-markup"
-            id="class"
-            dangerouslySetInnerHTML={createMarkup(content)}
-          />
-        )}
+        <div
+          className="content-markup"
+          id="class"
+          dangerouslySetInnerHTML={createMarkup(content)}
+        />
       </div>
     </div>
   );

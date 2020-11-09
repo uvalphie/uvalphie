@@ -7,6 +7,18 @@ import { withPrefix } from "gatsby";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
+
+  const isBrowser = typeof window !== `undefined`;
+
+  let navbar = null;
+  if (isBrowser) {
+    const url = window.location.href;
+    if (url.includes("news")) {
+      navbar = <div></div>;
+    } else {
+      navbar = <Navbar />;
+    }
+  }
   return (
     <div>
       <Helmet>
@@ -59,7 +71,8 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
+
+      {navbar}
       <div>{children}</div>
       <Footer />
     </div>

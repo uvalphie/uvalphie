@@ -26,6 +26,11 @@ body {
   font-family: "Helvetica", "Arial", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
 body {
   background-color: $primary-color;
 }
@@ -303,6 +308,10 @@ p {
     text-align: left;
     margin-bottom: 100px;
 
+    .react-reveal.text {
+      margin: auto 0;
+    }
+
     .text {
       margin: auto;
       padding-left: 3rem;
@@ -310,6 +319,7 @@ p {
 
     img {
       max-height: 300px;
+      margin: auto 0;
     }
 
     h2 {

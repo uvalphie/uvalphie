@@ -67,6 +67,12 @@ const Navbar = () => {
               <img src={BrothersIcon} />
               <span>Brothers</span>
             </Link>
+            <button
+              className="exit-navbar-btn"
+              onClick={() => toggleMenu(false)}
+            >
+              &times;
+            </button>
           </div>
         ) : (
           // Button when not-clicked

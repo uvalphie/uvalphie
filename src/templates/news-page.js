@@ -9,6 +9,16 @@ const NewsPage = ({ data }) => {
 
   return (
     <Layout>
+      <nav className="news-navbar">
+        <button
+          className="exit-news-btn"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          &times;
+        </button>
+      </nav>
       <div className="article-container">
         <h1 className="article-header">{post.frontmatter.title}</h1>
         <div
