@@ -31,17 +31,12 @@ const Footer = () => {
   return (
     <footer>
       <div className="container">
-        <div className="social-media">
-          <div>
-            <p>
-              <span>
-                Want to see more? <br></br>Check us out on social media!{" "}
-                <br></br>
-              </span>
-              <span>©2020 UVa Lambdas</span>
-            </p>
-          </div>
-          <div>
+        <div className="contact">
+          <p>
+            Have a question? Contact us at <br/>
+            <span>valambdas@gmail.com</span>
+          </p>
+          <div className="social-icons">
             <a
               href={
                 socialMediaQuery.markdownRemark.frontmatter.platform1
@@ -72,6 +67,7 @@ const Footer = () => {
               />
             </a>
           </div>
+          <p>©2020 UVa Lambdas</p>
         </div>
       </div>
     </footer>
