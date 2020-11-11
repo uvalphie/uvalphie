@@ -8,6 +8,10 @@ const Classes = () => {
   const [currentSelectedClass, changeCurrentClass] = React.useState(null);
   const myRef = React.createRef();
 
+  function createMarkup(markup) {
+    return { __html: markup };
+  }
+
   function showClass(classObject) {
     let markup = "<img src='/img/mini-rotunda.png' />";
     markup += "<h4><span>" + classObject.class_name + "</span></h4>";
@@ -64,7 +68,7 @@ const Classes = () => {
   }
 
   function clearInput() {
-    document.getElementById("search-input").value = '';
+    document.getElementById("search-input").value = "";
     resetClassStyle();
   }
 
@@ -100,7 +104,7 @@ const Classes = () => {
   }
 
   return (
-    <div>
+    <div className="classes-page">
       <section className="classes" id="subsection">
         {classInfo ? (
           <SlideUp
@@ -140,6 +144,14 @@ const Classes = () => {
           ))}
         </div>
       </section>
+
+      <div className="classes-displayer" id="desktop">
+        <div
+          className="member-names"
+          dangerouslySetInnerHTML
+          dangerouslySetInnerHTML={createMarkup(classInfo)}
+        />
+      </div>
     </div>
   );
 };
