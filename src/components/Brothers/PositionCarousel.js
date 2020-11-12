@@ -21,7 +21,6 @@ const PositionCarousel = (data) => {
   }
 
   function slickGoTo(index) {
-    console.log("Going to index: ", index)
     carousel.slickGoTo(index);
   }
 
@@ -46,22 +45,25 @@ const PositionCarousel = (data) => {
 
   return (
     <div className="positions-container">
-      <section class="positions" id="subsection">
+      <section className="positions" id="subsection">
         <h2 className="center-align" id="mobile">
           <span>Executive Board</span>
         </h2>
 
         <div class="container">
+          {/* <div className="carousel-decorator-1"/>
+          <div className="carousel-decorator-2"/>
+          <div className="carousel-decorator-3"/> */}
           <Slider
             asNavFor={carousel}
             ref={(slider) => setCarousel(slider)}
             {...settings}
           >
             {allPositions.map((position) => (
-              <div class="person">
-                <div class="mini-decorator" id="circle1"></div>
-                <div class="mini-decorator" id="circle2"></div>
-                <div class="mini-decorator" id="circle3"></div>
+              <div className="person">
+                <div className="mini-decorator" id="circle1" />
+                <div className="mini-decorator" id="circle2" />
+                <div className="mini-decorator" id="circle3" />
                 <Img
                   fluid={position.image.childImageSharp.fluid}
                   alt="TopSection Image"

@@ -155,6 +155,15 @@
       .front-side {
         width: 45%;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 0;
+
+        .cover-img {
+          border-radius: 0;
+
+          .gatsby-image-wrapper {
+            border-radius: 0;
+          }
+        }
 
         .container {
           display: none;
@@ -163,10 +172,9 @@
 
       .back-side {
         width: 55%;
-        height: 80%;
+        height: 100%;
         margin: auto;
         display: flex;
-        background: #f8f8f8;
 
         .logo {
           display: block;
@@ -185,6 +193,10 @@
 
     .flip-card {
       pointer-events: none;
+    }
+
+    #left.flip-card .back-side {
+      background: #f8f8f8;
     }
 
     #right.flip-card {

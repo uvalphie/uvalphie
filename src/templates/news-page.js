@@ -25,14 +25,6 @@ const NewsPage = ({ data }) => {
           className="article-content"
           dangerouslySetInnerHTML={{ __html: `<div> ${post.html} </div>` }}
         ></div>
-        <button
-          className="exit-news-btn"
-          onClick={() => {
-            navigate("/");
-          }}
-        >
-          Exit News
-        </button>
       </div>
     </Layout>
   );

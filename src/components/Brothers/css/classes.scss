@@ -3,13 +3,13 @@
 .classes-page {
   display: flex;
 }
+#desktop.classes-displayer {
+  display: none;
+}
+
 .classes {
   width: 90%;
   margin: auto;
-
-  #desktop.classes-displayer {
-    display: none;
-  }
 
   .classes-list {
     margin-top: 1rem;
@@ -74,7 +74,7 @@
   .classes {
     width: 40%;
 
-    h2{
+    h2 {
       font-size: 3rem;
     }
   }
