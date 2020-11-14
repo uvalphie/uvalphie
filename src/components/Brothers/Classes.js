@@ -105,52 +105,54 @@ const Classes = () => {
 
   return (
     <div className="classes-page">
-      <section className="classes" id="subsection">
-        {classInfo ? (
-          <SlideUp
-            slideDown={closeSlide}
-            content={classInfo}
-            contentType="class"
-          >
-            {classInfo}{" "}
-          </SlideUp>
-        ) : (
-          <div></div>
-        )}
-        <h2 className="center-align">
-          <span>Classes</span>
-        </h2>
-
-        <div className="name-search">
-          <input
-            id="search-input"
-            onChange={searchName}
-            placeholder="Find a brother"
-          />
-          <button onClick={clearInput}>&times;</button>
-        </div>
-
-        <div className="classes-list" id="mobile">
-          {classes.map((classObject, index) => (
-            <button
-              className="class"
-              id={classObject.class_name}
-              ref={myRef}
-              onClick={() => showClass(classObject)}
-              key={index}
+      <h2 className="header">
+        <span>Classes</span>
+      </h2>
+      <div class="container">
+        <section className="classes" id="subsection">
+          {classInfo ? (
+            <SlideUp
+              slideDown={closeSlide}
+              content={classInfo}
+              contentType="class"
             >
-              {classObject.class_name}
-            </button>
-          ))}
-        </div>
-      </section>
+              {classInfo}{" "}
+            </SlideUp>
+          ) : (
+            <div></div>
+          )}
 
-      <div className="classes-displayer" id="desktop">
-        <div
-          className="member-names"
-          dangerouslySetInnerHTML
-          dangerouslySetInnerHTML={createMarkup(classInfo)}
-        />
+          <div className="name-search">
+            <input
+              id="search-input"
+              onChange={searchName}
+              placeholder="Find a brother"
+            />
+            <button onClick={clearInput}>&times;</button>
+          </div>
+
+          <div className="classes-list" id="mobile">
+            {classes.map((classObject, index) => (
+              <button
+                className="class"
+                id={classObject.class_name}
+                ref={myRef}
+                onClick={() => showClass(classObject)}
+                key={index}
+              >
+                {classObject.class_name}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <div className="classes-displayer" id="desktop">
+          <div
+            className="member-names"
+            dangerouslySetInnerHTML
+            dangerouslySetInnerHTML={createMarkup(classInfo)}
+          />
+        </div>
       </div>
     </div>
   );

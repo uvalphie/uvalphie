@@ -46,9 +46,6 @@ const PositionCarousel = (data) => {
   return (
     <div className="positions-container">
       <section className="positions" id="subsection">
-        <h2 className="center-align" id="mobile">
-          <span>Executive Board</span>
-        </h2>
 
         <div class="container">
           {/* <div className="carousel-decorator-1"/>

@@ -31,6 +31,9 @@ const Exec = () => {
 
   return (
     <section class="exec" id="subsection">
+        <h2 className="header">
+          <span>Executive Board</span>
+        </h2>
       <PositionCarousel data={positionData} />
     </section>
   );

@@ -31,6 +31,9 @@ const Chairs = () => {
 
   return (
     <section class="chairs" id="subsection">
+      <h2 className="header">
+        <span>Chairs Positions</span>
+      </h2>
       <PositionCarousel data={positionData} />
     </section>
   );

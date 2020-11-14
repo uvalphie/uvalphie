@@ -12,7 +12,6 @@
 }
 
 .positions {
-  margin: 50px 0;
 
   h3,
   p {
@@ -164,6 +163,7 @@
 
   .positions-list {
     width: 60%;
+    display: block;
 
     button {
       font-size: 1rem;

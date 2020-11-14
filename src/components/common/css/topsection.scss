@@ -82,6 +82,10 @@
       object-position: center center !important;
     }
   }
+
+  .desktop-container {
+    display: none;
+  }
 }
 
 // Decorators for circles
@@ -232,20 +236,21 @@
 
   .main-image {
     border-radius: 0 !important;
-  }
 
-  .desktop-container {
-    height: 100%;
-
-    .desktop-img{
+    .desktop-container {
       height: 100%;
-    }
+      display: block;
 
-    h3 {
-      max-width: $max-width;
-      margin: auto;
-      font-size: 6rem;
-      text-align: left;
+      .desktop-img {
+        height: 100%;
+      }
+
+      h3 {
+        max-width: $max-width;
+        margin: auto;
+        font-size: 6rem;
+        text-align: left;
+      }
     }
   }
 }

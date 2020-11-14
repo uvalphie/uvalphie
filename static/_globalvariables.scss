@@ -209,26 +209,28 @@ p {
   }
 }
 
-.center-align {
-  text-align: center;
-  margin-bottom: 1rem;
+.exec, .chairs, .classes-page  {
+  .header {
+    text-align: center;
+    margin-bottom: 1rem;
 
-  span {
-    width: 100%;
-    position: relative;
-  }
+    span {
+      width: 100%;
+      position: relative;
+    }
 
-  span::after {
-    content: "";
-    position: absolute;
-    border-bottom: 4px solid #b4f6ff;
-    width: 120%;
-    display: block;
-    margin: auto;
-    margin-left: 0;
-    left: -10%;
-    right: 0;
-    bottom: -2px;
+    span::after {
+      content: "";
+      position: absolute;
+      border-bottom: 4px solid #b4f6ff;
+      width: 120%;
+      display: block;
+      margin: auto;
+      margin-left: 0;
+      left: -10%;
+      right: 0;
+      bottom: -2px;
+    }
   }
 }
 
@@ -253,11 +255,19 @@ p {
 }
 
 #brothers {
+  overflow: hidden;
+
   .main-image {
     background-color: #284a84;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%2323437b' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%231e3d72' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%231a3768' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%2315305e' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23122a54' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%230e2449' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%230b1e3e' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
     background-size: cover;
     background-position: center;
+  }
+}
+
+.exec {
+  margin: 50px 0;
+  h2 {
   }
 }
 
@@ -294,6 +304,42 @@ p {
 }
 
 @media screen and (min-width: $tablet-landscape) {
+  .exec{
+    .header{
+      text-align: right;
+      font-size: 3rem;
+    }
+
+    .header span::after{
+      left: auto;
+      width: 2000px;
+    }
+  }
+
+  .chairs{
+    .header{
+      text-align: left;
+      font-size: 3rem;
+    }
+
+    .header span::after{
+      left: 0;
+      width: 2000px;
+    }
+  }
+
+  .classes-page{
+    .header{
+      text-align: left;
+      font-size: 3rem;
+    }
+
+    .header span::after{
+      left: 0;
+      width: 2000px;
+    }
+  }
+  
   .card-left-align,
   .card-right-align {
     width: 100% !important;

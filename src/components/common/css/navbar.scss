@@ -30,32 +30,43 @@
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
     border: none;
     animation: fadeInDown 0.9s;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: auto;
   }
+
+  #active.hamburger-menu {
+    width: 175px;
+  }
+
 
   .hamburger-menu {
     position: absolute;
     right: 10px;
     top: 10px;
     font-size: 1rem;
-    width: 150px;
 
     img {
-      height: 1rem;
-      width: 1rem;
+      height: 1.2rem;
+      width: 1.2rem;
     }
 
     a {
+      font-size: 1.2rem;
       display: flex;
       justify-content: space-evenly;
       text-decoration: none;
-      padding: 0.3rem 0.3rem;
+      padding: 0.3rem 0.5rem;
       background-color: $primary-color;
       color: $primary-font-color;
       border-radius: 500px;
       text-align: center;
       margin-bottom: 6px;
       box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+
+      span{
+        padding-left: 0.5rem;
+      }
 
       img {
         margin: auto 0;
