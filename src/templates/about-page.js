@@ -33,6 +33,13 @@ const AboutPage = () => {
                 }
               }
             }
+            desktopImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
+            }
           }
         }
       }

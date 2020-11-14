@@ -5,7 +5,8 @@ import "./css/topsection.scss";
 const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
   let leftImage,
     rightImage,
-    centerImage = null;
+    centerImage,
+    desktopImage = null;
 
   try {
     leftImage =
@@ -20,6 +21,12 @@ const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
   try {
     centerImage =
       queryResults.markdownRemark.frontmatter.centerImage.childImageSharp.fluid;
+  } catch (err) {}
+
+  try {
+    desktopImage =
+      queryResults.markdownRemark.frontmatter.desktopImage.childImageSharp
+        .fluid;
   } catch (err) {}
 
   return (
@@ -74,6 +81,11 @@ const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
           <h3>{queryResults.markdownRemark.frontmatter.title}</h3>
         </div>
         <div className="desktop-container">
+          <Img
+            className="desktop-img"
+            fluid={desktopImage}
+            alt="TopSection Image"
+          />
           <h3>{queryResults.markdownRemark.frontmatter.title}</h3>
         </div>
       </div>

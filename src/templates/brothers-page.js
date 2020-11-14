@@ -37,6 +37,13 @@ const BrothersPage = () => {
                 }
               }
             }
+            desktopImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
+            }
           }
         }
       }

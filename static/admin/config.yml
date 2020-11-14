@@ -165,6 +165,12 @@ collections:
               widget: image,
               required: false,
             }
+          - {
+              label: Desktop Image,
+              name: desktopImage,
+              widget: image,
+              required: true,
+            }
 
       - file: "src/pages/about/midsection.md"
         name: "midsection"
@@ -206,6 +212,12 @@ collections:
               name: rightImage,
               widget: image,
               required: false,
+            }
+          - {
+              label: Desktop Image,
+              name: desktopImage,
+              widget: image,
+              required: true,
             }
 
       - file: "src/pages/philantrophy/midsection.md"
@@ -249,6 +261,12 @@ collections:
               name: rightImage,
               widget: image,
               required: false,
+            }
+          - {
+              label: Desktop Image,
+              name: desktopImage,
+              widget: image,
+              required: true,
             }
       - file: "src/pages/brothers/classes.md"
         name: "classes"

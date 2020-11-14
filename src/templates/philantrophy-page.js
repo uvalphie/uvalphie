@@ -35,6 +35,13 @@ const PhilantrophyPage = () => {
                 }
               }
             }
+            desktopImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
+            }
           }
         }
       }

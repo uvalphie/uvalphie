@@ -118,9 +118,6 @@ p {
   h2,
   p {
     position: relative;
-  }
-
-  p {
     padding-top: 0.5rem;
   }
 }
@@ -306,7 +303,6 @@ p {
     width: 100%;
     display: flex;
     text-align: left;
-    margin-bottom: 100px;
 
     .react-reveal.text {
       margin: auto 0;
@@ -320,10 +316,12 @@ p {
     img {
       max-height: 300px;
       margin: auto 0;
+      padding: 2rem;
     }
 
     h2 {
       font-size: 3rem;
+      padding-top: 0;
     }
     p {
       padding-top: 0;
@@ -379,6 +377,25 @@ p {
     .text {
       text-align: left;
       order: 2;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .card-center-align:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: scale(1);
+  }
+
+  .card-center-align {
+    transform: scale(0.8);
+
+    img {
+      padding: 2rem;
+    }
+
+    p {
+      padding-right: 1rem;
     }
   }
 }

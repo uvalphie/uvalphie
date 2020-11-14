@@ -235,6 +235,12 @@
   }
 
   .desktop-container {
+    height: 100%;
+
+    .desktop-img{
+      height: 100%;
+    }
+
     h3 {
       max-width: $max-width;
       margin: auto;
