@@ -7,19 +7,17 @@
   background: $primary-color;
 
   .exit-news-btn {
-    padding: 0 !important;
-    width: 35px;
-    height: 35px;
     position: absolute;
     right: 5%;
     top: 0;
     bottom: 0;
     margin: auto;
-    border-radius: 50%;
+    height: 2rem;
+    padding: 0.3rem 0.5rem;
     border: none;
-    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
     background: none;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     color: #262626;
   }
 }

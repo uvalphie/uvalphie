@@ -210,7 +210,9 @@ p {
   }
 }
 
-.exec, .chairs, .classes-page  {
+.exec,
+.chairs,
+.classes-page {
   .header {
     text-align: center;
     margin-bottom: 1rem;
@@ -224,11 +226,10 @@ p {
       content: "";
       position: absolute;
       border-bottom: 4px solid #b4f6ff;
-      width: 120%;
+      width: 100%;
       display: block;
       margin: auto;
       margin-left: 0;
-      left: -10%;
       right: 0;
       bottom: -2px;
     }
@@ -305,42 +306,42 @@ p {
 }
 
 @media screen and (min-width: $tablet-landscape) {
-  .exec{
-    .header{
+  .exec {
+    .header {
       text-align: right;
       font-size: 3rem;
     }
 
-    .header span::after{
+    .header span::after {
       left: auto;
       width: 2000px;
     }
   }
 
-  .chairs{
-    .header{
+  .chairs {
+    .header {
       text-align: left;
       font-size: 3rem;
     }
 
-    .header span::after{
+    .header span::after {
       left: 0;
       width: 100vw;
     }
   }
 
-  .classes-page{
-    .header{
+  .classes-page {
+    .header {
       text-align: left;
       font-size: 3rem;
     }
 
-    .header span::after{
+    .header span::after {
       left: 0;
       width: 2000px;
     }
   }
-  
+
   .card-left-align,
   .card-right-align {
     width: 100% !important;

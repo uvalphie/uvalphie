@@ -16,7 +16,7 @@ const NewsPage = ({ data }) => {
             navigate("/");
           }}
         >
-          &times;
+          Exit News
         </button>
       </nav>
       <div className="article-container">

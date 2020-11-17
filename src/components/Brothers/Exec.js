@@ -34,7 +34,7 @@ const Exec = () => {
         <h2 className="header">
           <span>Executive Board</span>
         </h2>
-      <PositionCarousel data={positionData} />
+      <PositionCarousel data={positionData} carouselAlignment="right" />
     </section>
   );
 };

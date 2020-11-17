@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import PositionCarousel from "./PositionCarousel";
+import "./css/chairs.scss";
 
 const Chairs = () => {
   const queryResults = useStaticQuery(
@@ -34,7 +35,7 @@ const Chairs = () => {
       <h2 className="header">
         <span>Chairs Positions</span>
       </h2>
-      <PositionCarousel data={positionData} />
+      <PositionCarousel data={positionData} carouselAlignment="left" />
     </section>
   );
 };
