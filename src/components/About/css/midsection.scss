@@ -1,0 +1,25 @@
+@import "@/../static/_globalvariables.scss";
+
+@media screen and (min-width: $tablet-landscape) {
+  #about.mid-section {
+      width: 95%;
+  }
+
+  .card-center-align {
+    .react-reveal.text{
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  #about.mid-section {
+      width: 100%;
+  }
+
+  .card-center-align {
+    .react-reveal.text{
+      width: auto;
+    }
+  }
+}

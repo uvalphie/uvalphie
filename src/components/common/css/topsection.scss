@@ -232,6 +232,10 @@
 @media screen and (min-width: $tablet-landscape) {
   .top-section {
     height: 40vh;
+
+    .mobile-container {
+      display: none;
+    }
   }
 
   .main-image {
@@ -250,6 +254,17 @@
         margin: auto;
         font-size: 6rem;
         text-align: left;
+        left: 2.5%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .top-section {
+    .main-image {
+      h3 {
+        left: 0;
       }
     }
   }

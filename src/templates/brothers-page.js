@@ -2,9 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import { useStaticQuery, graphql } from "gatsby";
 import TopSection from "../components/common/TopSection";
-import Classes from "../components/Brothers/Classes";
-import Exec from "../components/Brothers/Exec";
-import Chairs from "../components/Brothers/Chairs";
+import MidSection from "../components/Brothers/MidSection";
 import "../../static/_globalvariables.scss";
 
 const BrothersPage = () => {
@@ -51,13 +49,9 @@ const BrothersPage = () => {
   );
   return (
     <Layout>
-      <div id="brothers">
+      <div id="brothers" class="section">
         <TopSection queryResults={queryResults} triangle="true" />
-        <div className="mid-section">
-          <Classes />
-          <Exec />
-          <Chairs />
-        </div>
+        <MidSection />
       </div>
     </Layout>
   );

@@ -81,7 +81,7 @@
     }
   }
 
-  .flip-card{
+  .flip-card {
     margin-bottom: 15px;
   }
 
@@ -205,5 +205,17 @@
         order: 2;
       }
     }
+  }
+}
+
+@media screen and (min-width: $tablet-landscape) {
+  #philantrophy.mid-section {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  #philantrophy.mid-section {
+    width: 100%;
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Fade from "react-reveal/Fade";
+import "./css/midsection.scss";
 
 const MidSection = () => {
   const queryResults = useStaticQuery(
