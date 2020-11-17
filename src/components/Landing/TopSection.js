@@ -90,7 +90,6 @@ const TopSection = () => {
       >
         <Img
           className="mini-image"
-          id="1"
           fluid={currentModalImage}
           alt="TopSection"
         />

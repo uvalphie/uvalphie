@@ -218,6 +218,7 @@
 @media screen and (min-width: $tablet-landscape) {
   .landing-section {
     display: flex;
+    margin-top: 70px;
 
     .desktop-svg-overlay {
       display: block;
@@ -241,12 +242,18 @@
       transform: scaleY(-1);
     }
 
+    .mobile-container {
+      display: none;
+    }
+
     .main-img {
-      width: 55%;
-      height: 700px;
+      // width: 55%;
+      // height: 700px;
       margin: auto;
       margin-right: 0;
       order: 2;
+      width: 50%;
+      height: 600px;
 
       .mobile-overlay {
         display: none;
@@ -260,6 +267,10 @@
       flex-direction: column;
       text-align: left;
       width: 45%;
+
+      .container:first-child {
+        margin: auto;
+      }
 
       .uvalphie-text {
         height: 7rem;
@@ -317,14 +328,37 @@
   }
 }
 
-@media screen and (min-width: $tablet-landscape) {
-  .mobile-container {
-    display: none;
-  }
+@media screen and (min-width: $desktop) {
+  .landing-section {
+    margin-top: 0;
 
-  .intro {
-    .container:first-child {
-      margin: auto;
+    #frame-1.mini-frame {
+      left: 20%;
+    }
+    #frame-2.mini-frame {
+      right: 15%;
+    }
+
+    #circle1.landing-decorator{
+      left: 10%;
+    }
+
+    #circle2.landing-decorator {
+      top: 30%;
+      right: 22%;
+    }
+
+    #circle3.landing-decorator {
+      right: 10%;
+    }
+
+    .main-img {
+      width: 55%;
+      height: 750px;
+
+      .gatsby-image-wrapper{
+        height: 90%;
+      }
     }
   }
 }

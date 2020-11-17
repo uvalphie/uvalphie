@@ -130,8 +130,17 @@
 
 @media screen and (min-width: $tablet-landscape) {
   .gallery {
+    padding-bottom: 50px;
+  }
+
+  .gallery .slick-dots {
+    bottom: 0px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .gallery {
     padding-bottom: 150px;
-    margin-top: $global-margin-top;
 
     .prev-carousel-btn,
     .next-carousel-btn {
@@ -143,7 +152,7 @@
         height: 700px;
       }
 
-      .instagram-slide{
+      .instagram-slide {
         height: 700px;
       }
 
