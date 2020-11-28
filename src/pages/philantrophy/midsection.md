@@ -1,8 +1,12 @@
 ---
 midsection:
   - title: Twitch Plays Lambdas
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-      nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. "
+    description: >-
+      Twitch plays lambdas is an annual event we hold during our Philanthropy
+      month where we hold a twitch stream showcasing small events and videos
+      from our own brothers as well as other Asian-interest 
+
+      organizations including alpha Kappa Delta Phi Sorority Inc with the goal of raising money to donate to our national philanthropy, Be The Match.
     image: /img/twitch.png
     order: 1
     logo: /img/twitch-1.svg
