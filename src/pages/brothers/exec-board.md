@@ -3,7 +3,7 @@ position:
   - position-title: President
     position-holder: Seth "Hide iN Sect" Miller
     image: /img/dhaval.png
-  - position-title: Test 2
+  - position-title: Vice President Internal
     position-holder: Jeffrey "MeAn GiRlZ" Shi
     image: /img/nick.png
   - position-title: Test 3
