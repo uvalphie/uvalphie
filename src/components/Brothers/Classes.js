@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import SlideUp from "../common/SlideUp.js";
 import "./css/classes.scss";
@@ -6,7 +6,32 @@ import "./css/classes.scss";
 const Classes = () => {
   const [classInfo, changeInfo] = React.useState(null);
   const [currentSelectedClass, changeCurrentClass] = React.useState(null);
+  const [initialClicked, toggleInitialClicked] = React.useState(false);
+
   const myRef = React.createRef();
+
+  const isBrowser = typeof window !== `undefined`;
+
+  useEffect(() => {
+    if (!initialClicked && window.matchMedia("(min-width: 1280px)").matches) {
+      try {
+        document.getElementById("Charter").click();
+        toggleInitialClicked(true);
+      } catch (err) {}
+    }
+  });
+
+  if (isBrowser) {
+    const mq = window.matchMedia("(min-width: 1280px)");
+    mq.addEventListener("change", () => {
+      if (!initialClicked) {
+        try {
+          document.getElementById("Charter").click();
+          toggleInitialClicked(true);
+        } catch (err) {}
+      }
+    });
+  }
 
   function createMarkup(markup) {
     return { __html: markup };

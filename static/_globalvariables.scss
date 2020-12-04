@@ -315,7 +315,7 @@ p {
 
     .header span::after {
       left: auto;
-      width: 2000px;
+      width: 100%;
     }
   }
 
@@ -327,7 +327,7 @@ p {
 
     .header span::after {
       left: 0;
-      width: 100vw;
+      width: 100%;
     }
   }
 
@@ -339,7 +339,7 @@ p {
 
     .header span::after {
       left: 0;
-      width: 2000px;
+      width: 100vw;
     }
   }
 

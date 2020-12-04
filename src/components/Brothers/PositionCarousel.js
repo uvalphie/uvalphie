@@ -6,8 +6,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const PositionCarousel = (data, carouselAlignment) => {
-  const [currentPositionTitle, updatePositionTitle] = React.useState("");
+  const [currentPositionTitle, updatePositionTitle] = React.useState(data.data[0].position_title);
   const [currentPositionHolder, updatePositionHolder] = React.useState("");
+  const [showDropdown, toggleDropdown] = React.useState(false);
+
   const allPositions = data.data;
   console.log(data.carouselAlignment);
 
@@ -15,14 +17,13 @@ const PositionCarousel = (data, carouselAlignment) => {
   const slider = React.useRef();
 
   function updatePosition(current) {
-    console.log(current);
     updatePositionTitle(allPositions[current].position_title);
     updatePositionHolder(allPositions[current].position_holder);
-    console.log(currentPositionTitle);
   }
 
   function slickGoTo(index) {
     carousel.slickGoTo(index);
+    toggleDropdown(false);
   }
 
   function nextSlide() {
@@ -33,8 +34,8 @@ const PositionCarousel = (data, carouselAlignment) => {
     carousel.slickPrev();
   }
 
-  function selectMenuGoTo(event) {
-    carousel.slickGoTo(event.target.value);
+  function showDropdownMenu() {
+    toggleDropdown(!showDropdown);
   }
 
   const settings = {
@@ -46,7 +47,6 @@ const PositionCarousel = (data, carouselAlignment) => {
     afterChange: (current) => updatePosition(current),
   };
 
-  console.log(data);
 
   return (
     <div className="positions-container">
@@ -116,12 +116,28 @@ const PositionCarousel = (data, carouselAlignment) => {
             </button>
           </div>
 
-          <div className="positions-list">
-            <select onChange={selectMenuGoTo}>
-              {allPositions.map((position, index) => (
-                <option value={index}>{position.position_title}</option>
-              ))}
-            </select>
+          <div>
+            <button
+              onClick={showDropdownMenu}
+              className="position-dropdown-btn"
+            >
+              {currentPositionTitle}
+            </button>
+            <div className="positions-list-wrapper">
+              <div className="positions-list">
+                {showDropdown ? (
+                  <div className="options">
+                    {allPositions.map((position, index) => (
+                      <button onClick={() => slickGoTo(index)}>
+                        {position.position_title}
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+            </div>
           </div>
         </section>
       </div>
