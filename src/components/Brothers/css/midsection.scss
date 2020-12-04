@@ -4,6 +4,25 @@
   #brothers.mid-section {
     width: 95%;
   }
+
+  .exec-chairs {
+    display: flex;
+    justify-content: space-between;
+
+    .exec,
+    .chairs {
+      width: 45%;
+      margin-top: $global-margin-top;
+
+      h2 {
+        text-align: center;
+      }
+
+      .align-container {
+        margin: auto;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: $desktop) {

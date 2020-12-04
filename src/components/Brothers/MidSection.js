@@ -8,8 +8,10 @@ const MidSection = () => {
   return (
     <div className="mid-section" id="brothers">
       <Classes />
-      <Exec />
-      <Chairs />
+      <div className="exec-chairs">
+        <Exec />
+        <Chairs />
+      </div>
     </div>
   );
 };

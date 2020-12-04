@@ -33,6 +33,10 @@ const PositionCarousel = (data, carouselAlignment) => {
     carousel.slickPrev();
   }
 
+  function selectMenuGoTo(event) {
+    carousel.slickGoTo(event.target.value);
+  }
+
   const settings = {
     dots: true,
     infinite: true,
@@ -111,17 +115,15 @@ const PositionCarousel = (data, carouselAlignment) => {
               </svg>
             </button>
           </div>
-        </section>
-      </div>
 
-      <div className="positions-list">
-        {allPositions.map((position, index) => (
-          <div>
-            <button onClick={() => slickGoTo(index)}>
-              {position.position_title}
-            </button>
+          <div className="positions-list">
+            <select onChange={selectMenuGoTo}>
+              {allPositions.map((position, index) => (
+                <option value={index}>{position.position_title}</option>
+              ))}
+            </select>
           </div>
-        ))}
+        </section>
       </div>
     </div>
   );

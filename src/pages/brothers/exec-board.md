@@ -17,5 +17,5 @@ position:
     image: /img/ben_adr.png
   - position-title: Secretary
     position-holder: Brian "Backdoor Bezo$" Pak
-    image: /img/bethematch-1.svg
+    image: /img/ben_adr.png
 ---

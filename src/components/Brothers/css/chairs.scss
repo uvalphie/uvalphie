@@ -1,4 +1,8 @@
 @import "@/../static/_globalvariables.scss";
 .chairs {
-  margin-bottom: 25px;
+  margin-bottom: $global-margin-top;
+
+  .slick-dots li {
+    display: none;
+  }
 }

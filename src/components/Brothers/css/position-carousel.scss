@@ -26,6 +26,10 @@
     margin: auto;
   }
 
+  .slick-dots li{
+    display: none;
+  }
+
   .person {
     position: relative;
 
@@ -179,14 +183,14 @@
       padding: 0.5rem 2rem;
       border: none;
       margin-bottom: 0.5rem;
-      border: 1px solid #dadada;
+      // border: 1px solid #dadada;
       background: none;
-      font-size: 2rem;
+      font-size: 1rem;
     }
   }
 
   .positions {
-    width: 55%;
+    width: 100%;
 
     .center-align {
       display: none;
