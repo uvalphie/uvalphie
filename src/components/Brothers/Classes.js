@@ -38,7 +38,7 @@ const Classes = () => {
   }
 
   function showClass(classObject) {
-    let markup = "<img src='/img/mini-rotunda.png' />";
+    let markup = "<img src='/img/mini-rotunda.png' alt='markup-img'/>";
     markup += "<h4><span>" + classObject.class_name + "</span></h4>";
     markup += "<ul>";
     for (let index in classObject.member) {

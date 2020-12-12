@@ -40,6 +40,7 @@ const SocialMedia = () => {
           src={
             socialMediaQuery.markdownRemark.frontmatter.platform1.logo.publicURL
           }
+          alt="Social Media Logo"
         />
       </a>
 
@@ -53,6 +54,7 @@ const SocialMedia = () => {
           src={
             socialMediaQuery.markdownRemark.frontmatter.platform2.logo.publicURL
           }
+          alt="Social Media Logo"
         />
       </a>
     </div>

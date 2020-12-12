@@ -33,7 +33,7 @@ const Footer = () => {
       <div className="container">
         <div className="contact">
           <p>
-            Have a question? Contact us at <br/>
+            Have a question? Contact us at <br />
             <span>valambdas@gmail.com</span>
           </p>
           <div className="social-icons">
@@ -49,6 +49,7 @@ const Footer = () => {
                   socialMediaQuery.markdownRemark.frontmatter.platform1.logo
                     .publicURL
                 }
+                alt="Social Media Logo"
               />
             </a>
 
@@ -64,6 +65,7 @@ const Footer = () => {
                   socialMediaQuery.markdownRemark.frontmatter.platform2.logo
                     .publicURL
                 }
+                alt="Social Media Logo"
               />
             </a>
           </div>

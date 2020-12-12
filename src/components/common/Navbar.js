@@ -19,28 +19,28 @@ const Navbar = () => {
     if (url.includes("about")) {
       currentPageNav = (
         <div className="current-page-btn">
-          <img src={AboutIcon} />
+          <img src={AboutIcon} alt="About Icon"/>
           <span>About</span>
         </div>
       );
     } else if (url.includes("philantrophy")) {
       currentPageNav = (
         <div className="current-page-btn">
-          <img src={PhilantrophyIcon} />
+          <img src={PhilantrophyIcon} alt="Philantrophy Icon"/>
           <span>Philantrophy</span>
         </div>
       );
     } else if (url.includes("brothers")) {
       currentPageNav = (
         <div className="current-page-btn">
-          <img src={BrothersIcon} />
+          <img src={BrothersIcon} alt="Brothers Icon"/>
           <span>Brothers</span>
         </div>
       );
     } else {
       currentPageNav = (
         <div className="current-page-btn">
-          <img src={HomeIcon} />
+          <img src={HomeIcon} alt="Home Icon"/>
           <span>Home</span>
         </div>
       );
@@ -52,19 +52,19 @@ const Navbar = () => {
         {isMenuToggled ? (
           <div className="hamburger-menu" id="active">
             <Link to="/" id="link2" activeClassName="active-link">
-              <img src={HomeIcon} />
+              <img src={HomeIcon} alt="Home Icon"/>
               <span>Home</span>
             </Link>
             <Link to="/about/" id="link2" activeClassName="active-link">
-              <img src={AboutIcon} />
+              <img src={AboutIcon} alt="About Icon"/>
               <span>About</span>
             </Link>
             <Link to="/philantrophy/" id="link3" activeClassName="active-link">
-              <img src={PhilantrophyIcon} />
+              <img src={PhilantrophyIcon} alt="Philantrophy Icon"/>
               <span>Philantrophy</span>
             </Link>
             <Link to="/brothers/" id="link4" activeClassName="active-link">
-              <img src={BrothersIcon} />
+              <img src={BrothersIcon} alt="Brothers Icon"/>
               <span>Brothers</span>
             </Link>
             <button
@@ -88,19 +88,19 @@ const Navbar = () => {
       <div className="desktop-navbar">
         <div className="hamburger-menu" id="active">
           <Link to="/" activeClassName="active-link">
-            <img src={HomeIcon} />
+            <img src={HomeIcon} alt="Home Icon"/>
             <span>Home</span>
           </Link>
           <Link to="/about" activeClassName="active-link">
-            <img src={AboutIcon} />
+            <img src={AboutIcon} alt="About Icon"/>
             <span>About</span>
           </Link>
           <Link to="/philantrophy" activeClassName="active-link">
-            <img src={PhilantrophyIcon} />
+            <img src={PhilantrophyIcon} alt="Philantrophy Icon"/>
             <span>Philantrophy</span>
           </Link>
           <Link to="/brothers" activeClassName="active-link">
-            <img src={BrothersIcon} />
+            <img src={BrothersIcon} alt="Brothers Icon"/>
             <span>Brothers</span>
           </Link>
         </div>
