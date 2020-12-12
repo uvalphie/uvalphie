@@ -77,12 +77,11 @@
 
 @media screen and (min-width: $tablet-landscape) {
   .classes {
-    width: 40%;
+    width: 50%;
   }
 
   #desktop.classes-displayer {
-    width: 60%;
-    // background: red;
+    width: 50%;
     display: flex;
     justify-content: center;
 

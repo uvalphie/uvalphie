@@ -10,7 +10,69 @@
 .positions-list {
   display: none;
 }
+.position-selector {
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.25);
 
+  .exit-space {
+    height: 40%;
+    width: 100%;
+  }
+
+  .wrapper {
+    height: 60%;
+    width: 100%;
+    background: $darkest-blue;
+    border-radius: 25px 25px 0px 0px;
+    animation: slideInUp 0.5s;
+
+    button {
+      display: flex;
+      justify-content: center;
+    }
+
+    .overflow-scroll {
+      overflow: scroll;
+      height: 100%;
+    }
+  }
+
+  .position-wrapper:last-child {
+    padding-bottom: 40vh;
+  }
+
+  button {
+    position: relative;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0.75rem 0;
+    background: none;
+    border: none;
+    color: $primary-color;
+    margin-bottom: 1px;
+  }
+
+  button::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.25);
+    margin: auto;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+  }
+
+  #selected.position {
+    background: $primary-blue;
+    color: $primary-color;
+  }
+}
 .positions {
   h3,
   p {
@@ -18,12 +80,15 @@
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin: auto;
+    margin-bottom: 0;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin: auto;
+    margin-top: 0;
   }
 
   .slick-dots li {
@@ -45,9 +110,12 @@
   }
 
   .position-text {
-    padding: 1.5rem 0;
-    width: 65%;
+    padding: 1rem 0.5rem;
+    padding-bottom: 1.5rem;
     height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .carousel-bottom {
@@ -58,8 +126,8 @@
     justify-content: space-between;
 
     button {
-      height: 40px;
-      width: 40px;
+      height: 35px;
+      width: 35px;
       border: none;
       background: none;
       border: 1px solid #999999;
@@ -78,6 +146,26 @@
         transform: scaleX(-1);
       }
     }
+  }
+
+  #mobile.position-dropdown-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin: auto;
+    display: block;
+    margin-top: -1.5rem;
+    border-radius: 50px;
+    border: none;
+    background: $dark-blue;
+    color: $primary-color;
+  }
+
+  #mobile.position-dropdown-btn:focus {
+    background: $primary-blue;
+  }
+
+  #desktop.position-dropdown-btn {
+    display: none;
   }
 
   #circle1.mini-decorator {
@@ -148,16 +236,6 @@
     position: relative;
     border-radius: 50%;
   }
-
-  // .slick-list::after {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   border-radius: 100%;
-  //   // box-shadow: 0px 0px 0px 10000px $primary-color;
-  // }
 }
 
 @media screen and (min-width: $tablet-landscape) {
@@ -183,6 +261,15 @@
     display: block;
     margin: auto;
     border: none;
+  }
+  .positions {
+    #mobile.position-dropdown-btn {
+      display: none;
+    }
+
+    #desktop.position-dropdown-btn {
+      display: block;
+    }
   }
 
   .positions-list-wrapper {
@@ -244,10 +331,6 @@
     }
 
     .carousel-bottom {
-      button {
-        // display: none;
-      }
-
       .position-text {
         margin: auto;
       }

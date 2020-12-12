@@ -30,7 +30,7 @@
   font-family: "Open Sans", sans-serif;
 
   .article-header {
-    font-size: 3rem;
+    font-size: 4rem;
     padding-bottom: 0.5rem;
   }
   .article-content {
@@ -73,7 +73,7 @@
 
 @media screen and (min-width: $tablet-landscape) {
   .article-container {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 5%;
 
     p {
