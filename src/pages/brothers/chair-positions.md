@@ -26,7 +26,7 @@ position:
     image: /img/won_jon.png
   - position-title: Culture
     position-holder: Gordon Lee and Eric Guan
-    image: /img/brothers_1.png
+    image: /img/gordon_eric.png
   - position-title: MGC/FOA
     position-holder: Jonathan Wen
     image: /img/jon-top.png
@@ -44,5 +44,5 @@ position:
     image: /img/mo_sean.png
   - position-title: Risk Management
     position-holder: Seth Miller
-    image: /img/bethematch.png
+    image: /img/seth.png
 ---
