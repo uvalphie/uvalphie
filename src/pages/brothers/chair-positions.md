@@ -35,7 +35,7 @@ position:
     image: /img/andre_connor.png
   - position-title: Philanthropy
     position-holder: Gordon Lee and Derek Yang
-    image: /img/bethematch.png
+    image: /img/ben_adr.png
   - position-title: Quartermaster
     position-holder: Nicholas Landi and Jonathan Wen
     image: /img/nick_jon.png
