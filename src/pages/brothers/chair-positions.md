@@ -17,13 +17,13 @@ position:
     image: /img/won_simon.png
   - position-title: Social Media
     position-holder: Sam Chen, Andre Tan, and Jonathan Wen
-    image: /img/brotherhood.png
+    image: /img/sam_andre_jon.png
   - position-title: External Relations
     position-holder: Christopher Nguyen, Mohamed Elgazar, and Sam Chen
-    image: /img/brotherhood.png
+    image: /img/chris_mo_sam.png
   - position-title: Recruitment
     position-holder: Wonyoung Choi and Jonathan Wen
-    image: /img/whatwedo_1.png
+    image: /img/won_jon.png
   - position-title: Culture
     position-holder: Gordon Lee and Eric Guan
     image: /img/brothers_1.png
@@ -32,16 +32,16 @@ position:
     image: /img/jon-top.png
   - position-title: Sports
     position-holder: Andre Tan and Connor Noble
-    image: /img/bros.jpg
+    image: /img/andre_connor.png
   - position-title: Philanthropy
     position-holder: Gordon Lee and Derek Yang
     image: /img/bethematch.png
   - position-title: Quartermaster
     position-holder: Nicholas Landi and Jonathan Wen
-    image: /img/bros.jpg
+    image: /img/nick_jon.png
   - position-title: "Scholarship "
     position-holder: Mohamed Elgazar and Sean Le
-    image: /img/bros.jpg
+    image: /img/mo_sean.png
   - position-title: Risk Management
     position-holder: Seth Miller
     image: /img/bethematch.png
