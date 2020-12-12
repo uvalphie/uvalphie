@@ -4,6 +4,7 @@ import Footer from "../components/common/Footer";
 import Navbar from "../components/common/Navbar";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
+import '../../static/_globalvariables.scss';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();

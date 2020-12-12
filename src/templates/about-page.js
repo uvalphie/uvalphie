@@ -3,7 +3,6 @@ import Layout from "../components/Layout";
 import { useStaticQuery, graphql } from "gatsby";
 import TopSection from "../components/common/TopSection";
 import MidSection from "../components/About/MidSection";
-import "../../static/_globalvariables.scss";
 
 const AboutPage = () => {
   const queryResults = useStaticQuery(
