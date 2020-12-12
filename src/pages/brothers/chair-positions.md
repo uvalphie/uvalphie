@@ -2,19 +2,19 @@
 position:
   - position-title: Webmaster
     position-holder: Jeffrey Shi
-    image: /img/peterhugs.png
+    image: /img/jeffrey-top.png
   - position-title: Design Chair
     position-holder: Connor Noble and Jonathan Wen
-    image: /img/brotherhood.png
+    image: /img/connor_jon.png
   - position-title: Historian
     position-holder: Connor Noble and Derek Yang
     image: /img/ben_adr.png
   - position-title: "Fundraising "
     position-holder: Jae Smith, Jeffrey Shi, Jonathan Wen, Wonyoung Choi, Sam Chen
-    image: /img/ben_adr.png
+    image: /img/jae_jeffrey_jon_won.png
   - position-title: Professional Chair
     position-holder: Wonyoung Choi and Simon Li
-    image: /img/ben_adr.png
+    image: /img/won_simon.png
   - position-title: Social Media
     position-holder: Sam Chen, Andre Tan, and Jonathan Wen
     image: /img/brotherhood.png
@@ -29,7 +29,7 @@ position:
     image: /img/brothers_1.png
   - position-title: MGC/FOA
     position-holder: Jonathan Wen
-    image: /img/bros.jpg
+    image: /img/jon-top.png
   - position-title: Sports
     position-holder: Andre Tan and Connor Noble
     image: /img/bros.jpg
