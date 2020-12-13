@@ -11,7 +11,7 @@ position:
     image: /img/connor_derek.png
   - position-title: "Fundraising "
     position-holder: Jae Smith, Jeffrey Shi, Jonathan Wen, Wonyoung Choi, Sam Chen
-    image: /img/jae_jeffrey_jon_won.png
+    image: /img/jae_jeff_jon_won.png
   - position-title: Professional Chair
     position-holder: Wonyoung Choi and Simon Li
     image: /img/won_simon.png
@@ -25,7 +25,7 @@ position:
     position-holder: Wonyoung Choi and Jonathan Wen
     image: /img/won_jon.png
   - position-title: Culture
-    position-holder: Gordon Lee and Eric Guan
+    position-holder: Eric Guan and Gordan Lee
     image: /img/gordon_eric.png
   - position-title: MGC/FOA
     position-holder: Jonathan Wen
