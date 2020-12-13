@@ -8,7 +8,7 @@ position:
     image: /img/connor_jon.png
   - position-title: Historian
     position-holder: Connor Noble and Derek Yang
-    image: /img/ben_adr.png
+    image: /img/connor_derek.png
   - position-title: "Fundraising "
     position-holder: Jae Smith, Jeffrey Shi, Jonathan Wen, Wonyoung Choi, Sam Chen
     image: /img/jae_jeffrey_jon_won.png
@@ -35,7 +35,7 @@ position:
     image: /img/andre_connor.png
   - position-title: Philanthropy
     position-holder: Gordon Lee and Derek Yang
-    image: /img/ben_adr.png
+    image: /img/gordon_derek.png
   - position-title: Quartermaster
     position-holder: Nicholas Landi and Jonathan Wen
     image: /img/nick_jon.png
