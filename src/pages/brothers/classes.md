@@ -59,6 +59,16 @@ class:
       - member: 41. Kevin "N.G.A.S. Jenkins" Chung
       - member: 42. Taeyoung "Wiidle" Kim
       - member: 43. Michael "Cheez-Whiz" Kim
+  - class-name: Theta
+    member:
+      - member: 44. Daniel "Sharqueen" Chu
+      - member: 45. Alex "Cornutz" Brooks
+      - member: 46. Thomas "Thirty-Pho Rupee" Antony
+      - member: 47. Tyler "Ong Cok" Del Rosario
+      - member: 48. Jon "Lt. Dan" Park
+      - member: 49. "Mo" "WHERE IS SHE?!?" Lu
+      - member: 50. Doug "Zoboomafoo" Mao
+      - member: 51. Bryan "Hip Hop Anonymous" Cheong
   - class-name: Iota
     member:
       - member: 52. Christian "Titty Kong" Sanchez
