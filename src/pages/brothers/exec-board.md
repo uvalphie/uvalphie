@@ -11,7 +11,7 @@ position:
     image: /img/simon-top.png
   - position-title: Treasurer
     position-holder: Alan "NUTella" Zheng
-    image: /img/ben_adr.png
+    image: /img/alan.png
   - position-title: Vice President Service
     position-holder: Ryan "Spoiled Goods" Jensen
     image: /img/ryan-top.png
