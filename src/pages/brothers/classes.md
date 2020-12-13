@@ -2,7 +2,7 @@
 class:
   - class-name: Charter
     member:
-      - member: 1. Thinh "E.T.L." Nguyen
+      - member: '1. Thinh "E.T.L." Nguyen '
       - member: 2. Tuan "Ta-two" Huynh
       - member: 3. C. Eugene "Spacely" Lee
       - member: 4. Yuan "Shakira" Ren
