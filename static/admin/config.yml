@@ -148,22 +148,10 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - {
-              label: Left Image,
-              name: leftImage,
-              widget: image,
-              required: false,
-            }
-          - {
               label: Center Image,
               name: centerImage,
               widget: image,
-              required: false,
-            }
-          - {
-              label: Right Image,
-              name: rightImage,
-              widget: image,
-              required: false,
+              required: true,
             }
           - {
               label: Desktop Image,
@@ -196,22 +184,10 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - {
-              label: Left Image,
-              name: leftImage,
-              widget: image,
-              required: false,
-            }
-          - {
               label: Center Image,
               name: centerImage,
               widget: image,
-              required: false,
-            }
-          - {
-              label: Right Image,
-              name: rightImage,
-              widget: image,
-              required: false,
+              required: true,
             }
           - {
               label: Desktop Image,
@@ -245,22 +221,10 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - {
-              label: Left Image,
-              name: leftImage,
-              widget: image,
-              required: false,
-            }
-          - {
               label: Center Image,
               name: centerImage,
               widget: image,
-              required: false,
-            }
-          - {
-              label: Right Image,
-              name: rightImage,
-              widget: image,
-              required: false,
+              required: true,
             }
           - {
               label: Desktop Image,

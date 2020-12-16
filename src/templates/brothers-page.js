@@ -20,20 +20,7 @@ const BrothersPage = () => {
                 }
               }
             }
-            rightImage {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_noBase64
-                }
-              }
-            }
-            leftImage {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_noBase64
-                }
-              }
-            }
+        
             desktopImage {
               childImageSharp {
                 fluid {

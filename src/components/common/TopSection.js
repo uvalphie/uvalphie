@@ -3,20 +3,8 @@ import Img from "gatsby-image";
 import "./css/topsection.scss";
 
 const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
-  let leftImage,
-    rightImage,
-    centerImage,
+  let centerImage,
     desktopImage = null;
-
-  try {
-    leftImage =
-      queryResults.markdownRemark.frontmatter.leftImage.childImageSharp.fluid;
-  } catch (err) {}
-
-  try {
-    rightImage =
-      queryResults.markdownRemark.frontmatter.rightImage.childImageSharp.fluid;
-  } catch (err) {}
 
   try {
     centerImage =
@@ -33,12 +21,6 @@ const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
     <div className="top-section">
       <div className="main-image">
         <div className="mobile-container">
-          <Img className="left-img" fluid={leftImage} alt="TopSection Image" />
-          <Img
-            className="right-img"
-            fluid={rightImage}
-            alt="TopSection Image"
-          />
           <Img
             className="center-img"
             fluid={centerImage}
