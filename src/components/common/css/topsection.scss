@@ -175,7 +175,7 @@
   right: 10%;
   bottom: 40%;
   z-index: 0;
-  animation: zoomInDown 2s;
+  animation: zoomInDown 1s;
 }
 
 #triangle3.decorator {
@@ -187,7 +187,7 @@
   z-index: 0;
   border: 2px solid #ff8845;
   transform: rotate(40deg);
-  animation: zoomInDown 2s;
+  animation: zoomInDown 1s;
 }
 
 #triangle4.decorator {
@@ -199,7 +199,7 @@
   z-index: 0;
   border: 2px solid #b4f6ff;
   transform: rotate(45deg);
-  animation: zoomInDown 2s;
+  animation: zoomInDown 1s;
 }
 
 @media screen and (min-width: $tablet-landscape) {
