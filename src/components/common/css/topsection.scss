@@ -220,6 +220,13 @@
 
       .desktop-img {
         height: 100%;
+        max-width: 1200px;
+        width: 80%;
+        margin: auto;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        right: 0;
       }
 
       h3 {
@@ -235,6 +242,64 @@
 
 @media screen and (min-width: $desktop) {
   .top-section {
+    .desktop-decorators {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      overflow: hidden;
+
+      .big-circle {
+        height: 70vw;
+        width: 70vw;
+        top: 25%;
+        margin: auto;
+        left: 0;
+        right: 0;
+        background: $dark-blue;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .small-circle{
+        height: 13vw;
+        width: 13vw;
+        background: purple;
+        position: absolute;
+        z-index: 1;
+        border-radius: 50%;
+        right: 10%;
+        top: 5%;
+        border: 2px solid $primary-color;
+        background: none;
+      }
+
+      .left-rectangle {
+        height: 12vw;
+        width: 12vw;
+        transform: rotateZ(60deg);
+        top: 0%;
+        left: 10%;
+        background: $primary-blue;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .left-circle{
+        position: absolute;
+        z-index: 1;
+        height: 10vw;
+        width: 10vw;
+        top: 10%;
+        left: 30%;
+        border-radius: 50%;
+        border: 3px solid $cyan;
+        background: none;
+      }
+    }
+
     .main-image {
       h3 {
         left: 0;

@@ -28,33 +28,33 @@ const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
           />
 
           {circle ? (
-            <div class="circle-decorators">
-              <div class="decorator" id="circle1" />
-              <div class="decorator" id="circle2" />
-              <div class="decorator" id="circle3" />
-              <div class="decorator" id="circle4" />
+            <div className="circle-decorators">
+              <div className="decorator" id="circle1" />
+              <div className="decorator" id="circle2" />
+              <div className="decorator" id="circle3" />
+              <div className="decorator" id="circle4" />
             </div>
           ) : (
             <div />
           )}
 
           {rectangle ? (
-            <div class="rectangles-decorators">
-              <div class="decorator" id="rectangle1" />
-              <div class="decorator" id="rectangle2" />
-              <div class="decorator" id="rectangle3" />
-              <div class="decorator" id="rectangle4" />
+            <div className="rectangles-decorators">
+              <div className="decorator" id="rectangle1" />
+              <div className="decorator" id="rectangle2" />
+              <div className="decorator" id="rectangle3" />
+              <div className="decorator" id="rectangle4" />
             </div>
           ) : (
             <div />
           )}
 
           {triangle ? (
-            <div class="triangle-decorators">
-              <div class="decorator" id="triangle1" />
-              <div class="decorator" id="triangle2" />
-              <div class="decorator" id="circle3" />
-              <div class="decorator" id="triangle4" />
+            <div className="triangle-decorators">
+              <div className="decorator" id="triangle1" />
+              <div className="decorator" id="triangle2" />
+              <div className="decorator" id="circle3" />
+              <div className="decorator" id="triangle4" />
             </div>
           ) : (
             <div />
@@ -68,6 +68,15 @@ const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
             fluid={desktopImage}
             alt="TopSection Image"
           />
+
+          <div className="desktop-decorators">
+            <div className="big-circle"/>
+            <div className="left-circle"/>
+            <div className="left-rectangle"/>
+            <div className="small-circle"/>
+          </div>
+
+
           <h3>{queryResults.markdownRemark.frontmatter.title}</h3>
         </div>
       </div>
