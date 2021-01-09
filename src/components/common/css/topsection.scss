@@ -3,6 +3,7 @@
 .top-section {
   position: relative;
   height: 40vh;
+  max-height: 800px;
   width: 100%;
   margin-bottom: $global-margin-top;
 
@@ -204,7 +205,7 @@
 
 @media screen and (min-width: $tablet-landscape) {
   .top-section {
-    height: 40vh;
+    height: 32vh;
 
     .mobile-container {
       display: none;
@@ -221,12 +222,17 @@
       .desktop-img {
         height: 100%;
         max-width: 1200px;
-        width: 80%;
+        width: 100%;
         margin: auto;
         position: absolute;
         z-index: 2;
         left: 0;
         right: 0;
+
+        img{
+          object-fit: contain !important;
+          object-position: bottom !important;
+        }
       }
 
       h3 {
@@ -242,6 +248,7 @@
 
 @media screen and (min-width: $desktop) {
   .top-section {
+    height: 40vh;
     .desktop-decorators {
       height: 100%;
       width: 100%;

@@ -188,7 +188,7 @@ const TopSection = () => {
           />
         </div>
         {/* Circles behind the main image in top-section */}
-        <div className="landing-decorator" id="circle1" />a
+        <div className="landing-decorator" id="circle1" />
         <div className="landing-decorator" id="circle2" />
         <div className="landing-decorator" id="circle3" />
         <Img

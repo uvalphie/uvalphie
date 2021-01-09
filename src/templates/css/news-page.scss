@@ -25,12 +25,13 @@
 .article-container {
   width: 90%;
   max-width: 1000px;
-  min-height: 90%;
+  min-height: 80vh;
   margin: auto;
   font-family: "Open Sans", sans-serif;
 
   .article-header {
-    font-size: 4rem;
+    font-size: 3rem;
+    line-height: 3.2rem;
     padding-bottom: 0.5rem;
   }
   .article-content {
