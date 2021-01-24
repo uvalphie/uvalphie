@@ -1,6 +1,8 @@
 import React from "react";
 import Img from "gatsby-image";
+import { Link } from "gatsby";
 import "./css/topsection.scss";
+import UvalphieText from "../../img/uvalphie-white.svg";
 
 const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
   let centerImage,
@@ -19,6 +21,9 @@ const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
 
   return (
     <div className="top-section">
+      <Link to="/">
+        <img className="uvalphie-text" id="mobile" src={UvalphieText} />
+      </Link>
       <div className="main-image">
         <div className="mobile-container">
           <Img
@@ -70,12 +75,11 @@ const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
           />
 
           <div className="desktop-decorators">
-            <div className="big-circle"/>
-            <div className="left-circle"/>
-            <div className="left-rectangle"/>
-            <div className="small-circle"/>
+            <div className="big-circle" />
+            <div className="left-circle" />
+            <div className="left-rectangle" />
+            <div className="small-circle" />
           </div>
-
 
           <h3>{queryResults.markdownRemark.frontmatter.title}</h3>
         </div>
