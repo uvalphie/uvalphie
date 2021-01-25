@@ -41,7 +41,7 @@ const TopSection = () => {
             title
             description
             mainimage {
-              background_image_mobile {
+              backgroundImageMobile {
                 childImageSharp {
                   fluid {
                     ...GatsbyImageSharpFluid_noBase64
@@ -50,7 +50,7 @@ const TopSection = () => {
               }
             }
             mainimage {
-              background_image_desktop {
+              backgroundImageDesktop {
                 childImageSharp {
                   fluid {
                     ...GatsbyImageSharpFluid_noBase64
@@ -59,7 +59,7 @@ const TopSection = () => {
               }
             }
             mainimage {
-              mini_image_1 {
+              miniImageOne {
                 childImageSharp {
                   fluid {
                     ...GatsbyImageSharpFluid_noBase64
@@ -68,7 +68,7 @@ const TopSection = () => {
               }
             }
             mainimage {
-              mini_image_2 {
+              miniImageTwo {
                 childImageSharp {
                   fluid {
                     ...GatsbyImageSharpFluid_noBase64
@@ -76,7 +76,7 @@ const TopSection = () => {
                 }
               }
             }
-            profile_image {
+            profileImage {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid_noBase64
@@ -88,7 +88,6 @@ const TopSection = () => {
       }
     `
   );
-
   return (
     <div className="landing-section">
       <Modal
@@ -162,7 +161,7 @@ const TopSection = () => {
           id="frame-1"
           onClick={() =>
             openModal(
-              queryResults.markdownRemark.frontmatter.mainimage.mini_image_1
+              queryResults.markdownRemark.frontmatter.mainimage.miniImageOne
                 .childImageSharp.fluid
             )
           }
@@ -170,7 +169,7 @@ const TopSection = () => {
           <Img
             className="mini-image"
             fluid={
-              queryResults.markdownRemark.frontmatter.mainimage.mini_image_1
+              queryResults.markdownRemark.frontmatter.mainimage.miniImageOne
                 .childImageSharp.fluid
             }
             alt="TopSection"
@@ -182,7 +181,7 @@ const TopSection = () => {
           id="frame-2"
           onClick={() =>
             openModal(
-              queryResults.markdownRemark.frontmatter.mainimage.mini_image_2
+              queryResults.markdownRemark.frontmatter.mainimage.miniImageTwo
                 .childImageSharp.fluid
             )
           }
@@ -190,7 +189,7 @@ const TopSection = () => {
           <Img
             className="mini-image"
             fluid={
-              queryResults.markdownRemark.frontmatter.mainimage.mini_image_2
+              queryResults.markdownRemark.frontmatter.mainimage.miniImageTwo
                 .childImageSharp.fluid
             }
             alt="TopSection"
@@ -203,7 +202,7 @@ const TopSection = () => {
         <Img
           className="big-image"
           fluid={
-            queryResults.markdownRemark.frontmatter.mainimage.background_image_mobile
+            queryResults.markdownRemark.frontmatter.mainimage.backgroundImageMobile
               .childImageSharp.fluid
           }
           alt="TopSection"
@@ -216,7 +215,7 @@ const TopSection = () => {
           <div
             onClick={() =>
               openModal(
-                queryResults.markdownRemark.frontmatter.profile_image.childImageSharp
+                queryResults.markdownRemark.frontmatter.profileImage.childImageSharp
                   .fluid
               )
             }
@@ -224,7 +223,7 @@ const TopSection = () => {
             <Img
               className="profile-img-mobile"
               fluid={
-                queryResults.markdownRemark.frontmatter.profile_image.childImageSharp
+                queryResults.markdownRemark.frontmatter.profileImage.childImageSharp
                   .fluid
               }
               alt="TopSection"
@@ -236,7 +235,7 @@ const TopSection = () => {
             <div
               onClick={() =>
                 openModal(
-                  queryResults.markdownRemark.frontmatter.profile_image.childImageSharp
+                  queryResults.markdownRemark.frontmatter.profileImage.childImageSharp
                     .fluid
                 )
               }
@@ -245,7 +244,7 @@ const TopSection = () => {
                 className="profile-img-desktop"
                 id="desktop"
                 fluid={
-                  queryResults.markdownRemark.frontmatter.profile_image.childImageSharp
+                  queryResults.markdownRemark.frontmatter.profileImage.childImageSharp
                     .fluid
                 }
                 alt="TopSection"

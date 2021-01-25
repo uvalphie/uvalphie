@@ -28,20 +28,20 @@ collections:
                 [
                   {
                     label: Background Image Mobile,
-                    name: background_image_mobile,
+                    name: backgroundImageMobile,
                     widget: image,
                   },
                   {
                     label: Background Image Desktop,
-                    name: background_image_desktop,
+                    name: backgroundImageDesktop,
                     widget: image,
                   },
-                  { label: Mini Image 1, name: mini_image_1, widget: image },
-                  { label: Mini Image 2, name: mini_image_2, widget: image },
+                  { label: Mini Image 1, name: miniImageOne, widget: image },
+                  { label: Mini Image 2, name: miniImageTwo, widget: image },
                 ],
             }
           - { label: Title, name: title, widget: string }
-          - { label: Profile Image, name: profile_image, widget: image }
+          - { label: Profile Image, name: profileImage, widget: image }
           - { label: Description, name: description, widget: text }
       - file: "src/pages/landing/midsection/section1.md"
         label: "Section 1"
