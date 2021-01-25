@@ -1,10 +1,11 @@
 ---
 mainimage:
-  background-image: /img/rotunda.png
-  mini-image-1: /img/miniimage1-1-.jpg
-  mini-image-2: /img/miniimage1-2-.jpg
+  background_image_mobile: /img/rotunda-mobile.png
+  background_image_desktop: /img/rotunda-desktop.png
+  mini_image_1: /img/miniimage1-1-.jpg
+  mini_image_2: /img/miniimage1-2-.jpg
 title: uvalphie
-image: /img/bros.jpg
+profile_image: /img/bros.jpg
 description: |-
   The Gentleman's Chapter
   University of Virginia

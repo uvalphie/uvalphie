@@ -41,7 +41,16 @@ const TopSection = () => {
             title
             description
             mainimage {
-              background_image {
+              background_image_mobile {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_noBase64
+                  }
+                }
+              }
+            }
+            mainimage {
+              background_image_desktop {
                 childImageSharp {
                   fluid {
                     ...GatsbyImageSharpFluid_noBase64
@@ -67,7 +76,7 @@ const TopSection = () => {
                 }
               }
             }
-            image {
+            profile_image {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid_noBase64
@@ -194,7 +203,7 @@ const TopSection = () => {
         <Img
           className="big-image"
           fluid={
-            queryResults.markdownRemark.frontmatter.mainimage.background_image
+            queryResults.markdownRemark.frontmatter.mainimage.background_image_mobile
               .childImageSharp.fluid
           }
           alt="TopSection"
@@ -207,7 +216,7 @@ const TopSection = () => {
           <div
             onClick={() =>
               openModal(
-                queryResults.markdownRemark.frontmatter.image.childImageSharp
+                queryResults.markdownRemark.frontmatter.profile_image.childImageSharp
                   .fluid
               )
             }
@@ -215,7 +224,7 @@ const TopSection = () => {
             <Img
               className="profile-img-mobile"
               fluid={
-                queryResults.markdownRemark.frontmatter.image.childImageSharp
+                queryResults.markdownRemark.frontmatter.profile_image.childImageSharp
                   .fluid
               }
               alt="TopSection"
@@ -227,7 +236,7 @@ const TopSection = () => {
             <div
               onClick={() =>
                 openModal(
-                  queryResults.markdownRemark.frontmatter.image.childImageSharp
+                  queryResults.markdownRemark.frontmatter.profile_image.childImageSharp
                     .fluid
                 )
               }
@@ -236,7 +245,7 @@ const TopSection = () => {
                 className="profile-img-desktop"
                 id="desktop"
                 fluid={
-                  queryResults.markdownRemark.frontmatter.image.childImageSharp
+                  queryResults.markdownRemark.frontmatter.profile_image.childImageSharp
                     .fluid
                 }
                 alt="TopSection"

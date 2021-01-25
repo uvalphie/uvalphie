@@ -116,6 +116,7 @@
   border-radius: 50%;
   border: 2px solid #b4f6ff;
   animation: zoomInDown 1s;
+  opacity: 0.2;
 }
 
 #rectangle1.decorator {
@@ -162,6 +163,7 @@
   border: 2px solid #b4f6ff;
   transform: rotate(45deg);
   animation: zoomInDown 1s;
+  opacity: 0.2;
 }
 
 #triangle1.decorator {
@@ -209,6 +211,7 @@
   border: 2px solid #b4f6ff;
   transform: rotate(45deg);
   animation: zoomInDown 1s;
+  opacity: 0.2;
 }
 
 @media screen and (min-width: $tablet-landscape) {
