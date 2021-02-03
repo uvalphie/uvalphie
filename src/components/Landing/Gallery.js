@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
 import Modal from "react-modal";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -25,6 +24,55 @@ const Gallery = () => {
   const [currentImageCaption, updateCaption] = React.useState("");
   const [currentGallerySlide, updateGallerySlide] = React.useState(0);
   const [carousel, setCarousel] = React.useState();
+  const [carouselImages, setImages] = React.useState([]);
+
+  useEffect(() => {
+    const INSTAGRAM_ID = 1366987037;
+    const PHOTO_COUNT = 50;
+
+    async function scrapeInstagram() {
+      // console.log(carouselImages)
+      let imagesScraped = false
+      while (imagesScraped == false) {
+        try {
+          const response = await fetch(
+            `https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${INSTAGRAM_ID}","first":${PHOTO_COUNT},"after":null}`
+          );
+          const { data } = await response.json();
+          const photos = data.user.edge_owner_to_timeline_media.edges.map(
+            ({ node }) => {
+              const { id } = node;
+              const caption = node.edge_media_to_caption.edges[0].node.text;
+              const originalImg = node.display_url;
+              const thumbnail = node.thumbnail_resources.find(
+                (thumbnail) => thumbnail.config_width === 320
+              );
+              const {
+                src,
+                config_width: width,
+                config_height: height,
+              } = thumbnail;
+              const url = `https://www.instagram.com/p/${node.shortcode}`;
+              return {
+                id,
+                caption,
+                src,
+                thumbnail,
+                originalImg,
+              };
+            }
+          );
+          // console.log("PHOTOS: ", photos);
+          setImages(photos);
+          imagesScraped = true;
+        } catch (error) {
+          // console.error(error);
+          console.log("Could not retrieve gallery images.")
+        }
+      }
+    }
+    scrapeInstagram();
+  }, []);
 
   // Modal Functions
   function openModal(image, caption) {
@@ -45,28 +93,29 @@ const Gallery = () => {
     carousel.slickPrev();
   }
 
-  const queryResults = useStaticQuery(
-    graphql`
-      query {
-        allInstaNode {
-          edges {
-            node {
-              id
-              mediaType
-              preview
-              original
-              timestamp
-              caption
-            }
-          }
-        }
-      }
-    `
-  );
-  let imagesData = [];
-  for (var query in queryResults.allInstaNode.edges) {
-    imagesData.push(queryResults.allInstaNode.edges[parseInt(query)].node);
-  }
+  // const queryResults = useStaticQuery(
+  //   graphql`
+  //     query {
+  //       allInstaNode {
+  //         edges {
+  //           node {
+  //             id
+  //             mediaType
+  //             preview
+  //             original
+  //             timestamp
+  //             caption
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `
+  // );
+  // let imagesData = [];
+  // console.log(queryResults.allInstaNode.edges);
+  // for (var query in queryResults.allInstaNode.edges) {
+  //   imagesData.push(queryResults.allInstaNode.edges[parseInt(query)].node);
+  // }
 
   // Carousel Settings
   const settings = {
@@ -142,14 +191,16 @@ const Gallery = () => {
       >
         {slideImgIndices.map((imageIndex, index) => (
           <div className="instagram-slide" key={index}>
-            {imagesData
+            {carouselImages
               .slice(imageIndex, imageIndex + 6)
               .map((image, index) => (
                 <div className="instagram-img" key={index}>
                   <img
-                    src={image.preview}
+                    src={image.thumbnail.src}
                     alt="Section Image"
-                    onClick={() => openModal(image.original, image.caption)}
+                    onClick={() =>
+                      openModal(image.originalImg, image.caption)
+                    }
                   />
                 </div>
               ))}
