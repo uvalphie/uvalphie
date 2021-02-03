@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { navigate } from "gatsby";
+import { Link, navigate } from "gatsby";
+import UvalphieText from "./img/uvalphie.svg";
 import "./css/news-page.scss";
 
 const NewsPage = ({ data }) => {
@@ -9,22 +10,27 @@ const NewsPage = ({ data }) => {
 
   return (
     <Layout>
-      <nav className="news-navbar">
-        <button
-          className="exit-news-btn"
-          onClick={() => {
-            navigate("/");
-          }}
-        >
-          Exit News
-        </button>
-      </nav>
-      <div className="article-container">
-        <h1 className="article-header">{post.frontmatter.title}</h1>
-        <div
-          className="article-content"
-          dangerouslySetInnerHTML={{ __html: `<div> ${post.html} </div>` }}
-        ></div>
+      <div class="news-page">
+        <nav className="news-navbar">
+          <Link to="/">
+            <img className="uvalphie-text" id="mobile" src={UvalphieText} />
+          </Link>
+          <button
+            className="exit-news-btn"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            &times;
+          </button>
+        </nav>
+        <div className="article-container">
+          <h1 className="article-header">{post.frontmatter.title}</h1>
+          <div
+            className="article-content"
+            dangerouslySetInnerHTML={{ __html: `<div> ${post.html} </div>` }}
+          ></div>
+        </div>
       </div>
     </Layout>
   );
