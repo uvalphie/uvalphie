@@ -12,4 +12,4 @@ This is a test paragraph with some **bolded** text.
 
 Zoom Link: <https://www.facebook.com/>
 
-\    Space
+&nbsp;Space
