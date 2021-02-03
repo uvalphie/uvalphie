@@ -10,9 +10,6 @@ This September, we organized a fundraiser called Lambdas Run and aimed to raise 
 
 This is a test paragraph with some **bolded** text.
 
-> Zoom Link: <https://www.facebook.com/>
+Zoom Link: <https://www.facebook.com/>
 
-\    This is a paragraph with Space\
-\
-\
-Test wth break
+\    Space
