@@ -4,6 +4,8 @@ title: Spring 2021 Rush
 image: /img/banner.png
 order: 1
 ---
+![](/img/banner.png "UVA Lambdas Spring Rush 2021: Suit Up")
+
 We, the brothers of the Alpha Tau Chapter of Lambda Phi Epsilon, invite you to attend our Spring 2021 Virtual Rush! Come out to our events to meet brothers and learn what it means To Be Leaders Among Men.
 
 Because of COVID-19, we are unable to hold in-person events as we normally do. However, the brothers would still like to get to know you! We have provided a Discord server for you to join in case you have any questions or just want to hang out at any time! Additionally, we will be sending updates related to rush here so join if you want to stay notified. Link provided below:
