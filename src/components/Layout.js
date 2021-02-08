@@ -4,7 +4,7 @@ import Footer from "../components/common/Footer";
 import Navbar from "../components/common/Navbar";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
-import '../../static/_globalvariables.scss';
+import "../../static/_globalvariables.scss";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -25,7 +25,7 @@ const TemplateWrapper = ({ children }) => {
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
-        <meta name="description" content={description} />
+        <meta name="description" content={description} charSet="utf-8" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"

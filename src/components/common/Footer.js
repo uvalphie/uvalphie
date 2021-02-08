@@ -43,6 +43,7 @@ const Footer = () => {
                   .website_link
               }
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 src={
@@ -59,6 +60,7 @@ const Footer = () => {
                   .website_link
               }
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 src={
@@ -66,6 +68,7 @@ const Footer = () => {
                     .publicURL
                 }
                 alt="Social Media Logo"
+                rel="noreferrer"
               />
             </a>
           </div>

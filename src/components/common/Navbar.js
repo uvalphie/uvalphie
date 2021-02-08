@@ -80,7 +80,7 @@ const Navbar = () => {
             <a role="button" onClick={() => toggleMenu(true)}>
               {currentPageNav}
             </a>
-            <a id="filler">Philantrophy</a>
+            <a role="button" id="filler">Philantrophy</a>
           </div>
         )}
       </div>

@@ -230,7 +230,7 @@ const TopSection = () => {
             />
           </div>
           {/* The 'uvalphie' text */}
-          <img className="uvalphie-text" id="mobile" src={UvalphieText} />
+          <img className="uvalphie-text" alt="uvalphie logo" id="mobile" src={UvalphieText} />
           <div className="text">
             <div
               onClick={() =>

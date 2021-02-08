@@ -11,7 +11,7 @@ const NewsPage = ({ data }) => {
       <div class="news-page">
         <nav className="news-navbar">
           <Link to="/">
-            <img className="uvalphie-text" id="mobile" src={UvalphieText} />
+            <img className="uvalphie-text" alt="uvalphie logo" id="mobile" src={UvalphieText} />
           </Link>
           <button
             className="exit-news-btn"

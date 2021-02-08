@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "uvalphie",
     description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
+      "Home to uvalphie or also known as University of Virginia Lambda Phi Epsilon.",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -40,6 +40,12 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages/news`,
         name: "News",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     "gatsby-plugin-sharp",

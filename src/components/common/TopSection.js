@@ -22,7 +22,7 @@ const TopSection = ({ queryResults, circle, rectangle, triangle }) => {
   return (
     <div className="top-section">
       <Link to="/">
-        <img className="uvalphie-text" id="mobile" src={UvalphieText} />
+        <img className="uvalphie-text" alt="uvalphie logo" id="mobile" src={UvalphieText} />
       </Link>
       <div className="main-image">
         <div className="mobile-container">

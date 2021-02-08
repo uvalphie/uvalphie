@@ -35,6 +35,7 @@ const SocialMedia = () => {
           socialMediaQuery.markdownRemark.frontmatter.platform1.website_link
         }
         target="_blank"
+        rel="noreferrer"
       >
         <img
           src={
@@ -49,6 +50,7 @@ const SocialMedia = () => {
           socialMediaQuery.markdownRemark.frontmatter.platform2.website_link
         }
         target="_blank"
+        rel="noreferrer"
       >
         <img
           src={
