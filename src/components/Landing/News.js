@@ -32,7 +32,9 @@ const News = () => {
   const queryResults = useStaticQuery(
     graphql`
       query MyQuery {
-        allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/src/pages/news/" } }) {
+        allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/src/pages/news/" } }
+        ) {
           edges {
             node {
               fields {
@@ -40,6 +42,7 @@ const News = () => {
               }
               id
               frontmatter {
+                order
                 title
                 image {
                   childImageSharp {
@@ -57,6 +60,9 @@ const News = () => {
     `
   );
   let allNews = queryResults.allMarkdownRemark.edges;
+  allNews.sort((a, b) => (a.node.frontmatter.order > b.node.frontmatter.order) ? 1 : -1)
+
+  console.log(allNews);
 
   return (
     <div className="news">
@@ -111,7 +117,9 @@ const News = () => {
         {allNews.map((news, index) => (
           <div
             className="news-slide"
-            onClick={()=>{navigate(news.node.fields.slug)}}
+            onClick={() => {
+              navigate(news.node.fields.slug);
+            }}
             key={index}
           >
             <Img

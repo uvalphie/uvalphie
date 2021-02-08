@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, withAssetPrefix } from "gatsby";
 import Modal from "react-modal";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./css/gallery.scss";
+import BackupData from "./json/gallery-backup.json";
 
 // Modal Settings
 const customStyles = {
@@ -32,13 +33,19 @@ const Gallery = () => {
 
     async function scrapeInstagram() {
       // console.log(carouselImages)
-      let imagesScraped = false
+      let imagesScraped = false;
       while (imagesScraped == false) {
         try {
           const response = await fetch(
             `https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${INSTAGRAM_ID}","first":${PHOTO_COUNT},"after":null}`
           );
-          const { data } = await response.json();
+          console.log(
+            `https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${INSTAGRAM_ID}","first":${PHOTO_COUNT},"after":null}`
+          );
+          console.log(await JSON.parse(JSON.stringify(response)));
+          // console.log(test);
+          const { data } = await response;
+          console.log(data);
           const photos = data.user.edge_owner_to_timeline_media.edges.map(
             ({ node }) => {
               const { id } = node;
@@ -47,12 +54,7 @@ const Gallery = () => {
               const thumbnail = node.thumbnail_resources.find(
                 (thumbnail) => thumbnail.config_width === 320
               );
-              const {
-                src,
-                config_width: width,
-                config_height: height,
-              } = thumbnail;
-              const url = `https://www.instagram.com/p/${node.shortcode}`;
+              const { src } = thumbnail;
               return {
                 id,
                 caption,
@@ -62,12 +64,40 @@ const Gallery = () => {
               };
             }
           );
-          // console.log("PHOTOS: ", photos);
+          console.log("PHOTOS: ", photos);
           setImages(photos);
           imagesScraped = true;
         } catch (error) {
-          // console.error(error);
-          console.log("Could not retrieve gallery images.")
+          // Fallback in case it doesnt work
+          console.error(error);
+          console.log("Could not retrieve gallery images.");
+          try {
+            const backupData = JSON.parse(JSON.stringify(BackupData));
+            console.log("FUCKKK--------------");
+            const photos = backupData.data.user.edge_owner_to_timeline_media.edges.map(
+              ({ node }) => {
+                const { id } = node;
+                const caption = node.edge_media_to_caption.edges[0].node.text;
+                const originalImg = node.display_url;
+                const thumbnail = node.thumbnail_resources.find(
+                  (thumbnail) => thumbnail.config_width === 320
+                );
+                const { src } = thumbnail;
+                return {
+                  id,
+                  caption,
+                  src,
+                  thumbnail,
+                  originalImg,
+                };
+              }
+            );
+            setImages(photos);
+            imagesScraped = true;
+          } catch (err) {
+            console.log(err);
+          }
+          imagesScraped = true;
         }
       }
     }
@@ -198,9 +228,7 @@ const Gallery = () => {
                   <img
                     src={image.thumbnail.src}
                     alt="Section Image"
-                    onClick={() =>
-                      openModal(image.originalImg, image.caption)
-                    }
+                    onClick={() => openModal(image.originalImg, image.caption)}
                   />
                 </div>
               ))}
