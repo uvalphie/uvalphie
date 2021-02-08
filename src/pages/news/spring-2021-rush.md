@@ -20,13 +20,9 @@ Zoom: <https://tinyurl.com/49vy3c8x>
 
 </br>
 
-</br>
-
 The next event will be a **Game Night on Thursday, February 4th at 8:00PM**. Come out and show your funny side and convincing skills while we play different games such as Jackbox and Mafia!
 
 Discord
-
-</br>
 
 </br>
 
@@ -36,13 +32,9 @@ Zoom: <https://tinyurl.com/ypt4emwg>
 
 </br>
 
-</br>
-
 We will be having a second **Game Night on Sunday, February 7th at 8:00PM**, Electric Boogaloo! Test out your detective skills while we try out different Escape Rooms as well as figuring out who the impostors are in Among Us!
 
 Discord
-
-</br>
 
 </br>
 
@@ -52,21 +44,15 @@ Zoom: <https://tinyurl.com/3ddawk3d>
 
 </br>
 
-</br>
-
 Next, we will be having a **Trivia Night on Wednesday, February 10th at 8:00PM**. Come show off your knowledge as we compete to find out who’s the smartest and they’ll be able to win some CASH prizes!
 
 Discord
 
 </br>
 
-</br>
-
 Finally, we will be having a **Feast on Thursday, February 11th at 6:30PM**. End rush with a treat from the bros where you can choose to enjoy any meal of your choice on us and get to know the bros even better over Zoom!
 
 Zoom: INVITE ONLY
-
-</br>
 
 </br>
 
@@ -79,16 +65,16 @@ Lambda Phi Epsilon is the first and only internationally recognized Asian-Americ
 
 </br>
 
-</br>
-
 ## WHAT IS RUSH?
+
+
 
 \
 Rush is a period for us to get to know you, with the goal of finding future brothers of our fraternity. It is also an opportunity for you to get a sense of who Lambdas are at UVA. Our brothers host a variety of events giving you the opportunity to get to know us and explore Greek life.
 
 </br>
 
-</br>
+
 
 ## WHAT IS A BID?
 
@@ -97,7 +83,7 @@ A Bid is a formal invitation from our Fraternity expressing interest in having y
 
 </br>
 
-</br>
+
 
 ## WHAT DO I NEED TO DO TO GET A BID?
 
