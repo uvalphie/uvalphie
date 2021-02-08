@@ -31,6 +31,33 @@ const Gallery = () => {
     const INSTAGRAM_ID = 1366987037;
     const PHOTO_COUNT = 50;
 
+    async function fallbackData() {
+      try {
+        const backupData = JSON.parse(JSON.stringify(BackupData));
+        const photos = backupData.data.user.edge_owner_to_timeline_media.edges.map(
+          ({ node }) => {
+            const { id } = node;
+            const caption = node.edge_media_to_caption.edges[0].node.text;
+            const originalImg = node.display_url;
+            const thumbnail = node.thumbnail_resources.find(
+              (thumbnail) => thumbnail.config_width === 320
+            );
+            const { src } = thumbnail;
+            return {
+              id,
+              caption,
+              src,
+              thumbnail,
+              originalImg,
+            };
+          }
+        );
+        setImages(photos);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+
     async function scrapeInstagram() {
       // console.log(carouselImages)
       let imagesScraped = false;
@@ -39,13 +66,7 @@ const Gallery = () => {
           const response = await fetch(
             `https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${INSTAGRAM_ID}","first":${PHOTO_COUNT},"after":null}`
           );
-          console.log(
-            `https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${INSTAGRAM_ID}","first":${PHOTO_COUNT},"after":null}`
-          );
-          console.log(await JSON.parse(JSON.stringify(response)));
-          // console.log(test);
           const { data } = await response;
-          console.log(data);
           const photos = data.user.edge_owner_to_timeline_media.edges.map(
             ({ node }) => {
               const { id } = node;
@@ -64,39 +85,13 @@ const Gallery = () => {
               };
             }
           );
-          console.log("PHOTOS: ", photos);
           setImages(photos);
           imagesScraped = true;
         } catch (error) {
           // Fallback in case it doesnt work
           console.error(error);
           console.log("Could not retrieve gallery images.");
-          try {
-            const backupData = JSON.parse(JSON.stringify(BackupData));
-            console.log("FUCKKK--------------");
-            const photos = backupData.data.user.edge_owner_to_timeline_media.edges.map(
-              ({ node }) => {
-                const { id } = node;
-                const caption = node.edge_media_to_caption.edges[0].node.text;
-                const originalImg = node.display_url;
-                const thumbnail = node.thumbnail_resources.find(
-                  (thumbnail) => thumbnail.config_width === 320
-                );
-                const { src } = thumbnail;
-                return {
-                  id,
-                  caption,
-                  src,
-                  thumbnail,
-                  originalImg,
-                };
-              }
-            );
-            setImages(photos);
-            imagesScraped = true;
-          } catch (err) {
-            console.log(err);
-          }
+          fallbackData();
           imagesScraped = true;
         }
       }

@@ -7,7 +7,6 @@ const NewsPagePreview = ({ entry, widgetFor }) => {
   // const data = entry.getIn(["body"]).toJS();
   const article = widgetFor("body");
   const post = article.props.value;
-  console.log(article.props);
 
   return (
     <div>

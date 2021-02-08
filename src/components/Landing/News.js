@@ -62,8 +62,6 @@ const News = () => {
   let allNews = queryResults.allMarkdownRemark.edges;
   allNews.sort((a, b) => (a.node.frontmatter.order > b.node.frontmatter.order) ? 1 : -1)
 
-  console.log(allNews);
-
   return (
     <div className="news">
       <button

@@ -6,8 +6,6 @@ import "./css/news-page.scss";
 
 const NewsPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log(post);
-
   return (
     <Layout>
       <div class="news-page">
