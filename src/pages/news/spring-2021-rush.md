@@ -61,25 +61,31 @@ Zoom: INVITE ONLY
 Want to know more about rush or what Lambdas is about? Here’s a few common questions!
 
 ## WHO ARE WE?
+
 Lambda Phi Epsilon is the first and only internationally recognized Asian-American interest fraternity, with 50 chapters spanning North America and over 10,000 active members and alumni. Grounded on the principles of wisdom, honor, and courage, Lambda Phi Epsilon strives to provide opportunities for young men to grow throughout their college years, and beyond, as inspirational leaders and men of morals, encouraging service to the community and academic excellence. Our fraternal traditions and time together build chapters into families and foster strong bonds of brotherhood that will last a lifetime.
 
 </br>
 
 ## WHAT IS RUSH?
+
 Rush is a period for us to get to know you, with the goal of finding future brothers of our fraternity. It is also an opportunity for you to get a sense of who Lambdas are at UVA. Our brothers host a variety of events giving you the opportunity to get to know us and explore Greek life.
 
 </br>
 
-
-
 ## WHAT IS A BID?
+
 A Bid is a formal invitation from our Fraternity expressing interest in having you as a potential brother of our house. Receiving a Bid depends on the outcome of Rush and how well we think you may fit within our Fraternity.
 
 </br>
 
 ## WHAT DO I NEED TO DO TO GET A BID?
+
 You will increase your chances of receiving a Bid by coming out to more events and allowing us to get to know you better. Be yourself and have fun! We also require interested members to attend at least ONE (1x) panel. All events are completely free with NO OBLIGATION to join. Additionally, selected individuals may be invited to interview at the conclusion of Rush.
 
 We’re looking forward to getting to know and welcome new brothers soon!
 
 Feel free to contact Jeffrey Shi on messenger with any questions!
+
+## Test
+
+geaeag
