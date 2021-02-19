@@ -83,9 +83,3 @@ A Bid is a formal invitation from our Fraternity expressing interest in having y
 You will increase your chances of receiving a Bid by coming out to more events and allowing us to get to know you better. Be yourself and have fun! We also require interested members to attend at least ONE (1x) panel. All events are completely free with NO OBLIGATION to join. Additionally, selected individuals may be invited to interview at the conclusion of Rush.
 
 We’re looking forward to getting to know and welcome new brothers soon!
-
-Feel free to contact Jeffrey Shi on messenger with any questions!
-
-## Test
-
-geaeag
