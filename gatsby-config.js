@@ -42,12 +42,6 @@ module.exports = {
         name: "News",
       },
     },
-    {
-      resolve: "gatsby-plugin-robots-txt",
-      options: {
-        policy: [{ userAgent: "*", allow: "/" }],
-      },
-    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
