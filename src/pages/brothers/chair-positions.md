@@ -5,7 +5,7 @@ position:
     image: /img/webmaster.png
   - position-title: Design Chair
     position-holder: Connor Noble and Jonathan Wen
-    image: /img/connor_jon.png
+    image: /img/design-chair.png
   - position-title: Historian
     position-holder: Connor Noble and Derek Yang
     image: /img/connor_derek.png
