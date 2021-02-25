@@ -2,7 +2,7 @@
 position:
   - position-title: Webmaster
     position-holder: Jeffrey Shi
-    image: /img/jeffrey-top.png
+    image: /img/webmaster.png
   - position-title: Design Chair
     position-holder: Connor Noble and Jonathan Wen
     image: /img/connor_jon.png
