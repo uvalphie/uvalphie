@@ -5,7 +5,7 @@ position:
     image: /img/seth.png
   - position-title: Vice President Internal
     position-holder: Jeffrey "MeAn GiRlZ" Shi
-    image: /img/jeffrey-top.png
+    image: /img/webmaster.png
   - position-title: Vice President External
     position-holder: Simon "Petty Officer Mudhole" Li
     image: /img/simon-top.png
