@@ -16,7 +16,7 @@ const Exec = () => {
               image {
                 childImageSharp {
                   fluid {
-                    ...GatsbyImageSharpFluid_noBase64
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -28,9 +28,11 @@ const Exec = () => {
   );
 
   let positionData = queryResults.markdownRemark.frontmatter.position;
+  console.log("TEST");
+  console.log(positionData);
 
   return (
-    <section class="exec" id="subsection">
+    <section className="exec" id="subsection">
         <h2 className="header">
           <span>Executive Board</span>
         </h2>

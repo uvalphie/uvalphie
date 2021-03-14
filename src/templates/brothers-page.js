@@ -20,7 +20,6 @@ const BrothersPage = () => {
                 }
               }
             }
-        
             desktopImage {
               childImageSharp {
                 fluid {

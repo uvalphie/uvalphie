@@ -15,6 +15,8 @@ const PositionCarousel = (data, carouselAlignment) => {
 
   const allPositions = data.data;
 
+  console.log(allPositions)
+
   const [carousel, setCarousel] = React.useState();
 
   function updatePosition(current) {
@@ -118,21 +120,22 @@ const PositionCarousel = (data, carouselAlignment) => {
       )}
       <div className="align-container" id={data.carouselAlignment}>
         <section className="positions" id="subsection">
-          <div class="container">
+          <div className="container">
             <Slider
               asNavFor={carousel}
               ref={(slider) => setCarousel(slider)}
               {...settings}
             >
-              {allPositions.map((position) => (
-                <div className="person">
+              {allPositions.map((position, index) => (
+                <div className="person" key={index}>
                   <div className="mini-decorator" id="circle1" />
                   <div className="mini-decorator" id="circle2" />
                   <div className="mini-decorator" id="circle3" />
                   <Img
                     fluid={position.image.childImageSharp.fluid}
-                    alt="TopSection Image"
+                    alt="Brother"
                   />
+                  {/* {JSON.stringify(position.image.childImageSharp)} */}
                 </div>
               ))}
             </Slider>

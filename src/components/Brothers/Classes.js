@@ -133,7 +133,7 @@ const Classes = () => {
       <h2 className="header">
         <span>Classes</span>
       </h2>
-      <div class="container">
+      <div className="container">
         <section className="classes" id="subsection">
           {classInfo ? (
             <SlideUp

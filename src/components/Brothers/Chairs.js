@@ -17,7 +17,7 @@ const Chairs = () => {
               image {
                 childImageSharp {
                   fluid {
-                    ...GatsbyImageSharpFluid_noBase64
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -31,7 +31,7 @@ const Chairs = () => {
   let positionData = queryResults.markdownRemark.frontmatter.position;
 
   return (
-    <section class="chairs" id="subsection">
+    <section className="chairs" id="subsection">
       <h2 className="header">
         <span>Chairs Positions</span>
       </h2>

@@ -43,6 +43,7 @@ const Gallery = () => {
               (thumbnail) => thumbnail.config_width === 320
             );
             const { src } = thumbnail;
+            // console.log(src)
             return {
               id,
               caption,
@@ -54,13 +55,14 @@ const Gallery = () => {
         );
         setImages(photos);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     }
 
     async function scrapeInstagram() {
       // console.log(carouselImages)
       try {
+        console.log( `https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${INSTAGRAM_ID}","first":${PHOTO_COUNT},"after":null}`);
         const response = await fetch(
           `https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${INSTAGRAM_ID}","first":${PHOTO_COUNT},"after":null}`
         );
