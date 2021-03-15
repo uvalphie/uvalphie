@@ -60,9 +60,7 @@ const Gallery = () => {
     }
 
     async function scrapeInstagram() {
-      // console.log(carouselImages)
       try {
-        console.log( `https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${INSTAGRAM_ID}","first":${PHOTO_COUNT},"after":null}`);
         const response = await fetch(
           `https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${INSTAGRAM_ID}","first":${PHOTO_COUNT},"after":null}`
         );

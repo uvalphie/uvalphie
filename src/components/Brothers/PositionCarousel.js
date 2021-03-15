@@ -15,8 +15,6 @@ const PositionCarousel = (data, carouselAlignment) => {
 
   const allPositions = data.data;
 
-  console.log(allPositions)
-
   const [carousel, setCarousel] = React.useState();
 
   function updatePosition(current) {
@@ -135,7 +133,6 @@ const PositionCarousel = (data, carouselAlignment) => {
                     fluid={position.image.childImageSharp.fluid}
                     alt="Brother"
                   />
-                  {/* {JSON.stringify(position.image.childImageSharp)} */}
                 </div>
               ))}
             </Slider>

@@ -28,8 +28,6 @@ const Exec = () => {
   );
 
   let positionData = queryResults.markdownRemark.frontmatter.position;
-  console.log("TEST");
-  console.log(positionData);
 
   return (
     <section className="exec" id="subsection">
