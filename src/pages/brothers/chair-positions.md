@@ -8,7 +8,7 @@ position:
     image: /img/design-chair.png
   - position_title: Historian
     position_holder: Connor Noble and Derek Yang
-    image: /img/historian.png
+    image: /img/connor_derek.png
   - position_title: Fundraising
     position_holder: Jae Smith, Jeffrey Shi, Jonathan Wen, Wonyoung Choi, Sam Chen
     image: /img/jae_jeff_jon_won.png
