@@ -61,29 +61,39 @@ const Gallery = () => {
 
     async function scrapeInstagram() {
       try {
-        const response = await fetch(
-          `https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${INSTAGRAM_ID}","first":${PHOTO_COUNT},"after":null}`
-        );
-        const { data } = await response;
-        const photos = data.user.edge_owner_to_timeline_media.edges.map(
-          ({ node }) => {
-            const { id } = node;
-            const caption = node.edge_media_to_caption.edges[0].node.text;
-            const originalImg = node.display_url;
-            const thumbnail = node.thumbnail_resources.find(
-              (thumbnail) => thumbnail.config_width === 320
-            );
-            const { src } = thumbnail;
-            return {
-              id,
-              caption,
-              src,
-              thumbnail,
-              originalImg,
-            };
+        fetch('https://scrapeinstagram.herokuapp.com/data', {
+          method: 'GET',
+          headers: {
+            Accept: 'application/json',
+          },
+        },
+        ).then(response => {
+          if (response.ok) {
+            response.json().then(json => {
+              const { data } = json;
+              // console.log(data.user)
+              const photos = data.user.edge_owner_to_timeline_media.edges.map(
+                ({ node }) => {
+                  const { id } = node;
+                  const caption = node.edge_media_to_caption.edges[0].node.text;
+                  const originalImg = node.display_url;
+                  const thumbnail = node.thumbnail_resources.find(
+                    (thumbnail) => thumbnail.config_width === 320
+                  );
+                  const { src } = thumbnail;
+                  return {
+                    id,
+                    caption,
+                    src,
+                    thumbnail,
+                    originalImg,
+                  };
+                }
+              );
+              setImages(photos);
+            });
           }
-        );
-        setImages(photos);
+        });
       } catch (error) {
         // Fallback in case it doesnt work
         fallbackData();
