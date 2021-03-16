@@ -55,7 +55,7 @@ const Gallery = () => {
         );
         setImages(photos);
       } catch (err) {
-        // console.log(err);
+        console.log(err);
       }
     }
 
@@ -94,8 +94,13 @@ const Gallery = () => {
             });
           }
         });
+        if(carouselImages.length == 0){
+          // console.log(carouselImages.length);
+          fallbackData();
+        }
       } catch (error) {
         // Fallback in case it doesnt work
+        // console.log("ERROR")
         fallbackData();
       }
     }
