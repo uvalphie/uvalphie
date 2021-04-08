@@ -20,7 +20,7 @@ class:
       - member: 14. Vinod "Hinbad" Chopra
   - class-name: Beta
     member:
-      - member: 15. Frank Sungping Chen
+      - member: 15. Frank “Joystick” Chen
       - member: 16. John "Generic" Kim
       - member: 17. Andrew "Revlon" Hong
       - member: 18. Ga-Ram "Snüz" Han
