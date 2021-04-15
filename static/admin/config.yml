@@ -285,3 +285,17 @@ collections:
                   widget: string,
                 }
               - { label: Image, name: image, widget: image }
+  - name: "linktree"
+    label: "Linktree"
+    folder: "src/pages/linktree/links"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: "link"
+        label: "Link"
+        collapsed: false
+        widget: "list"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Link, name: link, widget: string }
+          - { label: Image, name: image, widget: image }

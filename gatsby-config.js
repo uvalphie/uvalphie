@@ -70,6 +70,13 @@ module.exports = {
         name: "brothers",
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/pages/linktree`,
+        name: "linktree",
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
