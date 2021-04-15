@@ -11,7 +11,13 @@ const Linktree = () => {
             link {
               title
               link
-              image
+              image {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_noBase64
+                  }
+                }
+              }
             }
           }
         }
