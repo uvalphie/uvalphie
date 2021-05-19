@@ -34,6 +34,7 @@ const Gallery = () => {
     async function fallbackData() {
       try {
         const backupData = JSON.parse(JSON.stringify(BackupData));
+        console.log("Pulling backup data");
         const photos = backupData.data.user.edge_owner_to_timeline_media.edges.map(
           ({ node }) => {
             const { id } = node;
@@ -229,9 +230,9 @@ const Gallery = () => {
               .map((image, index) => (
                 <div className="instagram-img" key={index}>
                   <img
-                    src={image.thumbnail.src}
+                    src={'https://shy-sky-2673.uvalphie.workers.dev/' + image.thumbnail.src}
                     alt="Section Image"
-                    onClick={() => openModal(image.originalImg, image.caption)}
+                    onClick={() => openModal('https://shy-sky-2673.uvalphie.workers.dev/' + image.originalImg, image.caption)}
                   />
                 </div>
               ))}
