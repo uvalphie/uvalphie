@@ -105,6 +105,7 @@ const Gallery = () => {
       }
     }
     // scrapeInstagram();
+    fallbackData();
   }, []);
 
   // Modal Functions
