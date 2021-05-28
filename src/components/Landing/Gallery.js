@@ -62,15 +62,14 @@ const Gallery = () => {
 
     async function scrapeInstagram() {
       try {
-        fetch('https://scrapeinstagram.herokuapp.com/data', {
-          method: 'GET',
+        fetch("https://scrapeinstagram.herokuapp.com/data", {
+          method: "GET",
           headers: {
-            Accept: 'application/json',
+            Accept: "application/json",
           },
-        },
-        ).then(response => {
+        }).then((response) => {
           if (response.ok) {
-            response.json().then(json => {
+            response.json().then((json) => {
               const { data } = json;
               // console.log(data.user)
               const photos = data.user.edge_owner_to_timeline_media.edges.map(
@@ -95,7 +94,7 @@ const Gallery = () => {
             });
           }
         });
-        if(carouselImages.length == 0){
+        if (carouselImages.length == 0) {
           // console.log(carouselImages.length);
           fallbackData();
         }
@@ -105,7 +104,7 @@ const Gallery = () => {
         fallbackData();
       }
     }
-    scrapeInstagram();
+    // scrapeInstagram();
   }, []);
 
   // Modal Functions
@@ -230,9 +229,18 @@ const Gallery = () => {
               .map((image, index) => (
                 <div className="instagram-img" key={index}>
                   <img
-                    src={'https://shy-sky-2673.uvalphie.workers.dev/' + image.thumbnail.src}
+                    src={
+                      "https://shy-sky-2673.uvalphie.workers.dev/" +
+                      image.thumbnail.src
+                    }
                     alt="Section Image"
-                    onClick={() => openModal('https://shy-sky-2673.uvalphie.workers.dev/' + image.originalImg, image.caption)}
+                    onClick={() =>
+                      openModal(
+                        "https://shy-sky-2673.uvalphie.workers.dev/" +
+                          image.originalImg,
+                        image.caption
+                      )
+                    }
                   />
                 </div>
               ))}
