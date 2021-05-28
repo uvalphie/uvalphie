@@ -25,8 +25,8 @@ const Linktree = () => {
     `
   );
   let links = queryResults.markdownRemark.frontmatter.link;
-  console.log(links);
-  console.log(links[0]);
+  // console.log(links);
+  // console.log(links[0]);
 
   return (
     <div className="linktree-page">

@@ -29,14 +29,17 @@ const TemplateWrapper = ({ children }) => {
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+          as="style"
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap"
           rel="stylesheet"
+          as="style"
         ></link>
         <link
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
           rel="stylesheet"
+          as="style"
         ></link>
 
         <link

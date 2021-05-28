@@ -34,7 +34,7 @@ const Gallery = () => {
     async function fallbackData() {
       try {
         const backupData = JSON.parse(JSON.stringify(BackupData));
-        console.log("Pulling backup data");
+        // console.log("Pulling backup data");
         const photos = backupData.data.user.edge_owner_to_timeline_media.edges.map(
           ({ node }) => {
             const { id } = node;
