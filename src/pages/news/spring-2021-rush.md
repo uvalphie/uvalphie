@@ -2,7 +2,7 @@
 templateKey: news-page
 title: Spring 2021 Rush
 image: /img/webstite-news-banner.png
-order: 1
+order: 3
 ---
 ![](/img/banner.png "UVA Lambdas Spring Rush 2021: Suit Up")
 
