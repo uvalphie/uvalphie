@@ -159,4 +159,8 @@ class:
       - member: 123. Ryan "Spoiled Goods" Jansen
       - member: 124. Jaehoon "Deceptidate" Smith
       - member: 125. Connor "Teletuggies" Noble
+  - class-name: Upsilon
+    member:
+      - member: 126. Ryan "Cloudy Audi Owi€" Dinh
+      - member: 127. Ivan "bOoKiE$ n’ CReAm" Zheng
 ---
