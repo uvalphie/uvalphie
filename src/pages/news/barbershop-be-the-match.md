@@ -1,7 +1,7 @@
 ---
 templateKey: news-page
 title: Barbershop Be The Match
-image: /img/barbershop.png
+image: /img/banner-2.png
 order: 1
 ---
 The Alpha Tau Chapter of Lambda Phi Epsilon at UVA ran a fundraiser to support Be The Match, the National Bone Marrow Donor registry.
