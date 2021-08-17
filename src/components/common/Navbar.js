@@ -27,7 +27,7 @@ const Navbar = () => {
       currentPageNav = (
         <div className="current-page-btn">
           <img src={PhilantrophyIcon} alt="Philantrophy Icon"/>
-          <span>Philantrophy</span>
+          <span>Philanthrophy</span>
         </div>
       );
     } else if (url.includes("brothers")) {
@@ -61,7 +61,7 @@ const Navbar = () => {
             </Link>
             <Link to="/philantrophy/" id="link3" activeClassName="active-link">
               <img src={PhilantrophyIcon} alt="Philantrophy Icon"/>
-              <span>Philantrophy</span>
+              <span>Philanthrophy</span>
             </Link>
             <Link to="/brothers/" id="link4" activeClassName="active-link">
               <img src={BrothersIcon} alt="Brothers Icon"/>
@@ -97,7 +97,7 @@ const Navbar = () => {
           </Link>
           <Link to="/philantrophy" activeClassName="active-link">
             <img src={PhilantrophyIcon} alt="Philantrophy Icon"/>
-            <span>Philantrophy</span>
+            <span>Philanthrophy</span>
           </Link>
           <Link to="/brothers" activeClassName="active-link">
             <img src={BrothersIcon} alt="Brothers Icon"/>
