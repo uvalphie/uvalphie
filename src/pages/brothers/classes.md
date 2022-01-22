@@ -163,7 +163,7 @@ class:
     member:
       - member: 126. Ryan "Cloudy Audi Owi€" Dinh
       - member: 127. Ivan "bOoKiE$ n’ CReAm" Zheng
-  - class-name: Upsilon
+  - class-name: Phi
     member:
       - member: 128. Roshan "$camwave" Basani
 ---
