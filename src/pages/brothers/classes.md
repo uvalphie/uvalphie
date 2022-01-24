@@ -147,7 +147,7 @@ class:
   - class-name: Tau
     member:
       - member: 113. Christopher "u R iN tRoUbL" Nguyen
-      - member: '114. Wonyoung "Tragic Mike" '
+      - member: 114. Wonyoung "Tragic Mike" Choi
       - member: 115. Alan "NUTella" Zheng
       - member: 116. Derek "Über Meets" Yang
       - member: '117. Sean "wakE n $hAke" Le '
