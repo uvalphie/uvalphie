@@ -4,7 +4,7 @@ position:
     position_holder: Jeffrey Shi
     image: /img/webmaster.png
     position-title: Webmaster
-    position-holder: Ryan Dinh
+    position-holder: Ryan Dinh, Justin Zhang, Jonathan Li
   - position_title: Design Chair
     position_holder: Connor Noble and Jonathan Wen
     image: /img/design-chair.png
