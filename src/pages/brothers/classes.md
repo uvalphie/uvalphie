@@ -166,8 +166,8 @@ class:
   - class-name: Phi
     member:
       - member: 128. Roshan "$camwave" Basani
-      - member: 129. Logan "Careless Whisper" Taylor
+      - member: 129. Logan "Monke Careless Whisper" Taylor
       - member: 130. Jonathan "Cr@sh BandiTOOT" Li
-      - member: 131. Justin "SnuggyTuggy" Zhang
+      - member: 131. Justin "SnuggieTUGgie" Zhang
       - member: 132. Christopher "Treble Maker" Goodhart
 ---
