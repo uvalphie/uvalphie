@@ -170,4 +170,15 @@ class:
       - member: 130. Jonathan "Cr@sh BandiTOOT" Li
       - member: 131. Justin "SnuggieTUGgie" Zhang
       - member: 132. Christopher "Treble Maker" Goodhart
+  - class-name: Chi
+    member:
+      - member: 133. Shawn “Ÿak Öut” Kao
+      - member: 134. Eric “ChübHub” Jung
+      - member: 135. Ethan “Poolice” Fang
+      - member: 136. Jason “Stumbldor£” He
+      - member: 137. Paul “No Mo! Geronimo!” Kiattikhunphan
+      - member: 138. Nathan “€ooL kniP” Yu
+      - member: 139. Benson “I.¢.U.P.” Yang
+      - member: 140. Brandon “*o!nk*” Yang
+      - member: 141. Kevin “PöstBates” Zhao
 ---
