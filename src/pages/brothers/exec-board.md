@@ -14,7 +14,7 @@ position:
     position_holder: Simon "Petty Officer Mudhole" Li
     image: /img/blank.png
     position-title: Vice President External
-    position-holder: Ryan Dinh
+    position-holder: Ryan Dinhh
   - position_title: Treasurer
     position_holder: Alan "NUTella" Zheng
     image: /img/roshanexec.png
