@@ -179,6 +179,6 @@ class:
       - member: 137. Paul “No Mo! Geronimo!” Kiattikhunphan
       - member: 138. Nathan “€ooL kniP” Yu
       - member: 139. Benson “I.¢.U.P.” Yang
-      - member: 140. Brandon “*o!nk*” Yangg
+      - member: 140. Brandon “*o!nk*” Yang
       - member: 141. Kevin “PöstBates” Zhao
 ---
