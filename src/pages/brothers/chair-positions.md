@@ -19,7 +19,7 @@ position:
     position_holder: Jae Smith, Jeffrey Shi, Jonathan Wen, Wonyoung Choi, Sam Chen
     image: /img/jae_jeff_jon_won.png
     position-title: Fundraising
-    position-holder: Ryan Dinh
+    position-holder: Ryan Dinhh
   - position_title: Professional Chair
     position_holder: Wonyoung Choi and Simon Li
     image: /img/won_simon.png
