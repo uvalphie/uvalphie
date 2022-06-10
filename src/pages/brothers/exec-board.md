@@ -12,7 +12,7 @@ position:
     position-holder: Jaehoon Smith
   - position_title: Vice President External
     position_holder: Simon "Petty Officer Mudhole" Li
-    image: /img/ryandinhexec-1-.png
+    image: /img/blank.png
     position-title: Vice President External
     position-holder: Ryan Dinh
   - position_title: Treasurer
