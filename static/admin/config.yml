@@ -262,10 +262,10 @@ collections:
             collapsed: false
             widget: "list"
             fields:
-              - { label: Position Title, name: position-title, widget: string }
+              - { label: Position Title, name: position_title, widget: string }
               - {
                   label: Position Holder,
-                  name: position-holder,
+                  name: position_holder,
                   widget: string,
                 }
               - { label: Image, name: image, widget: image }
