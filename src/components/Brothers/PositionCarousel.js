@@ -161,8 +161,8 @@ const PositionCarousel = (data, carouselAlignment) => {
               </div>
             ) : (
               <div className="position-text">
-                <h3>{currentPositionTitle}</h3>
-                <p>{currentPositionHolder}</p>
+                {/* <h3>{currentPositionTitle}</h3> */}
+                <h3>{currentPositionHolder}</h3>
               </div>
             )}
             <button onClick={nextSlide}>
