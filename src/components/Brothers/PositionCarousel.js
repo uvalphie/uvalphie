@@ -156,8 +156,8 @@ const PositionCarousel = (data, carouselAlignment) => {
             </button>
             {currentPositionHolder == "" ? (
               <div className="position-text">
-                <h3>{allPositions[0].position_title}</h3>
-                <p>{allPositions[0].position_holder}</p>
+                {/* <h3>{allPositions[0].position_title}</h3> */}
+                <h3>{allPositions[0].position_holder}</h3>
               </div>
             ) : (
               <div className="position-text">
