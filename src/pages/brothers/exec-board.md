@@ -8,7 +8,7 @@ position:
     position_holder: Jaehoon Smith
   - image: /img/roshanexec.png
     position_title: Vice President External
-    position_holder: Ryan Dinhh
+    position_holder: Ryan Dinh
   - image: /img/roshanexec.png
     position_title: Treasurer
     position_holder: Ryan Dinh
