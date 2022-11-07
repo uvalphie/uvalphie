@@ -19,7 +19,7 @@ position:
     position_holder: Alan "NUTella" Zheng
     image: /img/roshanexec.png
     position-title: Treasurer
-    position-holder: Roshan Basani
+    position-holder: Ryan Dinh
   - position_title: Vice President Service
     position_holder: Ryan "Spoiled Goods" Jensen
     image: /img/jonathanexec.png
