@@ -185,5 +185,5 @@ class:
       - member: 142. Mark "LuvHoleTel" Zambrano
       - member: 143. Junseo "Whack'n'Ruin" Lee
       - member: 144. Anthony "Naked & Afraid" Nosal
-    class-name: Pso
+    class-name: Ps
 ---
