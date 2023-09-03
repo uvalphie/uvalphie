@@ -186,4 +186,11 @@ class:
       - member: 143. Junseo "Whack'n'Ruin" Lee
       - member: 144. Anthony "Naked & Afraid" Nosal
     class-name: Psi
+  - class-name: Alpha Alpha
+    member:
+      - member: David "Shush n Bush" Le
+      - member: Brandon "Brigadier Ballsaq" Yuan
+      - member: Alex "5 peeni£s" Huang
+      - member: Andrew "R.O.T.$" Zhou
+      - member: Cato "Puffi Nut Cheerios" Zhong
 ---
