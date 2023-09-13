@@ -188,9 +188,9 @@ class:
     class-name: Psi
   - class-name: Alpha Alpha
     member:
-      - member: David "Shush n Bush" Le
-      - member: Brandon "Brigadier Ballsaq" Yuan
-      - member: Alex "5 peeni£s" Huang
-      - member: Andrew "R.O.T.$" Zhou
-      - member: Cato "Puffi Nut Cheerios" Zhong
+      - member: 145. David "Shush n Bush" Le
+      - member: 146. Brandon "Brigadier Ballsaq" Yuan
+      - member: 147. Alex "5 peeni£s" Huang
+      - member: 148. Andrew "R.O.T.$" Zhou
+      - member: 149. Cato "Puffi Nut Cheerios" Zhong
 ---
